@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.renchaigao.fangpu.dao.mapper.UserInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.renchaigao.fangpu.dao.UserInfo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="nickname" property="nickname" jdbcType="VARCHAR" />
+    <result column="avatarurl" property="avatarurl" jdbcType="VARCHAR" />
+    <result column="gender" property="gender" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="province" property="province" jdbcType="VARCHAR" />
+    <result column="country" property="country" jdbcType="VARCHAR" />
+    <result column="language" property="language" jdbcType="VARCHAR" />
+    <result column="unionid" property="unionid" jdbcType="INTEGER" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="vip" property="vip" jdbcType="VARCHAR" />
+    <result column="mytermsid" property="mytermsid" jdbcType="INTEGER" />
+    <result column="myrecordingid" property="myrecordingid" jdbcType="INTEGER" />
+    <result column="myrankid" property="myrankid" jdbcType="INTEGER" />
+    <result column="myshareid" property="myshareid" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, nickname, avatarurl, gender, city, province, country, language, unionid, address, 
+    vip, mytermsid, myrecordingid, myrankid, myshareid
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from userinfo
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectByUnionID" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from userinfo
+    where unionid = #{unionid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from userinfo
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.UserInfo" >
+    insert into userinfo (id, nickname, avatarurl,
+      gender, city, province, 
+      country, language, unionid, 
+      address, vip, mytermsid, 
+      myrecordingid, myrankid, myshareid
+      )
+    values (#{id,jdbcType=INTEGER}, #{nickname,jdbcType=VARCHAR}, #{avatarurl,jdbcType=VARCHAR}, 
+      #{gender,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, 
+      #{country,jdbcType=VARCHAR}, #{language,jdbcType=VARCHAR}, #{unionid,jdbcType=INTEGER}, 
+      #{address,jdbcType=VARCHAR}, #{vip,jdbcType=VARCHAR}, #{mytermsid,jdbcType=INTEGER}, 
+      #{myrecordingid,jdbcType=INTEGER}, #{myrankid,jdbcType=INTEGER}, #{myshareid,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.UserInfo" >
+    insert into userinfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="nickname != null" >
+        nickname,
+      </if>
+      <if test="avatarurl != null" >
+        avatarurl,
+      </if>
+      <if test="gender != null" >
+        gender,
+      </if>
+      <if test="city != null" >
+        city,
+      </if>
+      <if test="province != null" >
+        province,
+      </if>
+      <if test="country != null" >
+        country,
+      </if>
+      <if test="language != null" >
+        language,
+      </if>
+      <if test="unionid != null" >
+        unionid,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="vip != null" >
+        vip,
+      </if>
+      <if test="mytermsid != null" >
+        mytermsid,
+      </if>
+      <if test="myrecordingid != null" >
+        myrecordingid,
+      </if>
+      <if test="myrankid != null" >
+        myrankid,
+      </if>
+      <if test="myshareid != null" >
+        myshareid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="nickname != null" >
+        #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="avatarurl != null" >
+        #{avatarurl,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null" >
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="country != null" >
+        #{country,jdbcType=VARCHAR},
+      </if>
+      <if test="language != null" >
+        #{language,jdbcType=VARCHAR},
+      </if>
+      <if test="unionid != null" >
+        #{unionid,jdbcType=INTEGER},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="vip != null" >
+        #{vip,jdbcType=VARCHAR},
+      </if>
+      <if test="mytermsid != null" >
+        #{mytermsid,jdbcType=INTEGER},
+      </if>
+      <if test="myrecordingid != null" >
+        #{myrecordingid,jdbcType=INTEGER},
+      </if>
+      <if test="myrankid != null" >
+        #{myrankid,jdbcType=INTEGER},
+      </if>
+      <if test="myshareid != null" >
+        #{myshareid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.renchaigao.fangpu.dao.UserInfo" >
+    update userinfo
+    <set >
+      <if test="nickname != null" >
+        nickname = #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="avatarurl != null" >
+        avatarurl = #{avatarurl,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        gender = #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null" >
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="country != null" >
+        country = #{country,jdbcType=VARCHAR},
+      </if>
+      <if test="language != null" >
+        language = #{language,jdbcType=VARCHAR},
+      </if>
+      <if test="unionid != null" >
+        unionid = #{unionid,jdbcType=INTEGER},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="vip != null" >
+        vip = #{vip,jdbcType=VARCHAR},
+      </if>
+      <if test="mytermsid != null" >
+        mytermsid = #{mytermsid,jdbcType=INTEGER},
+      </if>
+      <if test="myrecordingid != null" >
+        myrecordingid = #{myrecordingid,jdbcType=INTEGER},
+      </if>
+      <if test="myrankid != null" >
+        myrankid = #{myrankid,jdbcType=INTEGER},
+      </if>
+      <if test="myshareid != null" >
+        myshareid = #{myshareid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.renchaigao.fangpu.dao.UserInfo" >
+    update userinfo
+    set nickname = #{nickname,jdbcType=VARCHAR},
+      avatarurl = #{avatarurl,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      province = #{province,jdbcType=VARCHAR},
+      country = #{country,jdbcType=VARCHAR},
+      language = #{language,jdbcType=VARCHAR},
+      unionid = #{unionid,jdbcType=INTEGER},
+      address = #{address,jdbcType=VARCHAR},
+      vip = #{vip,jdbcType=VARCHAR},
+      mytermsid = #{mytermsid,jdbcType=INTEGER},
+      myrecordingid = #{myrecordingid,jdbcType=INTEGER},
+      myrankid = #{myrankid,jdbcType=INTEGER},
+      myshareid = #{myshareid,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

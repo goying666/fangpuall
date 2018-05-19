@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.renchaigao.fangpu.dao.mapper.MyShareMapper" >
+  <resultMap id="BaseResultMap" type="com.renchaigao.fangpu.dao.MyShare" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="userid" property="userid" jdbcType="INTEGER" />
+    <result column="termsharelist" property="termsharelist" jdbcType="VARCHAR" />
+    <result column="recordingsharelist" property="recordingsharelist" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, userid, termsharelist, recordingsharelist
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from myshare
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from myshare
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.MyShare" >
+    insert into myshare (id, userid, termsharelist, 
+      recordingsharelist)
+    values (#{id,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{termsharelist,jdbcType=VARCHAR}, 
+      #{recordingsharelist,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.MyShare" >
+    insert into myshare
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="termsharelist != null" >
+        termsharelist,
+      </if>
+      <if test="recordingsharelist != null" >
+        recordingsharelist,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="termsharelist != null" >
+        #{termsharelist,jdbcType=VARCHAR},
+      </if>
+      <if test="recordingsharelist != null" >
+        #{recordingsharelist,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.renchaigao.fangpu.dao.MyShare" >
+    update myshare
+    <set >
+      <if test="userid != null" >
+        userid = #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="termsharelist != null" >
+        termsharelist = #{termsharelist,jdbcType=VARCHAR},
+      </if>
+      <if test="recordingsharelist != null" >
+        recordingsharelist = #{recordingsharelist,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.renchaigao.fangpu.dao.MyShare" >
+    update myshare
+    set userid = #{userid,jdbcType=INTEGER},
+      termsharelist = #{termsharelist,jdbcType=VARCHAR},
+      recordingsharelist = #{recordingsharelist,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

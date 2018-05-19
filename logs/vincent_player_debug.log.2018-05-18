@@ -1,0 +1,13 @@
+2018-05-18 21:19:02  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-18 21:19:02  [ http-nio-7899-exec-1:75 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-18 21:19:02  [ http-nio-7899-exec-1:97 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-18 21:20:59  [ http-nio-7899-exec-3:117370 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-18 21:27:36  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-18 21:27:36  [ http-nio-7899-exec-1:43 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-18 21:29:03  [ http-nio-7899-exec-10:86463 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-18 21:29:03  [ http-nio-7899-exec-10:86486 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-18 21:38:38  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-18 21:38:38  [ http-nio-7899-exec-1:37 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-18 21:38:38  [ http-nio-7899-exec-1:39 ] - [ INFO ]  Exception e : java.lang.NullPointerException
+2018-05-18 21:42:25  [ http-nio-7899-exec-3:227503 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-18 21:42:50  [ http-nio-7899-exec-9:252853 ] - [ INFO ]  Exception e : java.lang.NullPointerException

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.renchaigao.fangpu.dao.mapper.RecordingInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.renchaigao.fangpu.dao.RecordingInfo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="termid" property="termid" jdbcType="INTEGER" />
+    <result column="terminfo" property="terminfo" jdbcType="VARCHAR" />
+    <result column="userid" property="userid" jdbcType="INTEGER" />
+    <result column="path" property="path" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="filename" property="filename" jdbcType="VARCHAR" />
+    <result column="tingnum" property="tingnum" jdbcType="INTEGER" />
+    <result column="zannum" property="zannum" jdbcType="INTEGER" />
+    <result column="badnum" property="badnum" jdbcType="INTEGER" />
+    <result column="addtime" property="addtime" jdbcType="TIMESTAMP" />
+    <result column="shoucangnum" property="shoucangnum" jdbcType="INTEGER" />
+    <result column="sharenum" property="sharenum" jdbcType="INTEGER" />
+    <result column="useravatarurl" property="useravatarurl" jdbcType="VARCHAR" />
+    <result column="termclass" property="termclass" jdbcType="VARCHAR" />
+    <result column="usernickname" property="usernickname" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, termid, terminfo, userid, path, address, filename, tingnum, zannum, badnum, addtime, 
+    shoucangnum, sharenum, useravatarurl, termclass, usernickname
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from recordinginfo
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from recordinginfo
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.RecordingInfo" >
+    insert into recordinginfo (id, termid, terminfo, 
+      userid, path, address, 
+      filename, tingnum, zannum, 
+      badnum, addtime, shoucangnum, 
+      sharenum, useravatarurl, termclass, 
+      usernickname)
+    values (#{id,jdbcType=INTEGER}, #{termid,jdbcType=INTEGER}, #{terminfo,jdbcType=VARCHAR}, 
+      #{userid,jdbcType=INTEGER}, #{path,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{filename,jdbcType=VARCHAR}, #{tingnum,jdbcType=INTEGER}, #{zannum,jdbcType=INTEGER}, 
+      #{badnum,jdbcType=INTEGER}, #{addtime,jdbcType=TIMESTAMP}, #{shoucangnum,jdbcType=INTEGER}, 
+      #{sharenum,jdbcType=INTEGER}, #{useravatarurl,jdbcType=VARCHAR}, #{termclass,jdbcType=VARCHAR}, 
+      #{usernickname,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.RecordingInfo" >
+    insert into recordinginfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="termid != null" >
+        termid,
+      </if>
+      <if test="terminfo != null" >
+        terminfo,
+      </if>
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="path != null" >
+        path,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="filename != null" >
+        filename,
+      </if>
+      <if test="tingnum != null" >
+        tingnum,
+      </if>
+      <if test="zannum != null" >
+        zannum,
+      </if>
+      <if test="badnum != null" >
+        badnum,
+      </if>
+      <if test="addtime != null" >
+        addtime,
+      </if>
+      <if test="shoucangnum != null" >
+        shoucangnum,
+      </if>
+      <if test="sharenum != null" >
+        sharenum,
+      </if>
+      <if test="useravatarurl != null" >
+        useravatarurl,
+      </if>
+      <if test="termclass != null" >
+        termclass,
+      </if>
+      <if test="usernickname != null" >
+        usernickname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="termid != null" >
+        #{termid,jdbcType=INTEGER},
+      </if>
+      <if test="terminfo != null" >
+        #{terminfo,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="path != null" >
+        #{path,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="filename != null" >
+        #{filename,jdbcType=VARCHAR},
+      </if>
+      <if test="tingnum != null" >
+        #{tingnum,jdbcType=INTEGER},
+      </if>
+      <if test="zannum != null" >
+        #{zannum,jdbcType=INTEGER},
+      </if>
+      <if test="badnum != null" >
+        #{badnum,jdbcType=INTEGER},
+      </if>
+      <if test="addtime != null" >
+        #{addtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="shoucangnum != null" >
+        #{shoucangnum,jdbcType=INTEGER},
+      </if>
+      <if test="sharenum != null" >
+        #{sharenum,jdbcType=INTEGER},
+      </if>
+      <if test="useravatarurl != null" >
+        #{useravatarurl,jdbcType=VARCHAR},
+      </if>
+      <if test="termclass != null" >
+        #{termclass,jdbcType=VARCHAR},
+      </if>
+      <if test="usernickname != null" >
+        #{usernickname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.renchaigao.fangpu.dao.RecordingInfo" >
+    update recordinginfo
+    <set >
+      <if test="termid != null" >
+        termid = #{termid,jdbcType=INTEGER},
+      </if>
+      <if test="terminfo != null" >
+        terminfo = #{terminfo,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null" >
+        userid = #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="path != null" >
+        path = #{path,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="filename != null" >
+        filename = #{filename,jdbcType=VARCHAR},
+      </if>
+      <if test="tingnum != null" >
+        tingnum = #{tingnum,jdbcType=INTEGER},
+      </if>
+      <if test="zannum != null" >
+        zannum = #{zannum,jdbcType=INTEGER},
+      </if>
+      <if test="badnum != null" >
+        badnum = #{badnum,jdbcType=INTEGER},
+      </if>
+      <if test="addtime != null" >
+        addtime = #{addtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="shoucangnum != null" >
+        shoucangnum = #{shoucangnum,jdbcType=INTEGER},
+      </if>
+      <if test="sharenum != null" >
+        sharenum = #{sharenum,jdbcType=INTEGER},
+      </if>
+      <if test="useravatarurl != null" >
+        useravatarurl = #{useravatarurl,jdbcType=VARCHAR},
+      </if>
+      <if test="termclass != null" >
+        termclass = #{termclass,jdbcType=VARCHAR},
+      </if>
+      <if test="usernickname != null" >
+        usernickname = #{usernickname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.renchaigao.fangpu.dao.RecordingInfo" >
+    update recordinginfo
+    set termid = #{termid,jdbcType=INTEGER},
+      terminfo = #{terminfo,jdbcType=VARCHAR},
+      userid = #{userid,jdbcType=INTEGER},
+      path = #{path,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      filename = #{filename,jdbcType=VARCHAR},
+      tingnum = #{tingnum,jdbcType=INTEGER},
+      zannum = #{zannum,jdbcType=INTEGER},
+      badnum = #{badnum,jdbcType=INTEGER},
+      addtime = #{addtime,jdbcType=TIMESTAMP},
+      shoucangnum = #{shoucangnum,jdbcType=INTEGER},
+      sharenum = #{sharenum,jdbcType=INTEGER},
+      useravatarurl = #{useravatarurl,jdbcType=VARCHAR},
+      termclass = #{termclass,jdbcType=VARCHAR},
+      usernickname = #{usernickname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

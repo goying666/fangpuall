@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.renchaigao.fangpu.dao.mapper.TermInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.renchaigao.fangpu.dao.TermInfo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="ownerid" property="ownerid" jdbcType="INTEGER" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="introduce" property="introduce" jdbcType="VARCHAR" />
+    <result column="zannum" property="zannum" jdbcType="INTEGER" />
+    <result column="tingnum" property="tingnum" jdbcType="INTEGER" />
+    <result column="recordingnum" property="recordingnum" jdbcType="INTEGER" />
+    <result column="addtime" property="addtime" jdbcType="TIMESTAMP" />
+    <result column="recordingids" property="recordingids" jdbcType="VARCHAR" />
+    <result column="termclass" property="termclass" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, ownerid, content, address, introduce, zannum, tingnum, recordingnum, addtime, 
+    recordingids, termclass
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from terminfo
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from terminfo
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.TermInfo" >
+    insert into terminfo (id, ownerid, content, 
+      address, introduce, zannum, 
+      tingnum, recordingnum, addtime, 
+      recordingids, termclass)
+    values (#{id,jdbcType=INTEGER}, #{ownerid,jdbcType=INTEGER}, #{content,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{introduce,jdbcType=VARCHAR}, #{zannum,jdbcType=INTEGER}, 
+      #{tingnum,jdbcType=INTEGER}, #{recordingnum,jdbcType=INTEGER}, #{addtime,jdbcType=TIMESTAMP}, 
+      #{recordingids,jdbcType=VARCHAR}, #{termclass,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.TermInfo" >
+    insert into terminfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="ownerid != null" >
+        ownerid,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="introduce != null" >
+        introduce,
+      </if>
+      <if test="zannum != null" >
+        zannum,
+      </if>
+      <if test="tingnum != null" >
+        tingnum,
+      </if>
+      <if test="recordingnum != null" >
+        recordingnum,
+      </if>
+      <if test="addtime != null" >
+        addtime,
+      </if>
+      <if test="recordingids != null" >
+        recordingids,
+      </if>
+      <if test="termclass != null" >
+        termclass,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="ownerid != null" >
+        #{ownerid,jdbcType=INTEGER},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="introduce != null" >
+        #{introduce,jdbcType=VARCHAR},
+      </if>
+      <if test="zannum != null" >
+        #{zannum,jdbcType=INTEGER},
+      </if>
+      <if test="tingnum != null" >
+        #{tingnum,jdbcType=INTEGER},
+      </if>
+      <if test="recordingnum != null" >
+        #{recordingnum,jdbcType=INTEGER},
+      </if>
+      <if test="addtime != null" >
+        #{addtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="recordingids != null" >
+        #{recordingids,jdbcType=VARCHAR},
+      </if>
+      <if test="termclass != null" >
+        #{termclass,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.renchaigao.fangpu.dao.TermInfo" >
+    update terminfo
+    <set >
+      <if test="ownerid != null" >
+        ownerid = #{ownerid,jdbcType=INTEGER},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="introduce != null" >
+        introduce = #{introduce,jdbcType=VARCHAR},
+      </if>
+      <if test="zannum != null" >
+        zannum = #{zannum,jdbcType=INTEGER},
+      </if>
+      <if test="tingnum != null" >
+        tingnum = #{tingnum,jdbcType=INTEGER},
+      </if>
+      <if test="recordingnum != null" >
+        recordingnum = #{recordingnum,jdbcType=INTEGER},
+      </if>
+      <if test="addtime != null" >
+        addtime = #{addtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="recordingids != null" >
+        recordingids = #{recordingids,jdbcType=VARCHAR},
+      </if>
+      <if test="termclass != null" >
+        termclass = #{termclass,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.renchaigao.fangpu.dao.TermInfo" >
+    update terminfo
+    set ownerid = #{ownerid,jdbcType=INTEGER},
+      content = #{content,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      introduce = #{introduce,jdbcType=VARCHAR},
+      zannum = #{zannum,jdbcType=INTEGER},
+      tingnum = #{tingnum,jdbcType=INTEGER},
+      recordingnum = #{recordingnum,jdbcType=INTEGER},
+      addtime = #{addtime,jdbcType=TIMESTAMP},
+      recordingids = #{recordingids,jdbcType=VARCHAR},
+      termclass = #{termclass,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

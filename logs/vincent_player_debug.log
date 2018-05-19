@@ -1,0 +1,40 @@
+2018-05-19 16:03:30  [ http-nio-7899-exec-3:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-19 16:03:30  [ http-nio-7899-exec-3:44 ] - [ DEBUG ]  {conn-10001, pstmt-20000} exit cache
+2018-05-19 16:03:30  [ http-nio-7899-exec-3:92 ] - [ INFO ]  Exception e : org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"userinfo"
+    where unionid = 123' at line 6
+### The error may exist in file [/Users/goying/project/fangpu/javaCode/fangpu/target/classes/mapper/UserInfoMapper.xml]
+### The error may involve com.renchaigao.fangpu.dao.mapper.UserInfoMapper.selectByUnionID-Inline
+### The error occurred while setting parameters
+### SQL: select           id, nickname, avatarurl, gender, city, province, country, language, unionid, address,      vip, mytermsid, myrecordingid, myrankid, myshareid         from "userinfo"     where unionid = ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"userinfo"
+    where unionid = 123' at line 6
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"userinfo"
+    where unionid = 123' at line 6
+2018-05-19 16:05:50  [ Thread-17:140040 ] - [ INFO ]  {dataSource-1} closed
+2018-05-19 16:07:22  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-19 16:07:22  [ http-nio-7899-exec-1:36 ] - [ DEBUG ]  {conn-10001, pstmt-20000} exit cache
+2018-05-19 16:07:22  [ http-nio-7899-exec-1:68 ] - [ INFO ]  Exception e : org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"userinfo"
+    where id = 1' at line 6
+### The error may exist in file [/Users/goying/project/fangpu/javaCode/fangpu/target/classes/mapper/UserInfoMapper.xml]
+### The error may involve com.renchaigao.fangpu.dao.mapper.UserInfoMapper.selectByPrimaryKey-Inline
+### The error occurred while setting parameters
+### SQL: select           id, nickname, avatarurl, gender, city, province, country, language, unionid, address,      vip, mytermsid, myrecordingid, myrankid, myshareid         from "userinfo"     where id = ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"userinfo"
+    where id = 1' at line 6
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"userinfo"
+    where id = 1' at line 6
+2018-05-19 16:14:34  [ Thread-18:432184 ] - [ INFO ]  {dataSource-1} closed
+2018-05-19 16:20:29  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-19 16:20:29  [ http-nio-7899-exec-1:48 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-19 16:20:52  [ Thread-20:22464 ] - [ DEBUG ]  {conn-10001, pstmt-20000} exit cache
+2018-05-19 16:20:52  [ Thread-20:22468 ] - [ INFO ]  {dataSource-1} closed
+2018-05-19 16:21:38  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-19 16:21:38  [ http-nio-7899-exec-1:38 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-19 16:21:38  [ http-nio-7899-exec-1:76 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-19 16:24:10  [ http-nio-7899-exec-3:151938 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-19 16:33:37  [ Thread-19:719121 ] - [ DEBUG ]  {conn-10001, pstmt-20002} exit cache
+2018-05-19 16:33:37  [ Thread-19:719123 ] - [ DEBUG ]  {conn-10001, pstmt-20000} exit cache
+2018-05-19 16:33:37  [ Thread-19:719123 ] - [ DEBUG ]  {conn-10001, pstmt-20001} exit cache
+2018-05-19 16:33:37  [ Thread-19:719128 ] - [ INFO ]  {dataSource-1} closed
