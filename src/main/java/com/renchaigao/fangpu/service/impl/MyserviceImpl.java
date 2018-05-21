@@ -50,6 +50,7 @@ public class MyserviceImpl implements MyService {
 
 
     public ResponseEntity getMytermsByUserId(Integer id) {
+        System.out.println("id" + id);
         try {
             MyTerms myTerms = mytermsmapper.selectByPrimaryKey(id);
             List<String> termList = Arrays.asList(myTerms.getAlltermlist().split("-"));
@@ -68,7 +69,10 @@ public class MyserviceImpl implements MyService {
             switch (flagStr) {
                 case "add": {
                     //将最新的id拼接进原有string的末尾；通过"-"
-                    myTerms.setAlltermlist(myTerms.getAlltermlist() + "-" + termId.toString());
+                    if (myTerms.getAlltermlist() != null)
+                        myTerms.setAlltermlist(myTerms.getAlltermlist() + "-" + termId.toString());
+                    else
+                        myTerms.setAlltermlist(termId.toString());
                     mytermsmapper.updateByPrimaryKeySelective(myTerms);
                     return new ResponseEntity(RespCode.ADDSUCCES, myTerms);
                 }
@@ -112,7 +116,11 @@ public class MyserviceImpl implements MyService {
             switch (flagStr) {
                 case "add": {
                     //将最新的id拼接进原有string的末尾；通过"-"
-                    myRecording.setAllrecordinglist(myRecording.getAllrecordinglist() + "-" + recordingId.toString());
+                    if (myRecording.getAllrecordinglist() != null)
+                        myRecording.setAllrecordinglist(myRecording.getAllrecordinglist() + "-" + recordingId.toString());
+                    else
+                        myRecording.setAllrecordinglist(recordingId.toString());
+//                    myRecording.setAllrecordinglist(myRecording.getAllrecordinglist() + "-" + recordingId.toString());
                     myRecordingMapper.updateByPrimaryKeySelective(myRecording);
                     return new ResponseEntity(RespCode.ADDSUCCES, myRecording);
                 }

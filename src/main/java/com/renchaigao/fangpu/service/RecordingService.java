@@ -16,10 +16,13 @@ public interface RecordingService {
 
     ResponseEntity addRecordingFile(MultipartFile file, Integer userId, Integer recordingId);
 
-    ResponseEntity downloadRecordingFile(HttpServletResponse res, @PathVariable("path") String path, @PathVariable("filename") String filename);
+    void downloadRecordingFile(
+            HttpServletResponse res, @PathVariable("recordingid") Integer recordingid);
 
     ResponseEntity addRecordingList(RecordingList recordingList);
 
     ResponseEntity updateRecordingList(Integer listId, Integer newRecordingId, String flagStr);
+
+    ResponseEntity getRecordingList(Integer id);
 
 }

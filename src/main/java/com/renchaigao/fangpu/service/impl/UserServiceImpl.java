@@ -2,8 +2,12 @@ package com.renchaigao.fangpu.service.impl;
 
 
 import com.alibaba.fastjson.JSONObject;
+import com.renchaigao.fangpu.dao.MyRecording;
+import com.renchaigao.fangpu.dao.MyTerms;
 import com.renchaigao.fangpu.dao.UserInfo;
 import com.renchaigao.fangpu.dao.UserLogin;
+import com.renchaigao.fangpu.dao.mapper.MyRecordingMapper;
+import com.renchaigao.fangpu.dao.mapper.MyTermsMapper;
 import com.renchaigao.fangpu.dao.mapper.UserInfoMapper;
 import com.renchaigao.fangpu.dao.mapper.UserLoginMapper;
 import com.renchaigao.fangpu.domain.response.RespCode;
@@ -28,6 +32,13 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserLoginMapper userLoginMapper;
 
+
+    @Autowired
+    MyTermsMapper mytermsmapper;
+
+    @Autowired
+    MyRecordingMapper myRecordingMapper;
+
     //    //    用户登录
     public ResponseEntity addUser(UserInfo userInfo) {
         System.out.println(JSONObject.toJSONString(userInfo));
@@ -37,10 +48,26 @@ public class UserServiceImpl implements UserService {
             if (userUse != null) {
                 return new ResponseEntity(RespCode.OLDUSER, userUse);
             } else {
+
                 userInfoMapper.insertSelective(userInfo);
+//                创建我的系列
+                MyTerms myTerms = new MyTerms();
+                myTerms.setUserid(userInfo.getId());
+                mytermsmapper.insert(myTerms);
+
+                MyRecording myRecording = new MyRecording();
+                myRecording.setUserid(userInfo.getId());
+                myRecordingMapper.insert(myRecording);
+
+                userInfo.setMytermsid(myTerms.getId());
+                userInfo.setMyrecordingid(myRecording.getId());
+
+                userInfoMapper.updateByPrimaryKeySelective(userInfo);
+
                 UserLogin userLogin = new UserLogin();
                 userLogin.setLogindate(dateUse.DateToString(new Date()));//新增用户登录时间信息
                 userLoginMapper.insert(userLogin);
+
                 return new ResponseEntity(RespCode.NEWUSER, userInfo);
             }
         } catch (Exception e) {
@@ -49,14 +76,27 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+
+    public ResponseEntity getUserinfo(Integer userid){
+        System.out.println("userid is : " + userid);
+        try {
+            return new ResponseEntity(RespCode.SUCCESS, userInfoMapper.selectByPrimaryKey(userid));
+        } catch (Exception e) {
+            return new ResponseEntity(RespCode.EXCEPTION, e);
+        }
+    }
+
     public ResponseEntity userLogin(UserLogin userLogin) {
         userLogin.setLogindate(dateUse.DateToString(new Date()));//新增用户登录时间信息
         userLoginMapper.insert(userLogin);
+        System.out.println("userLogin.userId is : " + userLogin.getUserid());
         return new ResponseEntity(RespCode.NEWUSER, userLogin);
     }
 
 //
     public ResponseEntity userAddressAdd(UserInfo userInfo){
+        System.out.println("userInfo.getId is : " + userInfo.getId());
+        System.out.println("userInfo.getAddress is : " + userInfo.getAddress());
         try {
             userInfoMapper.updateByPrimaryKeySelective(userInfo);
             return new ResponseEntity(RespCode.SUCCESS, userInfo);

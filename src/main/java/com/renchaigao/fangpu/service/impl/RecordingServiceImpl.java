@@ -83,7 +83,12 @@ public class RecordingServiceImpl implements RecordingService {
         }
     }
 
-    public ResponseEntity downloadRecordingFile(HttpServletResponse res, String path, String filename) {
+    public void downloadRecordingFile(HttpServletResponse res, Integer recordingid) {
+        System.out.println("enter in downloadRecordingFile");
+        RecordingInfo recordingInfo = recordingInfoMapper.selectByPrimaryKey(recordingid);
+        String path = recordingInfo.getPath();
+        String filename = recordingInfo.getFilename();
+
         res.setHeader("content-type", "multipart/form-data");
         res.setContentType("application/octet-stream");
         res.setHeader("Content-Disposition", "attachment;filename=" + filename);
@@ -100,10 +105,8 @@ public class RecordingServiceImpl implements RecordingService {
                 os.flush();
                 i = bis.read(buff);
             }
-            return new ResponseEntity(RespCode.SUCCESS);
         } catch (IOException e) {
             e.printStackTrace();
-            return new ResponseEntity(RespCode.EXCEPTION,e);
         } finally {
             if (bis != null) {
                 try {

@@ -6,7 +6,8 @@
 	<groupId>com.renchaigao</groupId>
 	<artifactId>fangpu</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<!--<packaging>jar</packaging>-->
+	<packaging>war</packaging>
 
 	<name>fangpu</name>
 	<description>Demo project for Spring Boot</description>
@@ -35,17 +36,17 @@
 					<groupId>com.fasterxml.jackson.core</groupId>
 				</exclusion>
 				<!-- 移除嵌入式tomcat插件 -->
-				<!--<exclusion>-->
-				<!--<groupId>org.springframework.boot</groupId>-->
-				<!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
-				<!--</exclusion>-->
+				<exclusion>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<!--<scope>provided</scope>-->
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>

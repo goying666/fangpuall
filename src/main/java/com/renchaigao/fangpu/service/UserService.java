@@ -8,7 +8,8 @@ import com.renchaigao.fangpu.domain.response.ResponseEntity;
 public interface UserService {
 
 //    用户登录
-    ResponseEntity addUser(UserInfo userInfo);
+//    ResponseEntity addUser(UserInfo userInfo);
+    ResponseEntity getUserinfo(Integer userid);
 
     ResponseEntity userLogin(UserLogin userLogin);
 

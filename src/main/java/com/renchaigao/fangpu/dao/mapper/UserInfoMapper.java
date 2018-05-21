@@ -13,8 +13,6 @@ public interface UserInfoMapper {
 
     UserInfo selectByUnionID(Integer unionid);
 
-
-
     int updateByPrimaryKeySelective(UserInfo record);
 
     int updateByPrimaryKey(UserInfo record);

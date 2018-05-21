@@ -28,13 +28,18 @@ public class TermServiceImpl implements TermService {
     RecordingListMapper recordingListMapper;
 
     public ResponseEntity addTerm(TermInfo termInfo) {
+        System.out.println(JSONObject.toJSONString(termInfo));
         try{
             termInfo.setAddtime(new Date());//小程序端没有添加创建时间，由后台填写该字段；
-            termInfoMapper.insert(termInfo);
+            termInfoMapper.insertSelective(termInfo);
+//            创建term的recordinglist
             RecordingList recordingList = new RecordingList();
             recordingList.setTermid(termInfo.getId());
-            recordingListMapper.insert(recordingList);
+            recordingListMapper.insertSelective(recordingList);
+
             termInfo.setRecordingids(recordingList.getId().toString());
+            termInfoMapper.updateByPrimaryKeySelective(termInfo);
+
             return new ResponseEntity(RespCode.SUCCESS, termInfo);
         }catch (Exception e){
             logger.info(e);

@@ -7,10 +7,7 @@ import com.renchaigao.fangpu.domain.response.ResponseEntity;
 import com.renchaigao.fangpu.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping(value = "/user")
@@ -22,6 +19,12 @@ public class UserController {
     @ResponseBody
     public ResponseEntity userAddInfo(@RequestBody UserInfo userInfo){
         return usrserviceimpl.addUser(userInfo);
+    }
+
+    @GetMapping(value = "/getinfo/{userid}" , consumes = "application/json")
+    @ResponseBody
+    public ResponseEntity userAddInfo(@PathVariable("userid") Integer userid){
+        return usrserviceimpl.getUserinfo(userid);
     }
 
     @PostMapping(value = "/login" , consumes = "application/json")

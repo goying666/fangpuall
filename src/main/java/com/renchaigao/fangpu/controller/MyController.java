@@ -16,11 +16,11 @@ public class MyController {
     @Autowired
     MyserviceImpl myserviceImpl;
 
-    @PostMapping(value = "/myterms/add/",consumes = "application/json")
-    @ResponseBody
-    public ResponseEntity addMyTermsInfo(@RequestBody MyTerms myTerms){
-        return myserviceImpl.addMyTerms(myTerms);
-    }
+//    @PostMapping(value = "/myterms/add/",consumes = "application/json")
+//    @ResponseBody
+//    public ResponseEntity addMyTermsInfo(@RequestBody MyTerms myTerms){
+//        return myserviceImpl.addMyTerms(myTerms);
+//    }
 
     @GetMapping(value = "/myterms/get/{id}",consumes = "application/json")
     @ResponseBody
@@ -36,11 +36,11 @@ public class MyController {
             @PathVariable("flagStr") String flagStr){
         return myserviceImpl.updateMyTermsByTermId(id,termId,flagStr);
     }
-    @PostMapping(value = "/myrecording/add/",consumes = "application/json")
-    @ResponseBody
-    public ResponseEntity addMyRecordingInfo(@RequestBody MyRecording myRecording){
-        return myserviceImpl.addMyRecordings(myRecording);
-    }
+//    @PostMapping(value = "/myrecording/add/",consumes = "application/json")
+//    @ResponseBody
+//    public ResponseEntity addMyRecordingInfo(@RequestBody MyRecording myRecording){
+//        return myserviceImpl.addMyRecordings(myRecording);
+//    }
 
     @GetMapping(value = "/myrecording/get/{id}",consumes = "application/json")
     @ResponseBody
@@ -48,7 +48,7 @@ public class MyController {
         return myserviceImpl.getMyRecordingsByUserId(id);
     }
 
-    @PostMapping(value = "/myrecording/{id}/recordinId/{recordinId}/flag/{flagStr}" , consumes = "application/json")
+    @GetMapping(value = "/myrecording/{id}/recordinId/{recordinId}/flag/{flagStr}" , consumes = "application/json")
     @ResponseBody
     public ResponseEntity updateMyRecording(
             @PathVariable("id") Integer id,
