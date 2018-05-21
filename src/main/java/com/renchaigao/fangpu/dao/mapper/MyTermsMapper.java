@@ -11,6 +11,8 @@ public interface MyTermsMapper {
 
     MyTerms selectByPrimaryKey(Integer id);
 
+//    MyTerms[] selectByFivePrimaryKey(Integer id1,Integer id2,Integer id3,Integer id4,Integer id5);
+
     int updateByPrimaryKeySelective(MyTerms record);
 
     int updateByPrimaryKey(MyTerms record);

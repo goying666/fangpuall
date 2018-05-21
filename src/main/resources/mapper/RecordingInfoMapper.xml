@@ -33,7 +33,7 @@
     delete from recordinginfo
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.RecordingInfo" >
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.RecordingInfo" useGeneratedKeys="true" keyProperty="id">
     insert into recordinginfo (id, termid, terminfo, 
       userid, path, address, 
       filename, tingnum, zannum, 
@@ -47,7 +47,7 @@
       #{sharenum,jdbcType=INTEGER}, #{useravatarurl,jdbcType=VARCHAR}, #{termclass,jdbcType=VARCHAR}, 
       #{usernickname,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.RecordingInfo" >
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.RecordingInfo" useGeneratedKeys="true" keyProperty="id">
     insert into recordinginfo
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >

@@ -20,13 +20,13 @@
     delete from myrecording
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.MyRecording" >
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.MyRecording" useGeneratedKeys="true" keyProperty="id">
     insert into myrecording (id, userid, allrecordinglist, 
       recordingnum)
     values (#{id,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{allrecordinglist,jdbcType=VARCHAR}, 
       #{recordingnum,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.MyRecording" >
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.MyRecording" useGeneratedKeys="true" keyProperty="id">
     insert into myrecording
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >

@@ -1,6 +1,8 @@
 package com.renchaigao.fangpu.service.impl;
+
 import com.renchaigao.fangpu.dao.RecordingInfo;
 import com.renchaigao.fangpu.dao.RecordingList;
+import com.renchaigao.fangpu.dao.mapper.MyRecordingMapper;
 import com.renchaigao.fangpu.dao.mapper.RecordingInfoMapper;
 import com.renchaigao.fangpu.dao.mapper.RecordingListMapper;
 import com.renchaigao.fangpu.domain.response.RespCode;
@@ -10,13 +12,15 @@ import com.renchaigao.fangpu.service.RecordingService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.util.Date;
 
 @Service
-public class RecordingServiceImpl implements RecordingService{
+public class RecordingServiceImpl implements RecordingService {
 
     private static Logger logger = Logger.getLogger(RecordingServiceImpl.class);
 
@@ -26,17 +30,23 @@ public class RecordingServiceImpl implements RecordingService{
     @Autowired
     RecordingListMapper recordingListMapper;
 
+    @Autowired
+    MyserviceImpl myservice;
+
+    @Autowired
+    MyRecordingMapper myRecordingMapper;
+
     public ResponseEntity addRecording(RecordingInfo recordingInfo) {
         try {
             recordingInfo.setAddtime(new Date());
             recordingInfoMapper.insert(recordingInfo);
-            return new ResponseEntity(RespCode.SUCCESS , recordingInfo);
-        }catch (Exception e){
-            return new ResponseEntity(RespCode.EXCEPTION,e);
+            return new ResponseEntity(RespCode.SUCCESS, recordingInfo);
+        } catch (Exception e) {
+            return new ResponseEntity(RespCode.EXCEPTION, e);
         }
     }
 
-    public ResponseEntity addRecordingFile(MultipartFile file,Integer userId,Integer recordingId) {
+    public ResponseEntity addRecordingFile(MultipartFile file, Integer userId, Integer recordingId) {
 
         String filePathOnService = creatRecodingPathOnservice(userId);
         if (!file.isEmpty()) {
@@ -48,10 +58,10 @@ public class RecordingServiceImpl implements RecordingService{
                 out.close();
             } catch (FileNotFoundException e) {
                 logger.warn(e);
-                return new ResponseEntity(RespCode.WARN,e.getMessage());
+                return new ResponseEntity(RespCode.WARN, e.getMessage());
             } catch (IOException eIO) {
                 logger.warn(eIO);
-                return new ResponseEntity(RespCode.WARN,eIO.getMessage());
+                return new ResponseEntity(RespCode.WARN, eIO.getMessage());
             }
 //            acordingdao.updateAcoPathById(acordingId,filePathOnService);
 //            acordingdao.updateAcoFileNameById(acordingId,file.getOriginalFilename());
@@ -61,9 +71,41 @@ public class RecordingServiceImpl implements RecordingService{
             recordingInfoMapper.updateByPrimaryKeySelective(recordingInfo);
 //            acordingdao.updateAcoFileNameAndPathById(recordingId,file.getOriginalFilename(),filePathOnService);
             //待测试：更新后返回的形参recordingInfo是否涵盖了所有值需要测试；
-            return new ResponseEntity(RespCode.SUCCESS,recordingInfo);
+            return new ResponseEntity(RespCode.SUCCESS, recordingInfo);
         } else {
             return new ResponseEntity(RespCode.FILENONE);
+        }
+    }
+
+    public ResponseEntity downloadRecordingFile(HttpServletResponse res, String path, String filename) {
+        res.setHeader("content-type", "multipart/form-data");
+        res.setContentType("application/octet-stream");
+        res.setHeader("Content-Disposition", "attachment;filename=" + filename);
+        byte[] buff = new byte[1024];
+        BufferedInputStream bis = null;
+        OutputStream os = null;
+        try {
+            os = res.getOutputStream();
+            bis = new BufferedInputStream(new FileInputStream(
+                    new File(path + filename)));
+            int i = bis.read(buff);
+            while (i != -1) {
+                os.write(buff, 0, buff.length);
+                os.flush();
+                i = bis.read(buff);
+            }
+            return new ResponseEntity(RespCode.SUCCESS);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new ResponseEntity(RespCode.EXCEPTION,e);
+        } finally {
+            if (bis != null) {
+                try {
+                    bis.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
@@ -81,49 +123,47 @@ public class RecordingServiceImpl implements RecordingService{
     public ResponseEntity getRecordingInfo(RecordingInfo recordingInfo) {
         try {
             recordingInfoMapper.selectByPrimaryKey(recordingInfo.getId());
-            return new ResponseEntity(RespCode.SUCCESS , recordingInfo);
-        }catch (Exception e){
-            return new ResponseEntity(RespCode.EXCEPTION,e);
+            return new ResponseEntity(RespCode.SUCCESS, recordingInfo);
+        } catch (Exception e) {
+            return new ResponseEntity(RespCode.EXCEPTION, e);
         }
     }
 
-    public ResponseEntity addRecordingList(RecordingList recordingList){
+    public ResponseEntity addRecordingList(RecordingList recordingList) {
         try {
             recordingListMapper.insert(recordingList);
-            return new ResponseEntity(RespCode.SUCCESS , recordingList);
-        }catch (Exception e){
-            return new ResponseEntity(RespCode.EXCEPTION,e);
+            return new ResponseEntity(RespCode.SUCCESS, recordingList);
+        } catch (Exception e) {
+            return new ResponseEntity(RespCode.EXCEPTION, e);
         }
 
     }
 
     public ResponseEntity updateRecordingList(Integer listId,
-                                                Integer newRecordingId,
-                                                String flagStr){
+                                              Integer newRecordingId,
+                                              String flagStr) {
         try {
             RecordingList recordingList = recordingListMapper.selectByPrimaryKey(listId);
-            if (flagStr.equals("add")){
+            if (flagStr.equals("add")) {
                 //将最新的id拼接进原有string的末尾；通过"-"
                 recordingList.setRecordingliststr(recordingList.getRecordingliststr()
                         + "-" + newRecordingId.toString());
                 recordingListMapper.updateByPrimaryKeySelective(recordingList);
-                return new ResponseEntity(RespCode.ADDSUCCES,recordingList);
-            }else if (flagStr.equals("delete")){
+                return new ResponseEntity(RespCode.ADDSUCCES, recordingList);
+            } else if (flagStr.equals("delete")) {
                 recordingList.setRecordingliststr(normalFunc.deleteStrArg(
                         recordingList.getRecordingliststr(),
                         newRecordingId.toString()));
                 recordingListMapper.updateByPrimaryKeySelective(recordingList);
-                return new ResponseEntity(RespCode.DELETSUCCES,recordingList);
-            }else {
+                return new ResponseEntity(RespCode.DELETSUCCES, recordingList);
+            } else {
                 return new ResponseEntity(RespCode.WRONGINFO);
             }
 
-        }catch (Exception e){
+        } catch (Exception e) {
             return new ResponseEntity(RespCode.EXCEPTION);
         }
     }
-
-
 
 
 }

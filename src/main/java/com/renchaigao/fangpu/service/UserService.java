@@ -12,9 +12,9 @@ public interface UserService {
 
     ResponseEntity userLogin(UserLogin userLogin);
 
-//    public ResponseEntity userAddressAdd(UserInfo userInfo);
-//
-//    public ResponseEntity userAddressUpdate(UserInfo userInfo);
+    ResponseEntity userAddressAdd(UserInfo userInfo);
+
+    ResponseEntity userAddressUpdate(UserInfo userInfo);
 //
 //    public String searchUserByNickname(String nickName);
 //

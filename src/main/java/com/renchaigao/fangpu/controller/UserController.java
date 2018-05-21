@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping(value = "/user/")
+@RequestMapping(value = "/user")
 public class UserController {
     @Autowired
     private UserServiceImpl usrserviceimpl;
@@ -30,16 +30,16 @@ public class UserController {
         return usrserviceimpl.userLogin(userLogin);
     }
 
-//    @PostMapping(value = "/address/add" , consumes = "application/json")
-//    @ResponseBody
-//    public ResponseEntity userAddressAdd(@RequestBody UserInfo userInfo){
-//        return usrserviceimpl.userAddressAdd(userInfo);
-//    }
-//    @PostMapping(value = "/address/update" , consumes = "application/json")
-//    @ResponseBody
-//    public ResponseEntity userAddressUpdate(@RequestBody UserInfo userInfo){
-//        return usrserviceimpl.userAddressUpdate(userInfo);
-//    }
+    @PostMapping(value = "/address/add" , consumes = "application/json")
+    @ResponseBody
+    public ResponseEntity userAddressAdd(@RequestBody UserInfo userInfo){
+        return usrserviceimpl.userAddressAdd(userInfo);
+    }
+    @PostMapping(value = "/address/update" , consumes = "application/json")
+    @ResponseBody
+    public ResponseEntity userAddressUpdate(@RequestBody UserInfo userInfo){
+        return usrserviceimpl.userAddressUpdate(userInfo);
+    }
 
 //    @PostMapping(value = "/logintest1" , consumes = "application/json")
 //    @ResponseBody

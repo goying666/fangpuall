@@ -38,7 +38,7 @@
     delete from userinfo
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.UserInfo" >
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.UserInfo" useGeneratedKeys="true" keyProperty="id">
     insert into userinfo (id, nickname, avatarurl,
       gender, city, province, 
       country, language, unionid, 
@@ -52,7 +52,7 @@
       #{myrecordingid,jdbcType=INTEGER}, #{myrankid,jdbcType=INTEGER}, #{myshareid,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.UserInfo" >
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.UserInfo" useGeneratedKeys="true" keyProperty="id">
     insert into userinfo
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >

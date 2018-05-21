@@ -10,6 +10,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+
 @Controller
 @RequestMapping(value = "/recording/")
 public class RecordingController {
@@ -18,13 +21,19 @@ public class RecordingController {
     @Autowired
     private RecordingServiceImpl recordingServiceImpl;
 
-    @PostMapping(value = "/add/info" , consumes = "application/json")
+    @PostMapping(value = "/info/add" , consumes = "application/json")
     @ResponseBody
     public ResponseEntity addRecordingInfo(@RequestBody RecordingInfo recordingInfo){
         return recordingServiceImpl.addRecording(recordingInfo);
     }
 
-    @PostMapping(value = "/add/file/{userId}/aid/{recordingId}" , consumes = "multipart/form-data")
+    @PostMapping(value = "/info/get" , consumes = "application/json")
+    @ResponseBody
+    public ResponseEntity getRecordingInfo(@RequestBody RecordingInfo recordingInfo){
+        return recordingServiceImpl.getRecordingInfo(recordingInfo);
+    }
+
+    @PostMapping(value = "/file/add/{userId}/recId/{recordingId}" , consumes = "multipart/form-data")
     @ResponseBody
     public ResponseEntity addRecordingFile(@RequestParam("file") MultipartFile file,
                                           @PathVariable("userId") Integer userId,
@@ -32,32 +41,26 @@ public class RecordingController {
         return recordingServiceImpl.addRecordingFile(file,userId,recordingId);
     }
 
-    @PostMapping(value = "/get/info" , consumes = "application/json")
+    @GetMapping(value = "/file/get/{path}/filename/{filename}")
     @ResponseBody
-    public ResponseEntity getRecordingInfo(@RequestBody RecordingInfo recordingInfo){
-        return recordingServiceImpl.getRecordingInfo(recordingInfo);
+    public ResponseEntity downloadRecordingFile(HttpServletResponse res,
+                                      @PathVariable("path") String path,
+                                      @PathVariable("filename") String filename) {
+        return recordingServiceImpl.downloadRecordingFile(res,path,filename);
     }
 
+//    @PostMapping(value = "/recordinglist/add" , consumes = "application/json")
+//    @ResponseBody
+//    public ResponseEntity addRecordingList(@RequestBody RecordingList recordingList){
+//        return recordingServiceImpl.addRecordingList(recordingList);
+//    }
 
-    @PostMapping(value = "/RecordingOfTerm/add" , consumes = "application/json")
+    @PostMapping(value = "/recordinglist/{listId}/recordingId/{recordingId}/flag/{flag}" , consumes = "application/json")
     @ResponseBody
-    public ResponseEntity addRecordingOfTerm(@RequestBody RecordingList recordingList){
-        return recordingServiceImpl.addRecordingList(recordingList);
-    }
-
-    @PostMapping(value = "/RecordingOfTerm/{listId}/recordingId/{recordingId}/flag/{flag}" , consumes = "application/json")
-    @ResponseBody
-    public ResponseEntity updateRecordingOfTerm(
+    public ResponseEntity updateRecordingList(
             @PathVariable("listId") Integer listId,
             @PathVariable("recordingId") Integer recordingId,
             @PathVariable("flag") String flag){
         return recordingServiceImpl.updateRecordingList(listId,recordingId,flag);
     }
-
-//    @GetMapping(value = "/get/file/{acordingId}")
-//    @ResponseBody
-//    public
-
-
-
 }

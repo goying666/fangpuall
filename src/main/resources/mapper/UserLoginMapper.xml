@@ -19,13 +19,13 @@
     delete from userlogin
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.UserLogin" >
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.UserLogin" useGeneratedKeys="true" keyProperty="id">
     insert into userlogin (id, logindate, userid
       )
     values (#{id,jdbcType=INTEGER}, #{logindate,jdbcType=VARCHAR}, #{userid,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.UserLogin" >
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.UserLogin" useGeneratedKeys="true" keyProperty="id">
     insert into userlogin
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >

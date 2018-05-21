@@ -20,13 +20,13 @@
     delete from myshare
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.MyShare" >
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.MyShare" useGeneratedKeys="true" keyProperty="id">
     insert into myshare (id, userid, termsharelist, 
       recordingsharelist)
     values (#{id,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{termsharelist,jdbcType=VARCHAR}, 
       #{recordingsharelist,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.MyShare" >
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.MyShare" useGeneratedKeys="true" keyProperty="id">
     insert into myshare
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >

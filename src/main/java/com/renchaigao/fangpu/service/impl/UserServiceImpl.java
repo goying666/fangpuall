@@ -25,7 +25,6 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserInfoMapper userInfoMapper;
 
-
     @Autowired
     private UserLoginMapper userLoginMapper;
 
@@ -38,7 +37,10 @@ public class UserServiceImpl implements UserService {
             if (userUse != null) {
                 return new ResponseEntity(RespCode.OLDUSER, userUse);
             } else {
-                userInfoMapper.insert(userInfo);
+                userInfoMapper.insertSelective(userInfo);
+                UserLogin userLogin = new UserLogin();
+                userLogin.setLogindate(dateUse.DateToString(new Date()));//新增用户登录时间信息
+                userLoginMapper.insert(userLogin);
                 return new ResponseEntity(RespCode.NEWUSER, userInfo);
             }
         } catch (Exception e) {
@@ -54,34 +56,23 @@ public class UserServiceImpl implements UserService {
     }
 
 //
-//    public ResponseEntity userAddressAdd(UserInfo userInfo){
-//        UserInfo userUse = null;
-//        ResponseEntity userLoginRet = new ResponseEntity(RespCode.WARN, null);
-//        try {
-//            logger.info("run here : 1 ");
-//            userUse = userInfoMapper.selectByPrimaryKey(userInfo.getId());
-//            if (userUse != null) {
-//                userLoginRet = new ResponseEntity(RespCode.SUCCESS, userUse);
-//                logger.info("SUCCESS: user nickname:" + userInfo.getNickName() + "is find in system!");
-//
-//                if (userUse.getAddress() == null) {
-//                    logger.info("user.address is empty and updateUserAddressByID : " +
-//                            userInfoMapper.updateUserAddressByID(userUse.getId(),userInfo.getAddress()));
-//                    userLoginRet = new ResponseEntity(RespCode.SUCCESS,
-//                            userInfoMapper.findUserByNikename(userInfo.getNickName()));
-//                } else {
-//                    userLoginRet = new ResponseEntity(RespCode.SUCCESS,userUse);
-//                    logger.info("user address is on ：" + userUse.getAddress());
-//                }
-//            } else {
-//                logger.info("user "+ userInfo.getNickName() +" is not in system!");
-//            }
-//        } catch (Exception e) {
-//            logger.info("Exception e : " + e);
-//            userLoginRet.setData(e);
-//        }
-//        return userLoginRet;
-//    };
+    public ResponseEntity userAddressAdd(UserInfo userInfo){
+        try {
+            userInfoMapper.updateByPrimaryKeySelective(userInfo);
+            return new ResponseEntity(RespCode.SUCCESS, userInfo);
+        } catch (Exception e) {
+            return new ResponseEntity(RespCode.EXCEPTION, e);
+        }
+    }
+
+    public ResponseEntity userAddressUpdate(UserInfo userInfo){
+        try {
+            userInfoMapper.updateByPrimaryKeySelective(userInfo);
+            return new ResponseEntity(RespCode.SUCCESS, userInfo);
+        } catch (Exception e) {
+            return new ResponseEntity(RespCode.EXCEPTION, e);
+        }
+    }
 //
 //
 //    public ResponseEntity userAddressUpdate(UserInfo userInfo){

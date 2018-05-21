@@ -1,7 +1,9 @@
 package com.renchaigao.fangpu.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
+import com.renchaigao.fangpu.dao.RecordingList;
 import com.renchaigao.fangpu.dao.TermInfo;
+import com.renchaigao.fangpu.dao.mapper.RecordingListMapper;
 import com.renchaigao.fangpu.dao.mapper.TermInfoMapper;
 import com.renchaigao.fangpu.dao.mapper.UserInfoMapper;
 import com.renchaigao.fangpu.domain.response.RespCode;
@@ -22,11 +24,17 @@ public class TermServiceImpl implements TermService {
 
     @Autowired
     UserInfoMapper userInfoMapper;
+    @Autowired
+    RecordingListMapper recordingListMapper;
 
     public ResponseEntity addTerm(TermInfo termInfo) {
         try{
             termInfo.setAddtime(new Date());//小程序端没有添加创建时间，由后台填写该字段；
             termInfoMapper.insert(termInfo);
+            RecordingList recordingList = new RecordingList();
+            recordingList.setTermid(termInfo.getId());
+            recordingListMapper.insert(recordingList);
+            termInfo.setRecordingids(recordingList.getId().toString());
             return new ResponseEntity(RespCode.SUCCESS, termInfo);
         }catch (Exception e){
             logger.info(e);

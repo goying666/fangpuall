@@ -11,22 +11,28 @@
     id, userid, alltermlist, termnum
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from myterms
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <!--<select id="selectByFivePrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >-->
+    <!--select-->
+    <!--<include refid="Base_Column_List" />-->
+    <!--from myterms-->
+    <!--where id = #{id1,jdbcType=INTEGER} OR id = #{id2,jdbcType=INTEGER} OR id = #{id3,jdbcType=INTEGER} OR id = #{id4,jdbcType=INTEGER} OR id = #{id5,jdbcType=INTEGER}-->
+  <!--</select>-->
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from myterms
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.MyTerms" >
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.MyTerms" useGeneratedKeys="true" keyProperty="id">
     insert into myterms (id, userid, alltermlist, 
       termnum)
     values (#{id,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{alltermlist,jdbcType=VARCHAR}, 
       #{termnum,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.MyTerms" >
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.MyTerms" useGeneratedKeys="true" keyProperty="id">
     insert into myterms
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >

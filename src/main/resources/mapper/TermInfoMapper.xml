@@ -28,7 +28,7 @@
     delete from terminfo
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.TermInfo" >
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.TermInfo" useGeneratedKeys="true" keyProperty="id">
     insert into terminfo (id, ownerid, content, 
       address, introduce, zannum, 
       tingnum, recordingnum, addtime, 
@@ -38,7 +38,7 @@
       #{tingnum,jdbcType=INTEGER}, #{recordingnum,jdbcType=INTEGER}, #{addtime,jdbcType=TIMESTAMP}, 
       #{recordingids,jdbcType=VARCHAR}, #{termclass,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.TermInfo" >
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.TermInfo" useGeneratedKeys="true" keyProperty="id">
     insert into terminfo
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
