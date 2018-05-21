@@ -1,5 +1,6 @@
 package com.renchaigao.fangpu.service.impl;
 
+import com.alibaba.fastjson.JSONObject;
 import com.renchaigao.fangpu.dao.RecordingInfo;
 import com.renchaigao.fangpu.dao.RecordingList;
 import com.renchaigao.fangpu.dao.mapper.MyRecordingMapper;
@@ -17,7 +18,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class RecordingServiceImpl implements RecordingService {
@@ -49,6 +53,7 @@ public class RecordingServiceImpl implements RecordingService {
     public ResponseEntity addRecordingFile(MultipartFile file, Integer userId, Integer recordingId) {
 
         String filePathOnService = creatRecodingPathOnservice(userId);
+        System.out.println("filePathOnService is : " + filePathOnService);
         if (!file.isEmpty()) {
             try {
                 BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(
@@ -68,6 +73,7 @@ public class RecordingServiceImpl implements RecordingService {
             RecordingInfo recordingInfo = new RecordingInfo();
             recordingInfo.setId(recordingId);
             recordingInfo.setFilename(file.getOriginalFilename());
+            recordingInfo.setPath(filePathOnService);
             recordingInfoMapper.updateByPrimaryKeySelective(recordingInfo);
 //            acordingdao.updateAcoFileNameAndPathById(recordingId,file.getOriginalFilename(),filePathOnService);
             //待测试：更新后返回的形参recordingInfo是否涵盖了所有值需要测试；
@@ -122,8 +128,8 @@ public class RecordingServiceImpl implements RecordingService {
 
     public ResponseEntity getRecordingInfo(RecordingInfo recordingInfo) {
         try {
-            recordingInfoMapper.selectByPrimaryKey(recordingInfo.getId());
-            return new ResponseEntity(RespCode.SUCCESS, recordingInfo);
+            return new ResponseEntity(RespCode.SUCCESS, recordingInfoMapper.
+                    selectByPrimaryKey(recordingInfo.getId()));
         } catch (Exception e) {
             return new ResponseEntity(RespCode.EXCEPTION, e);
         }
@@ -146,8 +152,12 @@ public class RecordingServiceImpl implements RecordingService {
             RecordingList recordingList = recordingListMapper.selectByPrimaryKey(listId);
             if (flagStr.equals("add")) {
                 //将最新的id拼接进原有string的末尾；通过"-"
-                recordingList.setRecordingliststr(recordingList.getRecordingliststr()
-                        + "-" + newRecordingId.toString());
+
+                if (recordingList.getRecordingliststr() != null)
+                    recordingList.setRecordingliststr(recordingList.getRecordingliststr() + "-" + newRecordingId.toString());
+                else
+                    recordingList.setRecordingliststr(newRecordingId.toString());
+
                 recordingListMapper.updateByPrimaryKeySelective(recordingList);
                 return new ResponseEntity(RespCode.ADDSUCCES, recordingList);
             } else if (flagStr.equals("delete")) {
@@ -162,6 +172,20 @@ public class RecordingServiceImpl implements RecordingService {
 
         } catch (Exception e) {
             return new ResponseEntity(RespCode.EXCEPTION);
+        }
+    }
+
+    public ResponseEntity getRecordingList(Integer id){
+        try {
+            RecordingList recordingList = recordingListMapper.selectByPrimaryKey(id);
+            List<String> termrecordingList = Arrays.asList(recordingList.getRecordingliststr().split("-"));
+            List<RecordingInfo> recordingInfos = new ArrayList<>();
+            for (String str : termrecordingList) {
+                recordingInfos.add(recordingInfoMapper.selectByPrimaryKey(Integer.parseInt(str)));
+            }
+            return new ResponseEntity(RespCode.SUCCESS, recordingInfos);
+        } catch (Exception e) {
+            return new ResponseEntity(RespCode.EXCEPTION, e);
         }
     }
 
