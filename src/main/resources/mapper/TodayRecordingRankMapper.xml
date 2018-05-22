@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.renchaigao.fangpu.dao.mapper.TodayRecordingRankMapper" >
+  <resultMap id="BaseResultMap" type="com.renchaigao.fangpu.dao.TodayRecordingRank" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="todaydate" property="todaydate" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.renchaigao.fangpu.dao.TodayRecordingRank" extends="BaseResultMap" >
+    <result column="recordingranks" property="recordingranks" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, todaydate
+  </sql>
+  <sql id="Blob_Column_List" >
+    recordingranks
+  </sql>
+
+  <select id="selectByDate" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from todayrecordingrank
+    where todaydate = #{todaydate,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from todayrecordingrank
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from todayrecordingrank
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.TodayRecordingRank" >
+    insert into todayrecordingrank (id, todaydate, recordingranks
+      )
+    values (#{id,jdbcType=INTEGER}, #{todaydate,jdbcType=VARCHAR}, #{recordingranks,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.TodayRecordingRank" >
+    insert into todayrecordingrank
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="todaydate != null" >
+        todaydate,
+      </if>
+      <if test="recordingranks != null" >
+        recordingranks,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="todaydate != null" >
+        #{todaydate,jdbcType=VARCHAR},
+      </if>
+      <if test="recordingranks != null" >
+        #{recordingranks,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.renchaigao.fangpu.dao.TodayRecordingRank" >
+    update todayrecordingrank
+    <set >
+      <if test="todaydate != null" >
+        todaydate = #{todaydate,jdbcType=VARCHAR},
+      </if>
+      <if test="recordingranks != null" >
+        recordingranks = #{recordingranks,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.renchaigao.fangpu.dao.TodayRecordingRank" >
+    update todayrecordingrank
+    set todaydate = #{todaydate,jdbcType=VARCHAR},
+      recordingranks = #{recordingranks,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.renchaigao.fangpu.dao.TodayRecordingRank" >
+    update todayrecordingrank
+    set todaydate = #{todaydate,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

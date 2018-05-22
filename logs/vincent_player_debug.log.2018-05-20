@@ -1,0 +1,109 @@
+2018-05-19 16:03:30  [ http-nio-7899-exec-3:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-19 16:03:30  [ http-nio-7899-exec-3:44 ] - [ DEBUG ]  {conn-10001, pstmt-20000} exit cache
+2018-05-19 16:03:30  [ http-nio-7899-exec-3:92 ] - [ INFO ]  Exception e : org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"userinfo"
+    where unionid = 123' at line 6
+### The error may exist in file [/Users/goying/project/fangpu/javaCode/fangpu/target/classes/mapper/UserInfoMapper.xml]
+### The error may involve com.renchaigao.fangpu.dao.mapper.UserInfoMapper.selectByUnionID-Inline
+### The error occurred while setting parameters
+### SQL: select           id, nickname, avatarurl, gender, city, province, country, language, unionid, address,      vip, mytermsid, myrecordingid, myrankid, myshareid         from "userinfo"     where unionid = ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"userinfo"
+    where unionid = 123' at line 6
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"userinfo"
+    where unionid = 123' at line 6
+2018-05-19 16:05:50  [ Thread-17:140040 ] - [ INFO ]  {dataSource-1} closed
+2018-05-19 16:07:22  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-19 16:07:22  [ http-nio-7899-exec-1:36 ] - [ DEBUG ]  {conn-10001, pstmt-20000} exit cache
+2018-05-19 16:07:22  [ http-nio-7899-exec-1:68 ] - [ INFO ]  Exception e : org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"userinfo"
+    where id = 1' at line 6
+### The error may exist in file [/Users/goying/project/fangpu/javaCode/fangpu/target/classes/mapper/UserInfoMapper.xml]
+### The error may involve com.renchaigao.fangpu.dao.mapper.UserInfoMapper.selectByPrimaryKey-Inline
+### The error occurred while setting parameters
+### SQL: select           id, nickname, avatarurl, gender, city, province, country, language, unionid, address,      vip, mytermsid, myrecordingid, myrankid, myshareid         from "userinfo"     where id = ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"userinfo"
+    where id = 1' at line 6
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"userinfo"
+    where id = 1' at line 6
+2018-05-19 16:14:34  [ Thread-18:432184 ] - [ INFO ]  {dataSource-1} closed
+2018-05-19 16:20:29  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-19 16:20:29  [ http-nio-7899-exec-1:48 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-19 16:20:52  [ Thread-20:22464 ] - [ DEBUG ]  {conn-10001, pstmt-20000} exit cache
+2018-05-19 16:20:52  [ Thread-20:22468 ] - [ INFO ]  {dataSource-1} closed
+2018-05-19 16:21:38  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-19 16:21:38  [ http-nio-7899-exec-1:38 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-19 16:21:38  [ http-nio-7899-exec-1:76 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-19 16:24:10  [ http-nio-7899-exec-3:151938 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-19 16:33:37  [ Thread-19:719121 ] - [ DEBUG ]  {conn-10001, pstmt-20002} exit cache
+2018-05-19 16:33:37  [ Thread-19:719123 ] - [ DEBUG ]  {conn-10001, pstmt-20000} exit cache
+2018-05-19 16:33:37  [ Thread-19:719123 ] - [ DEBUG ]  {conn-10001, pstmt-20001} exit cache
+2018-05-19 16:33:37  [ Thread-19:719128 ] - [ INFO ]  {dataSource-1} closed
+2018-05-20 11:38:20  [ http-nio-7899-exec-2:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-20 11:38:20  [ http-nio-7899-exec-2:56 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-20 11:38:20  [ http-nio-7899-exec-2:67 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-20 11:39:13  [ http-nio-7899-exec-2:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-20 11:39:13  [ http-nio-7899-exec-2:43 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-20 11:40:30  [ http-nio-7899-exec-2:77165 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-20 11:41:09  [ http-nio-7899-exec-2:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-20 11:41:09  [ http-nio-7899-exec-2:62 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-20 11:41:09  [ http-nio-7899-exec-2:75 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-20 11:41:50  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-20 11:41:50  [ http-nio-7899-exec-1:45 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-20 11:41:56  [ http-nio-7899-exec-1:5772 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-20 11:45:11  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-20 11:45:11  [ http-nio-7899-exec-1:57 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-20 11:45:11  [ http-nio-7899-exec-1:68 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-20 11:47:17  [ http-nio-7899-exec-2:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-20 11:47:17  [ http-nio-7899-exec-2:85 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-20 11:47:17  [ http-nio-7899-exec-2:97 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-20 11:48:41  [ http-nio-7899-exec-2:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-20 11:48:41  [ http-nio-7899-exec-2:54 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-20 11:48:41  [ http-nio-7899-exec-2:64 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-20 11:49:32  [ http-nio-7899-exec-2:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-20 11:49:33  [ http-nio-7899-exec-2:49 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-20 11:49:33  [ http-nio-7899-exec-2:62 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-20 11:51:10  [ http-nio-7899-exec-2:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-20 11:51:11  [ http-nio-7899-exec-2:47 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-20 11:51:11  [ http-nio-7899-exec-2:57 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-20 11:52:18  [ http-nio-7899-exec-2:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-20 11:52:18  [ http-nio-7899-exec-2:45 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-20 11:52:18  [ http-nio-7899-exec-2:54 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-20 11:54:27  [ http-nio-7899-exec-2:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-20 11:54:27  [ http-nio-7899-exec-2:58 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-20 11:54:27  [ http-nio-7899-exec-2:67 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-20 11:55:04  [ http-nio-7899-exec-2:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-20 11:55:04  [ http-nio-7899-exec-2:58 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-20 11:55:04  [ http-nio-7899-exec-2:70 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-20 16:32:55  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-20 16:32:55  [ http-nio-7899-exec-1:39 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-20 16:32:55  [ http-nio-7899-exec-1:61 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-20 16:34:20  [ http-nio-7899-exec-3:84815 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-20 16:39:23  [ http-nio-7899-exec-6:387834 ] - [ DEBUG ]  skip not validate connection.
+2018-05-20 16:39:23  [ http-nio-7899-exec-6:387937 ] - [ DEBUG ]  {conn-10002, pstmt-20003} enter cache
+2018-05-20 16:50:05  [ http-nio-7899-exec-8:1029959 ] - [ DEBUG ]  skip not validate connection.
+2018-05-20 16:50:05  [ http-nio-7899-exec-8:1030076 ] - [ DEBUG ]  {conn-10003, pstmt-20004} enter cache
+2018-05-20 16:51:18  [ http-nio-7899-exec-10:1102826 ] - [ DEBUG ]  {conn-10003, pstmt-20005} enter cache
+2018-05-20 17:00:16  [ http-nio-7899-exec-2:1640951 ] - [ DEBUG ]  skip not validate connection.
+2018-05-20 17:00:16  [ http-nio-7899-exec-2:1641024 ] - [ DEBUG ]  {conn-10004, pstmt-20006} enter cache
+2018-05-20 17:01:46  [ http-nio-7899-exec-4:1730649 ] - [ DEBUG ]  {conn-10004, pstmt-20007} enter cache
+2018-05-20 17:17:24  [ http-nio-7899-exec-2:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-20 17:17:24  [ http-nio-7899-exec-2:41 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-20 17:17:24  [ http-nio-7899-exec-2:67 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-20 17:17:24  [ http-nio-7899-exec-2:89 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-20 17:18:59  [ http-nio-7899-exec-6:95635 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-20 21:27:17  [ http-nio-7899-exec-9:14993334 ] - [ DEBUG ]  skip not validate connection.
+2018-05-20 21:27:17  [ http-nio-7899-exec-9:14993468 ] - [ DEBUG ]  {conn-10002, pstmt-20004} enter cache
+2018-05-20 21:28:45  [ http-nio-7899-exec-1:15081888 ] - [ DEBUG ]  {conn-10002, pstmt-20005} enter cache
+2018-05-20 21:29:05  [ http-nio-7899-exec-3:15101769 ] - [ DEBUG ]  {conn-10002, pstmt-20006} enter cache
+2018-05-20 21:39:51  [ http-nio-7899-exec-10:15747844 ] - [ DEBUG ]  {conn-10002, pstmt-20007} enter cache
+2018-05-20 21:49:45  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-20 21:49:46  [ http-nio-7899-exec-1:38 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-20 21:49:46  [ http-nio-7899-exec-1:54 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-20 21:51:24  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-20 21:51:25  [ http-nio-7899-exec-1:41 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-20 21:51:25  [ http-nio-7899-exec-1:77 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-20 21:54:08  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-20 21:54:08  [ http-nio-7899-exec-1:40 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-20 21:54:08  [ http-nio-7899-exec-1:85 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-20 21:56:16  [ http-nio-7899-exec-3:128308 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-20 21:57:41  [ http-nio-7899-exec-5:213224 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
