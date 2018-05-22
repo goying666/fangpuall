@@ -31,3 +31,43 @@
 2018-05-22 10:08:55  [ http-nio-7899-exec-3:1708024 ] - [ DEBUG ]  {conn-10002, pstmt-20029} enter cache
 2018-05-22 10:08:55  [ http-nio-7899-exec-3:1708041 ] - [ DEBUG ]  {conn-10002, pstmt-20030} enter cache
 2018-05-22 10:08:55  [ http-nio-7899-exec-4:1708074 ] - [ DEBUG ]  {conn-10002, pstmt-20031} enter cache
+2018-05-22 16:31:24  [ http-nio-7899-exec-2:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-22 16:31:24  [ http-nio-7899-exec-2:39 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-22 16:51:57  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-22 16:51:57  [ http-nio-7899-exec-1:39 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-22 17:18:39  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-22 17:18:39  [ http-nio-7899-exec-1:39 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-22 17:18:39  [ http-nio-7899-exec-1:84 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-22 17:19:32  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-22 17:19:32  [ http-nio-7899-exec-1:52 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-22 17:19:32  [ http-nio-7899-exec-1:103 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-22 18:07:23  [ http-nio-7899-exec-3:2870978 ] - [ DEBUG ]  skip not validate connection.
+2018-05-22 18:07:23  [ http-nio-7899-exec-3:2871083 ] - [ DEBUG ]  {conn-10002, pstmt-20002} enter cache
+2018-05-22 19:44:19  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-22 19:44:19  [ http-nio-7899-exec-1:47 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-22 19:45:40  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-22 19:45:40  [ http-nio-7899-exec-1:43 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-22 19:47:18  [ http-nio-7899-exec-2:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-22 19:47:18  [ http-nio-7899-exec-2:51 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-22 19:54:18  [ http-nio-7899-exec-10:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-22 19:54:18  [ http-nio-7899-exec-10:48 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-22 19:54:18  [ http-nio-7899-exec-10:99 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-22 19:55:08  [ http-nio-7899-exec-9:50021 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-22 19:55:08  [ http-nio-7899-exec-9:50033 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-22 19:56:49  [ http-nio-7899-exec-1:1 ] - [ INFO ]  {dataSource-1} inited
+2018-05-22 19:56:49  [ http-nio-7899-exec-1:44 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-22 20:00:24  [ http-nio-7899-exec-1:215719 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-22 20:00:50  [ http-nio-7899-exec-10:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-22 20:00:50  [ http-nio-7899-exec-10:47 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-22 20:04:15  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-22 20:04:15  [ http-nio-7899-exec-1:67 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-22 20:08:37  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-22 20:08:37  [ http-nio-7899-exec-1:42 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-22 20:12:09  [ http-nio-7899-exec-9:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-22 20:12:09  [ http-nio-7899-exec-9:45 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-22 20:13:35  [ http-nio-7899-exec-10:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-22 20:13:35  [ http-nio-7899-exec-10:46 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-22 20:13:35  [ http-nio-7899-exec-10:54 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-22 20:15:14  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-22 20:15:14  [ http-nio-7899-exec-1:48 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-22 20:15:14  [ http-nio-7899-exec-1:58 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache

@@ -23,8 +23,13 @@
     id, termid, terminfo, userid, path, address, filename, tingnum, zannum, badnum, addtime, 
     shoucangnum, sharenum, useravatarurl, termclass, usernickname
   </sql>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from recordinginfo
+  </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from recordinginfo
     where id = #{id,jdbcType=INTEGER}

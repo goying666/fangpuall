@@ -19,12 +19,14 @@
     recordingids, termclass
   </sql>
 
-  <select id="selectAll" resultMap="BaseResultMap" >
-    select id,zannum
+  <select id="selectAll" resultMap="BaseResultMap"  >
+    select
+    <include refid="Base_Column_List" />
     from terminfo
   </select>
+
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from terminfo
     where id = #{id,jdbcType=INTEGER}

@@ -4,5 +4,8 @@ import com.renchaigao.fangpu.domain.response.ResponseEntity;
 
 public interface RankService {
 
-    ResponseEntity getTodayRank(String adminStr);
+    ResponseEntity addTermsRank();
+    ResponseEntity getTermsRank(Integer endnum);
+    ResponseEntity addRecordingRank();
+    ResponseEntity getRecordingRank(Integer endnum);
 }

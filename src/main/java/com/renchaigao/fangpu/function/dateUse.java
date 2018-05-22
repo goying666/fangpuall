@@ -3,9 +3,16 @@ package com.renchaigao.fangpu.function;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class dateUse {
+
+    public static String getTodayDate(){
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        System.out.println(formatter.format(new Date()));
+        return formatter.format(new Date());
+    }
 
     public static String DateToString(Date dateValue){
         if (dateValue != null){

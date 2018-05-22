@@ -35,6 +35,7 @@ public class MyserviceImpl implements MyService {
 
     @Autowired
     MyRecordingMapper myRecordingMapper;
+
     @Autowired
     RecordingInfoMapper recordingInfoMapper;
 
