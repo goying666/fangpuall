@@ -2,6 +2,8 @@ package com.renchaigao.fangpu.dao.mapper;
 
 import com.renchaigao.fangpu.dao.TermInfo;
 
+import java.util.List;
+
 public interface TermInfoMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -10,6 +12,7 @@ public interface TermInfoMapper {
     int insertSelective(TermInfo record);
 
     TermInfo selectByPrimaryKey(Integer id);
+    List<TermInfo> selectAll();
 
     int updateByPrimaryKeySelective(TermInfo record);
 
