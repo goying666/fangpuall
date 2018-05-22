@@ -37,13 +37,13 @@
     delete from todaytermrank
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.TodayTermRank" >
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.TodayTermRank" useGeneratedKeys="true" keyProperty="id">
     insert into todaytermrank (id, todaydate, termranks
       )
     values (#{id,jdbcType=INTEGER}, #{todaydate,jdbcType=VARCHAR}, #{termranks,jdbcType=LONGVARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.TodayTermRank" >
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.TodayTermRank" useGeneratedKeys="true" keyProperty="id">
     insert into todaytermrank
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >

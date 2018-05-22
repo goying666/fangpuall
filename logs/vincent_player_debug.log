@@ -103,3 +103,89 @@
 2018-05-23 01:43:45  [ Thread-9:1823554 ] - [ DEBUG ]  {conn-10004, pstmt-20007} exit cache
 2018-05-23 01:43:45  [ Thread-9:1823554 ] - [ DEBUG ]  {conn-10004, pstmt-20008} exit cache
 2018-05-23 01:43:45  [ Thread-9:1823556 ] - [ INFO ]  {dataSource-1} closed
+2018-05-23 01:48:35  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-23 01:48:35  [ http-nio-7899-exec-1:62 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-23 01:48:35  [ http-nio-7899-exec-1:90 ] - [ DEBUG ]  {conn-10001, pstmt-20001} exit cache
+2018-05-23 01:48:35  [ http-nio-7899-exec-1:126 ] - [ INFO ]  org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+### The error may involve com.renchaigao.fangpu.dao.mapper.RecordingListMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into recordinglist
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2018-05-23 02:01:08  [ Thread-9:753214 ] - [ DEBUG ]  {conn-10001, pstmt-20000} exit cache
+2018-05-23 02:01:08  [ Thread-9:753225 ] - [ INFO ]  {dataSource-1} closed
+2018-05-23 02:01:54  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-23 02:01:54  [ http-nio-7899-exec-1:53 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-23 02:01:54  [ http-nio-7899-exec-1:84 ] - [ DEBUG ]  {conn-10001, pstmt-20001} exit cache
+2018-05-23 02:01:54  [ http-nio-7899-exec-1:119 ] - [ INFO ]  org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+### The error may involve com.renchaigao.fangpu.dao.mapper.RecordingListMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into recordinglist
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2018-05-23 02:17:58  [ http-nio-7899-exec-3:964374 ] - [ DEBUG ]  {conn-10002, pstmt-20002} enter cache
+2018-05-23 02:17:58  [ http-nio-7899-exec-3:964411 ] - [ DEBUG ]  {conn-10002, pstmt-20003} enter cache
+2018-05-23 02:17:59  [ http-nio-7899-exec-3:964434 ] - [ DEBUG ]  {conn-10002, pstmt-20004} enter cache
+2018-05-23 02:17:59  [ http-nio-7899-exec-3:964454 ] - [ DEBUG ]  {conn-10002, pstmt-20005} enter cache
+2018-05-23 02:17:59  [ http-nio-7899-exec-3:964480 ] - [ DEBUG ]  {conn-10002, pstmt-20006} enter cache
+2018-05-23 02:17:59  [ http-nio-7899-exec-3:964500 ] - [ DEBUG ]  {conn-10002, pstmt-20007} enter cache
+2018-05-23 02:17:59  [ http-nio-7899-exec-4:965261 ] - [ DEBUG ]  skip not validate connection.
+2018-05-23 02:17:59  [ http-nio-7899-exec-4:965279 ] - [ DEBUG ]  {conn-10002, pstmt-20008} enter cache
+2018-05-23 02:17:59  [ http-nio-7899-exec-4:965295 ] - [ DEBUG ]  {conn-10002, pstmt-20009} enter cache
+2018-05-23 02:18:02  [ http-nio-7899-exec-5:968133 ] - [ DEBUG ]  {conn-10002, pstmt-20010} enter cache
+2018-05-23 02:18:49  [ http-nio-7899-exec-6:1014670 ] - [ DEBUG ]  {conn-10002, pstmt-20011} enter cache
+2018-05-23 02:18:49  [ http-nio-7899-exec-6:1014691 ] - [ DEBUG ]  {conn-10002, pstmt-20012} exit cache
+2018-05-23 02:18:49  [ http-nio-7899-exec-6:1014692 ] - [ INFO ]  org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+### The error may involve com.renchaigao.fangpu.dao.mapper.RecordingListMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into recordinglist
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2018-05-23 02:28:04  [ Thread-9:1569634 ] - [ DEBUG ]  {conn-10002, pstmt-20002} exit cache
+2018-05-23 02:28:04  [ Thread-9:1569635 ] - [ DEBUG ]  {conn-10002, pstmt-20003} exit cache
+2018-05-23 02:28:04  [ Thread-9:1569636 ] - [ DEBUG ]  {conn-10002, pstmt-20004} exit cache
+2018-05-23 02:28:04  [ Thread-9:1569636 ] - [ DEBUG ]  {conn-10002, pstmt-20005} exit cache
+2018-05-23 02:28:04  [ Thread-9:1569637 ] - [ DEBUG ]  {conn-10002, pstmt-20006} exit cache
+2018-05-23 02:28:04  [ Thread-9:1569637 ] - [ DEBUG ]  {conn-10002, pstmt-20007} exit cache
+2018-05-23 02:28:04  [ Thread-9:1569637 ] - [ DEBUG ]  {conn-10002, pstmt-20008} exit cache
+2018-05-23 02:28:04  [ Thread-9:1569637 ] - [ DEBUG ]  {conn-10002, pstmt-20009} exit cache
+2018-05-23 02:28:04  [ Thread-9:1569637 ] - [ DEBUG ]  {conn-10002, pstmt-20010} exit cache
+2018-05-23 02:28:04  [ Thread-9:1569637 ] - [ DEBUG ]  {conn-10002, pstmt-20011} exit cache
+2018-05-23 02:28:04  [ Thread-9:1569640 ] - [ INFO ]  {dataSource-1} closed
+2018-05-23 02:29:09  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-23 02:29:09  [ http-nio-7899-exec-2:62 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-23 02:29:09  [ http-nio-7899-exec-1:78 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-23 02:29:09  [ http-nio-7899-exec-1:88 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-23 02:29:10  [ http-nio-7899-exec-1:154 ] - [ DEBUG ]  {conn-10002, pstmt-20004} enter cache
+2018-05-23 02:29:10  [ http-nio-7899-exec-2:155 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-23 02:29:10  [ http-nio-7899-exec-2:183 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-23 02:29:10  [ http-nio-7899-exec-2:204 ] - [ DEBUG ]  {conn-10001, pstmt-20006} enter cache
+2018-05-23 02:29:10  [ http-nio-7899-exec-2:238 ] - [ DEBUG ]  {conn-10001, pstmt-20007} enter cache
+2018-05-23 02:29:10  [ http-nio-7899-exec-2:269 ] - [ DEBUG ]  {conn-10001, pstmt-20008} enter cache
+2018-05-23 02:29:14  [ http-nio-7899-exec-3:4537 ] - [ DEBUG ]  {conn-10001, pstmt-20009} enter cache
+2018-05-23 02:29:56  [ http-nio-7899-exec-4:46386 ] - [ DEBUG ]  {conn-10001, pstmt-20010} enter cache
+2018-05-23 02:29:56  [ http-nio-7899-exec-4:46412 ] - [ DEBUG ]  {conn-10001, pstmt-20011} enter cache
+2018-05-23 02:29:56  [ http-nio-7899-exec-4:46437 ] - [ DEBUG ]  {conn-10001, pstmt-20012} enter cache
+2018-05-23 02:29:56  [ http-nio-7899-exec-5:46458 ] - [ DEBUG ]  {conn-10001, pstmt-20013} enter cache
+2018-05-23 02:29:56  [ http-nio-7899-exec-5:46475 ] - [ DEBUG ]  {conn-10001, pstmt-20014} enter cache
+2018-05-23 02:31:45  [ http-nio-7899-exec-10:155425 ] - [ DEBUG ]  {conn-10002, pstmt-20015} enter cache
+2018-05-23 02:36:11  [ Thread-9:421435 ] - [ DEBUG ]  {conn-10002, pstmt-20004} exit cache
+2018-05-23 02:36:11  [ Thread-9:421436 ] - [ DEBUG ]  {conn-10002, pstmt-20015} exit cache
+2018-05-23 02:36:11  [ Thread-9:421438 ] - [ DEBUG ]  {conn-10001, pstmt-20000} exit cache
+2018-05-23 02:36:11  [ Thread-9:421438 ] - [ DEBUG ]  {conn-10001, pstmt-20003} exit cache
+2018-05-23 02:36:11  [ Thread-9:421438 ] - [ DEBUG ]  {conn-10001, pstmt-20005} exit cache
+2018-05-23 02:36:11  [ Thread-9:421438 ] - [ DEBUG ]  {conn-10001, pstmt-20006} exit cache
+2018-05-23 02:36:11  [ Thread-9:421439 ] - [ DEBUG ]  {conn-10001, pstmt-20007} exit cache
+2018-05-23 02:36:11  [ Thread-9:421439 ] - [ DEBUG ]  {conn-10001, pstmt-20008} exit cache
+2018-05-23 02:36:11  [ Thread-9:421439 ] - [ DEBUG ]  {conn-10001, pstmt-20009} exit cache
+2018-05-23 02:36:11  [ Thread-9:421439 ] - [ DEBUG ]  {conn-10001, pstmt-20010} exit cache
+2018-05-23 02:36:11  [ Thread-9:421439 ] - [ DEBUG ]  {conn-10001, pstmt-20011} exit cache
+2018-05-23 02:36:11  [ Thread-9:421439 ] - [ DEBUG ]  {conn-10001, pstmt-20012} exit cache
+2018-05-23 02:36:11  [ Thread-9:421439 ] - [ DEBUG ]  {conn-10001, pstmt-20014} exit cache
+2018-05-23 02:36:11  [ Thread-9:421439 ] - [ DEBUG ]  {conn-10001, pstmt-20013} exit cache
+2018-05-23 02:36:11  [ Thread-9:421440 ] - [ DEBUG ]  {conn-10001, pstmt-20001} exit cache
+2018-05-23 02:36:11  [ Thread-9:421440 ] - [ DEBUG ]  {conn-10001, pstmt-20002} exit cache
+2018-05-23 02:36:11  [ Thread-9:421440 ] - [ INFO ]  {dataSource-1} closed

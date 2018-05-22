@@ -21,13 +21,13 @@
     delete from myterms
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.MyTerms" >
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.MyTerms" useGeneratedKeys="true" keyProperty="id">
     insert into myterms (id, userid, alltermlist, 
       termnum)
     values (#{id,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{alltermlist,jdbcType=VARCHAR}, 
       #{termnum,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.MyTerms" >
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.MyTerms" useGeneratedKeys="true" keyProperty="id">
     insert into myterms
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
