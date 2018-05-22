@@ -12,21 +12,24 @@
     <result column="recordingnum" property="recordingnum" jdbcType="INTEGER" />
     <result column="addtime" property="addtime" jdbcType="TIMESTAMP" />
     <result column="recordingids" property="recordingids" jdbcType="VARCHAR" />
+    <result column="usernickname" property="usernickname" jdbcType="VARCHAR" />
     <result column="termclass" property="termclass" jdbcType="VARCHAR" />
+    <result column="useravatarurl" property="useravatarurl" jdbcType="VARCHAR" />
+    <result column="sharenum" property="sharenum" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, ownerid, content, address, introduce, zannum, tingnum, recordingnum, addtime, 
-    recordingids, termclass
+    recordingids, usernickname, termclass, useravatarurl, sharenum
   </sql>
 
-  <select id="selectAll" resultMap="BaseResultMap"  >
+  <select id="selectAll" resultMap="BaseResultMap">
     select
-    <include refid="Base_Column_List" />
+    <include refid="Base_Column_List"/>
     from terminfo
   </select>
 
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select
+    select 
     <include refid="Base_Column_List" />
     from terminfo
     where id = #{id,jdbcType=INTEGER}
@@ -35,17 +38,19 @@
     delete from terminfo
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.TermInfo" useGeneratedKeys="true" keyProperty="id">
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.TermInfo" >
     insert into terminfo (id, ownerid, content, 
       address, introduce, zannum, 
       tingnum, recordingnum, addtime, 
-      recordingids, termclass)
+      recordingids, usernickname, termclass, 
+      useravatarurl, sharenum)
     values (#{id,jdbcType=INTEGER}, #{ownerid,jdbcType=INTEGER}, #{content,jdbcType=VARCHAR}, 
       #{address,jdbcType=VARCHAR}, #{introduce,jdbcType=VARCHAR}, #{zannum,jdbcType=INTEGER}, 
       #{tingnum,jdbcType=INTEGER}, #{recordingnum,jdbcType=INTEGER}, #{addtime,jdbcType=TIMESTAMP}, 
-      #{recordingids,jdbcType=VARCHAR}, #{termclass,jdbcType=VARCHAR})
+      #{recordingids,jdbcType=VARCHAR}, #{usernickname,jdbcType=VARCHAR}, #{termclass,jdbcType=VARCHAR}, 
+      #{useravatarurl,jdbcType=VARCHAR}, #{sharenum,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.TermInfo" useGeneratedKeys="true" keyProperty="id">
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.TermInfo" >
     insert into terminfo
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -78,8 +83,17 @@
       <if test="recordingids != null" >
         recordingids,
       </if>
+      <if test="usernickname != null" >
+        usernickname,
+      </if>
       <if test="termclass != null" >
         termclass,
+      </if>
+      <if test="useravatarurl != null" >
+        useravatarurl,
+      </if>
+      <if test="sharenum != null" >
+        sharenum,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -113,8 +127,17 @@
       <if test="recordingids != null" >
         #{recordingids,jdbcType=VARCHAR},
       </if>
+      <if test="usernickname != null" >
+        #{usernickname,jdbcType=VARCHAR},
+      </if>
       <if test="termclass != null" >
         #{termclass,jdbcType=VARCHAR},
+      </if>
+      <if test="useravatarurl != null" >
+        #{useravatarurl,jdbcType=VARCHAR},
+      </if>
+      <if test="sharenum != null" >
+        #{sharenum,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -148,8 +171,17 @@
       <if test="recordingids != null" >
         recordingids = #{recordingids,jdbcType=VARCHAR},
       </if>
+      <if test="usernickname != null" >
+        usernickname = #{usernickname,jdbcType=VARCHAR},
+      </if>
       <if test="termclass != null" >
         termclass = #{termclass,jdbcType=VARCHAR},
+      </if>
+      <if test="useravatarurl != null" >
+        useravatarurl = #{useravatarurl,jdbcType=VARCHAR},
+      </if>
+      <if test="sharenum != null" >
+        sharenum = #{sharenum,jdbcType=INTEGER},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -165,7 +197,10 @@
       recordingnum = #{recordingnum,jdbcType=INTEGER},
       addtime = #{addtime,jdbcType=TIMESTAMP},
       recordingids = #{recordingids,jdbcType=VARCHAR},
-      termclass = #{termclass,jdbcType=VARCHAR}
+      usernickname = #{usernickname,jdbcType=VARCHAR},
+      termclass = #{termclass,jdbcType=VARCHAR},
+      useravatarurl = #{useravatarurl,jdbcType=VARCHAR},
+      sharenum = #{sharenum,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

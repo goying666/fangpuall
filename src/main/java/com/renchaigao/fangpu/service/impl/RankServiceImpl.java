@@ -1,6 +1,5 @@
 package com.renchaigao.fangpu.service.impl;
 
-import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.renchaigao.fangpu.dao.RecordingInfo;
 import com.renchaigao.fangpu.dao.TermInfo;

@@ -71,3 +71,35 @@
 2018-05-22 20:15:14  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
 2018-05-22 20:15:14  [ http-nio-7899-exec-1:48 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
 2018-05-22 20:15:14  [ http-nio-7899-exec-1:58 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-23 01:13:21  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-23 01:13:21  [ http-nio-7899-exec-1:48 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-23 01:13:29  [ http-nio-7899-exec-2:7254 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-23 01:13:29  [ http-nio-7899-exec-2:7271 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-23 01:25:34  [ http-nio-7899-exec-4:732781 ] - [ DEBUG ]  skip not validate connection.
+2018-05-23 01:25:34  [ http-nio-7899-exec-4:732935 ] - [ DEBUG ]  {conn-10002, pstmt-20003} enter cache
+2018-05-23 01:30:58  [ http-nio-7899-exec-7:1056389 ] - [ DEBUG ]  {conn-10003, pstmt-20004} enter cache
+2018-05-23 01:30:59  [ http-nio-7899-exec-6:1057226 ] - [ DEBUG ]  skip not validate connection.
+2018-05-23 01:30:59  [ http-nio-7899-exec-6:1057243 ] - [ DEBUG ]  {conn-10003, pstmt-20005} enter cache
+2018-05-23 01:34:10  [ http-nio-7899-exec-10:1249049 ] - [ DEBUG ]  {conn-10004, pstmt-20006} enter cache
+2018-05-23 01:34:10  [ http-nio-7899-exec-10:1249070 ] - [ DEBUG ]  {conn-10004, pstmt-20007} enter cache
+2018-05-23 01:37:16  [ http-nio-7899-exec-4:1434964 ] - [ DEBUG ]  {conn-10004, pstmt-20008} enter cache
+2018-05-23 01:37:16  [ http-nio-7899-exec-4:1434990 ] - [ DEBUG ]  {conn-10004, pstmt-20009} exit cache
+2018-05-23 01:37:16  [ http-nio-7899-exec-4:1435034 ] - [ INFO ]  org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+### The error may involve com.renchaigao.fangpu.dao.mapper.RecordingListMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into recordinglist
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2018-05-23 01:38:40  [ http-nio-7899-exec-7:1518645 ] - [ DEBUG ]  {conn-10004, pstmt-20010} exit cache
+2018-05-23 01:38:40  [ http-nio-7899-exec-7:1518648 ] - [ INFO ]  org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+### The error may involve com.renchaigao.fangpu.dao.mapper.RecordingListMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into recordinglist
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2018-05-23 01:43:45  [ Thread-9:1823553 ] - [ DEBUG ]  {conn-10004, pstmt-20006} exit cache
+2018-05-23 01:43:45  [ Thread-9:1823554 ] - [ DEBUG ]  {conn-10004, pstmt-20007} exit cache
+2018-05-23 01:43:45  [ Thread-9:1823554 ] - [ DEBUG ]  {conn-10004, pstmt-20008} exit cache
+2018-05-23 01:43:45  [ Thread-9:1823556 ] - [ INFO ]  {dataSource-1} closed

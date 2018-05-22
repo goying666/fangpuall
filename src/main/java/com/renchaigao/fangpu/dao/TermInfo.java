@@ -23,7 +23,13 @@ public class TermInfo {
 
     private String recordingids;
 
+    private String usernickname;
+
     private String termclass;
+
+    private String useravatarurl;
+
+    private Integer sharenum;
 
     public Integer getId() {
         return id;
@@ -105,11 +111,35 @@ public class TermInfo {
         this.recordingids = recordingids == null ? null : recordingids.trim();
     }
 
+    public String getUsernickname() {
+        return usernickname;
+    }
+
+    public void setUsernickname(String usernickname) {
+        this.usernickname = usernickname == null ? null : usernickname.trim();
+    }
+
     public String getTermclass() {
         return termclass;
     }
 
     public void setTermclass(String termclass) {
         this.termclass = termclass == null ? null : termclass.trim();
+    }
+
+    public String getUseravatarurl() {
+        return useravatarurl;
+    }
+
+    public void setUseravatarurl(String useravatarurl) {
+        this.useravatarurl = useravatarurl == null ? null : useravatarurl.trim();
+    }
+
+    public Integer getSharenum() {
+        return sharenum;
+    }
+
+    public void setSharenum(Integer sharenum) {
+        this.sharenum = sharenum;
     }
 }

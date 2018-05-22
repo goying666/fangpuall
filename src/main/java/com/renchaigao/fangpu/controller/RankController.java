@@ -24,7 +24,6 @@ public class RankController {
     public ResponseEntity getTermsRank(@PathVariable("endnum") Integer endnum){
         return rankServiceImpl.getTermsRank(endnum);
     }
-
     @GetMapping(value = "/addrecordingrank",consumes = "application/json")
     @ResponseBody
     public ResponseEntity addRecordingRank(){
