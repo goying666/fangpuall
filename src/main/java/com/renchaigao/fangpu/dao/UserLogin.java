@@ -1,6 +1,8 @@
 package com.renchaigao.fangpu.dao;
 
-public class UserLogin {
+import java.io.Serializable;
+
+public class UserLogin implements Serializable {
     private Integer id;
 
     private String logindate;
@@ -30,4 +32,6 @@ public class UserLogin {
     public void setUserid(Integer userid) {
         this.userid = userid;
     }
+
+
 }

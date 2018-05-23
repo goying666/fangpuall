@@ -1,6 +1,8 @@
 package com.renchaigao.fangpu.dao;
 
-public class UserInfo {
+import java.io.Serializable;
+
+public class UserInfo implements Serializable {
     private Integer id;
 
     private String nickname;
@@ -30,6 +32,28 @@ public class UserInfo {
     private Integer myrankid;
 
     private Integer myshareid;
+
+    public UserInfo(){
+
+    }
+
+    public UserInfo(Integer id,String nickname,String avatarurl,String gender,String city,String province,String country,String language,Integer unionid,String address,String vip,Integer mytermsid,Integer myrecordingid,Integer myrankid,Integer myshareid){
+        this.id = id;
+        this.nickname = nickname;
+        this.avatarurl = avatarurl;
+        this.gender = gender;
+        this.city = city;
+        this.province = province;
+        this.country = country;
+        this.language = language;
+        this.unionid = unionid;
+        this.address = address;
+        this.vip = vip;
+        this.mytermsid = mytermsid;
+        this.myrecordingid = myrecordingid;
+        this.myrankid = myrankid;
+        this.myshareid = myshareid;
+    }
 
     public Integer getId() {
         return id;
@@ -149,5 +173,26 @@ public class UserInfo {
 
     public void setMyshareid(Integer myshareid) {
         this.myshareid = myshareid;
+    }
+
+    @Override
+    public String toString() {
+        return "UserInfo{" +
+                "id='" + id+ '\'' +
+                ", nickname='" + nickname+ '\'' +
+                ", avatarurl='" + avatarurl+ '\'' +
+                ", gender='" + gender+ '\'' +
+                ", city='" + city+ '\'' +
+                ", province='" + province+ '\'' +
+                ", country='" + country+ '\'' +
+                ", language='" + language+ '\'' +
+                ", unionid='" + unionid+ '\'' +
+                ", address='" + address+ '\'' +
+                ", vip='" + vip+ '\'' +
+                ", mytermsid='" + mytermsid+ '\'' +
+                ", myrecordingid='" + myrecordingid+ '\'' +
+                ", myrankid='" + myrankid+ '\'' +
+                ", myshareid='" + myshareid+ '\'' +
+                '}';
     }
 }

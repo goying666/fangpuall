@@ -252,3 +252,7 @@
 2018-05-23 10:08:01  [ http-nio-7899-exec-7:690486 ] - [ DEBUG ]  {conn-10004, pstmt-20006} enter cache
 2018-05-23 10:08:01  [ http-nio-7899-exec-8:690521 ] - [ DEBUG ]  {conn-10004, pstmt-20007} enter cache
 2018-05-23 10:08:25  [ http-nio-7899-exec-9:714373 ] - [ DEBUG ]  {conn-10004, pstmt-20008} enter cache
+2018-05-23 15:42:35  [ http-nio-7899-exec-2:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-23 15:42:35  [ http-nio-7899-exec-2:42 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-23 15:54:36  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-23 15:54:36  [ http-nio-7899-exec-1:38 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache

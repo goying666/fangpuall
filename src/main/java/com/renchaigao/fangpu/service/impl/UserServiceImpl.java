@@ -14,12 +14,15 @@ import com.renchaigao.fangpu.domain.response.RespCode;
 import com.renchaigao.fangpu.domain.response.ResponseEntity;
 import com.renchaigao.fangpu.domain.wx.WxUserInfo;
 import com.renchaigao.fangpu.function.dateUse;
+import com.renchaigao.fangpu.function.wxlogin.SHA1;
+import com.renchaigao.fangpu.function.wxlogin.WXCore;
 import com.renchaigao.fangpu.service.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -52,8 +55,30 @@ public class UserServiceImpl implements UserService {
                 + "&grant_type=authorization_code";
         try {
             JSONObject jsonUse = new JSONObject();
-            org.springframework.http.ResponseEntity<List> responseEntity = restTemplate.getForEntity(urlStr,List.class);
-            return new ResponseEntity(RespCode.SUCCESS,responseEntity);
+            org.springframework.http.ResponseEntity<String> responseEntity =
+                restTemplate.getForEntity(urlStr,String.class);
+            jsonUse = JSONObject.parseObject(responseEntity.getBody());
+//
+//            WxUserInfo wxUserInfo1 = JSONObject.parse(jsonUse.to);
+            String session_key = jsonUse.getString("session_key");
+            String unionid = jsonUse.getString("unionid");
+//            判断用户signature 正确性
+            String ServiceSignatura = SHA1.encode(jsonUse.getString("rawData") + session_key);
+            String wxSignatura = jsonUse.getString("signature");
+            String encryptedData = jsonUse.getString("encryptedData");
+            String iv = jsonUse.getString("iv");
+            String jsondata = WXCore.decrypt(
+                    "wx5f1755206e7513a2" , encryptedData , session_key , iv);
+
+            System.out.println(
+                    "session_key is : " + session_key +
+                            "unionid is : " + unionid +
+                            "ServiceSignatura is : " + ServiceSignatura +
+                            "wxSignatura is : " + wxSignatura +
+                            "encryptedData is : " + encryptedData +
+                            "iv is : " + iv +
+                            "jsondata is : " + jsondata);
+            return new ResponseEntity(RespCode.SUCCESS,JSONObject.parseObject(jsondata));
         } catch (Exception e) {
             return new ResponseEntity(RespCode.EXCEPTION, e);
         }
@@ -105,6 +130,21 @@ public class UserServiceImpl implements UserService {
             return new ResponseEntity(RespCode.EXCEPTION, e);
         }
     }
+    public UserInfo getUserinfoTest() {
+        System.out.println("run in : getUserinfoTest");
+//        List<UserInfo> list = new ArrayList<>();
+//        UserInfo userInfo1 = new UserInfo();
+//        UserInfo userInfo2 = new UserInfo();
+        UserInfo userInfo3 = new UserInfo();
+//        userInfo1.setId(1);
+//        userInfo2.setId(2);
+        userInfo3.setId(3);
+//        list.set(0,userInfo1);
+//        list.set(1,userInfo2);
+//        list.set(2,userInfo3);
+        return userInfo3;
+    }
+
 
     public ResponseEntity userLogin(UserLogin userLogin) {
         userLogin.setLogindate(dateUse.DateToString(new Date()));//新增用户登录时间信息
