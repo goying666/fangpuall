@@ -3,6 +3,7 @@ package com.renchaigao.fangpu.service;
 import com.renchaigao.fangpu.dao.UserInfo;
 import com.renchaigao.fangpu.dao.UserLogin;
 import com.renchaigao.fangpu.domain.response.ResponseEntity;
+import com.renchaigao.fangpu.domain.wx.WxUserInfo;
 
 
 public interface UserService {
@@ -16,6 +17,8 @@ public interface UserService {
     ResponseEntity userAddressAdd(UserInfo userInfo);
 
     ResponseEntity userAddressUpdate(UserInfo userInfo);
+
+    ResponseEntity userWxLogin(WxUserInfo wxUserInfo);
 //
 //    public String searchUserByNickname(String nickName);
 //

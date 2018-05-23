@@ -12,6 +12,7 @@ public enum  RespCode {
     NEWUSER(2,"新用户,已添加"),
     ADDSUCCES(3,"添加成功"),
     DELETSUCCES(4,"删除成功"),
+    TERMSEND(5,"词条刷完咯"),
     WRONGINFO(-4,"错误指令"),
     EXCEPTION(-2, "抛出异常"),
     FILENONE(-3,"文件为空"),

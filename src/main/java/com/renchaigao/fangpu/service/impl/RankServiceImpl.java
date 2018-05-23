@@ -67,8 +67,8 @@ public class RankServiceImpl implements RankService {
             List<String> termRanksList = Arrays.asList(todayTermRanks.split("-"));
             List<TermInfo> termInfoList = new ArrayList<>();
             if (endnum > termRanksList.size())
-                endnum = termRanksList.size();
-            for (int i = endnum - 1; i < endnum + 10 && i < termRanksList.size(); i++)
+                endnum = termRanksList.size() ;
+            for (int i = endnum - 1; i < endnum + 9 && i < termRanksList.size() - 1; i++)
                 termInfoList.add(termInfoMapper.selectByPrimaryKey(Integer.parseInt(termRanksList.get(i))));
             return new ResponseEntity(RespCode.SUCCESS, termInfoList);
         } catch (Exception e) {

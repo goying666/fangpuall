@@ -12,13 +12,16 @@ import com.renchaigao.fangpu.dao.mapper.UserInfoMapper;
 import com.renchaigao.fangpu.dao.mapper.UserLoginMapper;
 import com.renchaigao.fangpu.domain.response.RespCode;
 import com.renchaigao.fangpu.domain.response.ResponseEntity;
+import com.renchaigao.fangpu.domain.wx.WxUserInfo;
 import com.renchaigao.fangpu.function.dateUse;
 import com.renchaigao.fangpu.service.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 //@Transactional
@@ -38,6 +41,23 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     MyRecordingMapper myRecordingMapper;
+
+    private RestTemplate restTemplate = new RestTemplate();
+
+    public ResponseEntity userWxLogin(WxUserInfo wxUserInfo) {
+        String urlStr = "https://api.weixin.qq.com/sns/jscode2session?"
+                + "appid=" + "wx5f1755206e7513a2"
+                + "&secret=" + "4522d3ddaadf5914e32a2b3090b170cd"
+                + "&js_code=" + wxUserInfo.getJscode()
+                + "&grant_type=authorization_code";
+        try {
+            JSONObject jsonUse = new JSONObject();
+            org.springframework.http.ResponseEntity<List> responseEntity = restTemplate.getForEntity(urlStr,List.class);
+            return new ResponseEntity(RespCode.SUCCESS,responseEntity);
+        } catch (Exception e) {
+            return new ResponseEntity(RespCode.EXCEPTION, e);
+        }
+    }
 
     //    //    用户登录
     public ResponseEntity addUser(UserInfo userInfo) {
@@ -77,7 +97,7 @@ public class UserServiceImpl implements UserService {
     }
 
 
-    public ResponseEntity getUserinfo(Integer userid){
+    public ResponseEntity getUserinfo(Integer userid) {
         System.out.println("userid is : " + userid);
         try {
             return new ResponseEntity(RespCode.SUCCESS, userInfoMapper.selectByPrimaryKey(userid));
@@ -93,8 +113,8 @@ public class UserServiceImpl implements UserService {
         return new ResponseEntity(RespCode.NEWUSER, userLogin);
     }
 
-//
-    public ResponseEntity userAddressAdd(UserInfo userInfo){
+    //
+    public ResponseEntity userAddressAdd(UserInfo userInfo) {
         System.out.println("userInfo.getId is : " + userInfo.getId());
         System.out.println("userInfo.getAddress is : " + userInfo.getAddress());
         try {
@@ -105,7 +125,7 @@ public class UserServiceImpl implements UserService {
         }
     }
 
-    public ResponseEntity userAddressUpdate(UserInfo userInfo){
+    public ResponseEntity userAddressUpdate(UserInfo userInfo) {
         try {
             userInfoMapper.updateByPrimaryKeySelective(userInfo);
             return new ResponseEntity(RespCode.SUCCESS, userInfo);
