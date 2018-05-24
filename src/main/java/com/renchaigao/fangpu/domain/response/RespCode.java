@@ -6,7 +6,10 @@ import lombok.ToString;
 @Getter
 @ToString
 public enum  RespCode {
-
+    RANKGETNEW(7, "获取新rank成功"),
+    RANKALLGET(-7, "rank已全被取完"),
+    WXWRONG(-6, "认证失败"),
+    WXPASS(6, "认证通过"),
     SUCCESS(0, "请求成功"),
     OLDUSER(1,"旧用户"),
     NEWUSER(2,"新用户,已添加"),
@@ -23,6 +26,7 @@ public enum  RespCode {
     private String msg;
 
     RespCode(int code, String msg) {
+        this.code = code;
         this.msg = msg;
     }
 

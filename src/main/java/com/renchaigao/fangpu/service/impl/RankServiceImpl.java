@@ -52,8 +52,16 @@ public class RankServiceImpl implements RankService {
             }
             TodayTermRank todayTermRank = new TodayTermRank();
             todayTermRank.setTermranks(allTermStrIdStr);
-            todayTermRank.setTodaydate(dateUse.getTodayDate());
-            todayTermRankMapper.insertSelective(todayTermRank);
+            //判断是否已经有今天的排名，若有，就更新，没有就新增
+            if(todayTermRankMapper.selectByDate(dateUse.getTodayDate()).getId()!=null){
+                System.out.println("today termrank already in DB");
+                todayTermRankMapper.updateByPrimaryKeySelective(todayTermRank);
+            }
+            else {
+                System.out.println("today termrank is none in DB");
+                todayTermRank.setTodaydate(dateUse.getTodayDate());
+                todayTermRankMapper.insertSelective(todayTermRank);
+            }
             System.out.println(JSONObject.toJSONString(allterminfos));
             return new ResponseEntity(RespCode.SUCCESS, allterminfos);
         } catch (Exception e) {
@@ -66,11 +74,17 @@ public class RankServiceImpl implements RankService {
             String todayTermRanks = todayTermRankMapper.selectByDate(dateUse.getTodayDate()).getTermranks();
             List<String> termRanksList = Arrays.asList(todayTermRanks.split("-"));
             List<TermInfo> termInfoList = new ArrayList<>();
-            if (endnum > termRanksList.size())
-                endnum = termRanksList.size() ;
-            for (int i = endnum - 1; i < endnum + 9 && i < termRanksList.size() - 1; i++)
-                termInfoList.add(termInfoMapper.selectByPrimaryKey(Integer.parseInt(termRanksList.get(i))));
-            return new ResponseEntity(RespCode.SUCCESS, termInfoList);
+            System.out.println("termRanksList.size() is : " + termRanksList.size());
+            if (endnum < termRanksList.size()){
+                for (int i = endnum - 1; i < endnum + 9 && i < termRanksList.size(); i++)
+                    termInfoList.add(termInfoMapper.selectByPrimaryKey(Integer.parseInt(termRanksList.get(i))));
+                return new ResponseEntity(RespCode.RANKGETNEW,termInfoList);
+            }else // endnum相等或大于list的size，说明已经取完
+                return new ResponseEntity(RespCode.RANKALLGET);
+//            if (endnum > termRanksList.size())
+//                endnum = termRanksList.size() ;
+//            for (int i = endnum - 1; i < endnum + 9 && i < termRanksList.size() - 1; i++)
+//                termInfoList.add(termInfoMapper.selectByPrimaryKey(Integer.parseInt(termRanksList.get(i))));
         } catch (Exception e) {
             return new ResponseEntity(RespCode.EXCEPTION, e);
         }

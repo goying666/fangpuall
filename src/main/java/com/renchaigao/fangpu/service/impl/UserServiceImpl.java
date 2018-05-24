@@ -54,31 +54,30 @@ public class UserServiceImpl implements UserService {
                 + "&js_code=" + wxUserInfo.getJscode()
                 + "&grant_type=authorization_code";
         try {
-            JSONObject jsonUse = new JSONObject();
             org.springframework.http.ResponseEntity<String> responseEntity =
                 restTemplate.getForEntity(urlStr,String.class);
-            jsonUse = JSONObject.parseObject(responseEntity.getBody());
-//
-//            WxUserInfo wxUserInfo1 = JSONObject.parse(jsonUse.to);
+            JSONObject jsonUse = JSONObject.parseObject(responseEntity.getBody());
             String session_key = jsonUse.getString("session_key");
-            String unionid = jsonUse.getString("unionid");
+            String openid = jsonUse.getString("openid");
 //            判断用户signature 正确性
-            String ServiceSignatura = SHA1.encode(jsonUse.getString("rawData") + session_key);
-            String wxSignatura = jsonUse.getString("signature");
-            String encryptedData = jsonUse.getString("encryptedData");
-            String iv = jsonUse.getString("iv");
+            String ServiceSignatura = SHA1.encode(wxUserInfo.getRawData() + session_key);
+            String wxSignatura = wxUserInfo.getSignature();
+            String encryptedData = wxUserInfo.getEncryptedData();
+            String iv = wxUserInfo.getIv();
             String jsondata = WXCore.decrypt(
                     "wx5f1755206e7513a2" , encryptedData , session_key , iv);
-
             System.out.println(
                     "session_key is : " + session_key +
-                            "unionid is : " + unionid +
+                            "unionid is : " + openid +
                             "ServiceSignatura is : " + ServiceSignatura +
                             "wxSignatura is : " + wxSignatura +
                             "encryptedData is : " + encryptedData +
                             "iv is : " + iv +
                             "jsondata is : " + jsondata);
-            return new ResponseEntity(RespCode.SUCCESS,JSONObject.parseObject(jsondata));
+            if(ServiceSignatura.equals(wxSignatura))
+                return new ResponseEntity(RespCode.WXPASS,JSONObject.parseObject(jsondata));
+            else
+                return new ResponseEntity(RespCode.WXWRONG);
         } catch (Exception e) {
             return new ResponseEntity(RespCode.EXCEPTION, e);
         }
@@ -88,7 +87,6 @@ public class UserServiceImpl implements UserService {
     public ResponseEntity addUser(UserInfo userInfo) {
         System.out.println(JSONObject.toJSONString(userInfo));
         try {
-//            UserInfo userUse = userInfoMapper.selectByPrimaryKey(userInfo.getId());//通过用户的unionid查询是否已在系统
             UserInfo userUse = userInfoMapper.selectByUnionID(userInfo.getUnionid());//通过用户的unionid查询是否已在系统
             if (userUse != null) {
                 return new ResponseEntity(RespCode.OLDUSER, userUse);
