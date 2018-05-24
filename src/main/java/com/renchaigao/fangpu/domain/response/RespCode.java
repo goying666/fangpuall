@@ -6,6 +6,10 @@ import lombok.ToString;
 @Getter
 @ToString
 public enum  RespCode {
+    BADNEWFINISH(9,"点坏成功"),
+    BADOLDFINISH(-9,"取消坏成功"),
+    ZANNEWFINISH(8,"点赞成功"),
+    ZANOLDFINISH(-8,"取消赞成功"),
     RANKGETNEW(7, "获取新rank成功"),
     RANKALLGET(-7, "rank已全被取完"),
     WXWRONG(-6, "认证失败"),

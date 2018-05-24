@@ -15,6 +15,17 @@
   <sql id="Blob_Column_List" >
     zanuseridlist, baduseridlist
   </sql>
+
+
+  <select id="selectByRecordingId" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from recordingnumlist
+    where recordingid = #{recordingid,jdbcType=INTEGER}
+  </select>
+
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />

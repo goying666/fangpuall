@@ -19,4 +19,6 @@ public interface MyZanMapper {
     int updateByPrimaryKeyWithBLOBs(MyZanWithBLOBs record);
 
     int updateByPrimaryKey(MyZan record);
+    int updateZanByPrimaryKey(MyZanWithBLOBs record);
+    int updateBadByPrimaryKey(MyZanWithBLOBs record);
 }

@@ -42,6 +42,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     MyNumMapper myNumMapper;
 
+    @Autowired
+    MyZanMapper myZanMapper;
+
 
     private RestTemplate restTemplate = new RestTemplate();
 
@@ -100,16 +103,24 @@ public class UserServiceImpl implements UserService {
                 myRecording.setUserid(userInfo.getId());
                 myRecordingMapper.insert(myRecording);
 
-                userInfo.setMytermsid(myTerms.getId());
-                userInfo.setMyrecordingid(myRecording.getId());
-
 //                创建我的num：mynum
                 MyNum myNum = new MyNum();
                 myNum.setUserid(userInfo.getId());
                 myNumMapper.insertSelective(myNum);
 
+                MyZanWithBLOBs myZanWithBLOBs = new MyZanWithBLOBs();
+                myZanWithBLOBs.setUserid(userInfo.getId());
+                myZanMapper.insertSelective(myZanWithBLOBs);
+
+                userInfo.setMytermsid(myTerms.getId());
+                userInfo.setMyrecordingid(myRecording.getId());
+
+
 //                 更新userinfo数据
                 userInfoMapper.updateByPrimaryKeySelective(userInfo);
+
+
+
 //                户登录时间信息
                 UserLogin userLogin = new UserLogin();
                 userLogin.setLogindate(dateUse.DateToString(new Date()));

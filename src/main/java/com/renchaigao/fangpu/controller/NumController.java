@@ -20,19 +20,14 @@ public class NumController {
     public ResponseEntity numZanControl(@RequestBody Map<String,Object> reqMap){
         return numServiceImpl.numZanControl(reqMap);
     }
-    @GetMapping(value = "/zan/{userid}/info/{recordingid}",consumes = "application/json")
-    @ResponseBody
-    public ResponseEntity numZanGet(@PathVariable("userid") Integer userid,@PathVariable("recordingid") Integer recordingid){
-        return numServiceImpl.numZanGet(userid , recordingid);
-    }
     @PostMapping(value = "/bad",consumes = "application/json")
     @ResponseBody
     public ResponseEntity numBadControl(@RequestBody Map<String,Object> reqMap){
         return numServiceImpl.numBadControl(reqMap);
     }
-    @GetMapping(value = "/bad/{userid}/info/{recordingid}",consumes = "application/json")
+    @GetMapping(value = "/{userid}/info/{recordingid}",consumes = "application/json")
     @ResponseBody
-    public ResponseEntity numZanGet(@PathVariable("userid") Integer userid,@PathVariable("recordingid") Integer recordingid){
-        return numServiceImpl.numZanGet(userid , recordingid);
+    public ResponseEntity numControlGet(@PathVariable("userid") Integer userid,@PathVariable("recordingid") Integer recordingid){
+        return numServiceImpl.numControlGet(userid , recordingid);
     }
 }

@@ -12,6 +12,8 @@ public interface RecordingNumListMapper {
 
     RecordingNumListWithBLOBs selectByPrimaryKey(Integer id);
 
+    RecordingNumListWithBLOBs selectByRecordingId(Integer recordingid);
+
     int updateByPrimaryKeySelective(RecordingNumListWithBLOBs record);
 
     int updateByPrimaryKeyWithBLOBs(RecordingNumListWithBLOBs record);

@@ -99,4 +99,15 @@
     set userid = #{userid,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <update id="updateZanByPrimaryKey" parameterType="com.renchaigao.fangpu.dao.MyZanWithBLOBs" >
+    update myzan
+    set zanrecordinglist = #{zanrecordinglist,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateBadByPrimaryKey" parameterType="com.renchaigao.fangpu.dao.MyZanWithBLOBs" >
+    update myzan
+    set badrecordinglist = #{badrecordinglist,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
 </mapper>
