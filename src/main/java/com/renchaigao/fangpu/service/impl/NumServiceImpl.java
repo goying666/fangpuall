@@ -55,8 +55,10 @@ public class NumServiceImpl {
                             else
                                 zanlistNew = zanlistNew + "-" + stri;
                         }
-                        
+                        myZanWithBLOBs.setZanrecordinglist(zanlistNew);
+                        myZanMapper.updateByPrimaryKeySelective(myZanWithBLOBs);
 //                  3，方言赞list删除用户；
+
                         System.out.println("recordingid is on");
                     } else {
 //            没赞：1、方言recordingInfo赞+1；

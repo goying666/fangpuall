@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.renchaigao.fangpu.dao.mapper.RecordingNumListMapper" >
+  <resultMap id="BaseResultMap" type="com.renchaigao.fangpu.dao.RecordingNumList" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="recordingid" property="recordingid" jdbcType="INTEGER" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.renchaigao.fangpu.dao.RecordingNumListWithBLOBs" extends="BaseResultMap" >
+    <result column="zanuseridlist" property="zanuseridlist" jdbcType="LONGVARCHAR" />
+    <result column="baduseridlist" property="baduseridlist" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, recordingid
+  </sql>
+  <sql id="Blob_Column_List" >
+    zanuseridlist, baduseridlist
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from recordingnumlist
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from recordingnumlist
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.RecordingNumListWithBLOBs"  useGeneratedKeys="true" keyProperty="id">
+    insert into recordingnumlist (id, recordingid, zanuseridlist, 
+      baduseridlist)
+    values (#{id,jdbcType=INTEGER}, #{recordingid,jdbcType=INTEGER}, #{zanuseridlist,jdbcType=LONGVARCHAR}, 
+      #{baduseridlist,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.RecordingNumListWithBLOBs"  useGeneratedKeys="true" keyProperty="id">
+    insert into recordingnumlist
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="recordingid != null" >
+        recordingid,
+      </if>
+      <if test="zanuseridlist != null" >
+        zanuseridlist,
+      </if>
+      <if test="baduseridlist != null" >
+        baduseridlist,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="recordingid != null" >
+        #{recordingid,jdbcType=INTEGER},
+      </if>
+      <if test="zanuseridlist != null" >
+        #{zanuseridlist,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="baduseridlist != null" >
+        #{baduseridlist,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.renchaigao.fangpu.dao.RecordingNumListWithBLOBs" >
+    update recordingnumlist
+    <set >
+      <if test="recordingid != null" >
+        recordingid = #{recordingid,jdbcType=INTEGER},
+      </if>
+      <if test="zanuseridlist != null" >
+        zanuseridlist = #{zanuseridlist,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="baduseridlist != null" >
+        baduseridlist = #{baduseridlist,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.renchaigao.fangpu.dao.RecordingNumListWithBLOBs" >
+    update recordingnumlist
+    set recordingid = #{recordingid,jdbcType=INTEGER},
+      zanuseridlist = #{zanuseridlist,jdbcType=LONGVARCHAR},
+      baduseridlist = #{baduseridlist,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.renchaigao.fangpu.dao.RecordingNumList" >
+    update recordingnumlist
+    set recordingid = #{recordingid,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

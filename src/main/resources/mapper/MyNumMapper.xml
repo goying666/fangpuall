@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.renchaigao.fangpu.dao.mapper.MyNumMapper" >
+  <resultMap id="BaseResultMap" type="com.renchaigao.fangpu.dao.MyNum" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="todaydate" property="todaydate" jdbcType="VARCHAR" />
+    <result column="zannum" property="zannum" jdbcType="INTEGER" />
+    <result column="badnum" property="badnum" jdbcType="INTEGER" />
+    <result column="termnum" property="termnum" jdbcType="INTEGER" />
+    <result column="recordingnum" property="recordingnum" jdbcType="INTEGER" />
+    <result column="userid" property="userid" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, todaydate, zannum, badnum, termnum, recordingnum, userid
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from mynum
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from mynum
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.MyNum"  useGeneratedKeys="true" keyProperty="id">
+    insert into mynum (id, todaydate, zannum, 
+      badnum, termnum, recordingnum, 
+      userid)
+    values (#{id,jdbcType=INTEGER}, #{todaydate,jdbcType=VARCHAR}, #{zannum,jdbcType=INTEGER}, 
+      #{badnum,jdbcType=INTEGER}, #{termnum,jdbcType=INTEGER}, #{recordingnum,jdbcType=INTEGER}, 
+      #{userid,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.MyNum"  useGeneratedKeys="true" keyProperty="id">
+    insert into mynum
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="todaydate != null" >
+        todaydate,
+      </if>
+      <if test="zannum != null" >
+        zannum,
+      </if>
+      <if test="badnum != null" >
+        badnum,
+      </if>
+      <if test="termnum != null" >
+        termnum,
+      </if>
+      <if test="recordingnum != null" >
+        recordingnum,
+      </if>
+      <if test="userid != null" >
+        userid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="todaydate != null" >
+        #{todaydate,jdbcType=VARCHAR},
+      </if>
+      <if test="zannum != null" >
+        #{zannum,jdbcType=INTEGER},
+      </if>
+      <if test="badnum != null" >
+        #{badnum,jdbcType=INTEGER},
+      </if>
+      <if test="termnum != null" >
+        #{termnum,jdbcType=INTEGER},
+      </if>
+      <if test="recordingnum != null" >
+        #{recordingnum,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.renchaigao.fangpu.dao.MyNum" >
+    update mynum
+    <set >
+      <if test="todaydate != null" >
+        todaydate = #{todaydate,jdbcType=VARCHAR},
+      </if>
+      <if test="zannum != null" >
+        zannum = #{zannum,jdbcType=INTEGER},
+      </if>
+      <if test="badnum != null" >
+        badnum = #{badnum,jdbcType=INTEGER},
+      </if>
+      <if test="termnum != null" >
+        termnum = #{termnum,jdbcType=INTEGER},
+      </if>
+      <if test="recordingnum != null" >
+        recordingnum = #{recordingnum,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null" >
+        userid = #{userid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.renchaigao.fangpu.dao.MyNum" >
+    update mynum
+    set todaydate = #{todaydate,jdbcType=VARCHAR},
+      zannum = #{zannum,jdbcType=INTEGER},
+      badnum = #{badnum,jdbcType=INTEGER},
+      termnum = #{termnum,jdbcType=INTEGER},
+      recordingnum = #{recordingnum,jdbcType=INTEGER},
+      userid = #{userid,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

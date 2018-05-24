@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.renchaigao.fangpu.dao.mapper.MyZanMapper" >
+  <resultMap id="BaseResultMap" type="com.renchaigao.fangpu.dao.MyZan" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="userid" property="userid" jdbcType="INTEGER" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.renchaigao.fangpu.dao.MyZanWithBLOBs" extends="BaseResultMap" >
+    <result column="zanrecordinglist" property="zanrecordinglist" jdbcType="LONGVARCHAR" />
+    <result column="badrecordinglist" property="badrecordinglist" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, userid
+  </sql>
+  <sql id="Blob_Column_List" >
+    zanrecordinglist, badrecordinglist
+  </sql>
+  <select id="selectByUserId" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from myzan
+    where userid = #{userid,jdbcType=INTEGER}
+  </select>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from myzan
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from myzan
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.MyZanWithBLOBs"  useGeneratedKeys="true" keyProperty="id">
+    insert into myzan (id, userid, zanrecordinglist, 
+      badrecordinglist)
+    values (#{id,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{zanrecordinglist,jdbcType=LONGVARCHAR}, 
+      #{badrecordinglist,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.MyZanWithBLOBs"  useGeneratedKeys="true" keyProperty="id">
+    insert into myzan
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="zanrecordinglist != null" >
+        zanrecordinglist,
+      </if>
+      <if test="badrecordinglist != null" >
+        badrecordinglist,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="zanrecordinglist != null" >
+        #{zanrecordinglist,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="badrecordinglist != null" >
+        #{badrecordinglist,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.renchaigao.fangpu.dao.MyZanWithBLOBs" >
+    update myzan
+    <set >
+      <if test="userid != null" >
+        userid = #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="zanrecordinglist != null" >
+        zanrecordinglist = #{zanrecordinglist,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="badrecordinglist != null" >
+        badrecordinglist = #{badrecordinglist,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.renchaigao.fangpu.dao.MyZanWithBLOBs" >
+    update myzan
+    set userid = #{userid,jdbcType=INTEGER},
+      zanrecordinglist = #{zanrecordinglist,jdbcType=LONGVARCHAR},
+      badrecordinglist = #{badrecordinglist,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.renchaigao.fangpu.dao.MyZan" >
+    update myzan
+    set userid = #{userid,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

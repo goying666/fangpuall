@@ -3,9 +3,12 @@ package com.renchaigao.fangpu.service.impl;
 import com.alibaba.fastjson.JSONObject;
 import com.renchaigao.fangpu.dao.RecordingInfo;
 import com.renchaigao.fangpu.dao.RecordingList;
+import com.renchaigao.fangpu.dao.RecordingNumList;
+import com.renchaigao.fangpu.dao.RecordingNumListWithBLOBs;
 import com.renchaigao.fangpu.dao.mapper.MyRecordingMapper;
 import com.renchaigao.fangpu.dao.mapper.RecordingInfoMapper;
 import com.renchaigao.fangpu.dao.mapper.RecordingListMapper;
+import com.renchaigao.fangpu.dao.mapper.RecordingNumListMapper;
 import com.renchaigao.fangpu.domain.response.RespCode;
 import com.renchaigao.fangpu.domain.response.ResponseEntity;
 import com.renchaigao.fangpu.function.normalFunc;
@@ -40,10 +43,17 @@ public class RecordingServiceImpl implements RecordingService {
     @Autowired
     MyRecordingMapper myRecordingMapper;
 
+    @Autowired
+    RecordingNumListMapper recordingNumListMapper;
+
     public ResponseEntity addRecording(RecordingInfo recordingInfo) {
         try {
             recordingInfo.setAddtime(new Date());
             recordingInfoMapper.insert(recordingInfo);
+//            增加recording的zanlist
+            RecordingNumListWithBLOBs recordingNumListWithBLOBs = new RecordingNumListWithBLOBs();
+            recordingNumListWithBLOBs.setRecordingid(recordingInfo.getId());
+            recordingNumListMapper.insertSelective(recordingNumListWithBLOBs);
             return new ResponseEntity(RespCode.SUCCESS, recordingInfo);
         } catch (Exception e) {
             return new ResponseEntity(RespCode.EXCEPTION, e);
