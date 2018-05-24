@@ -11,7 +11,7 @@ import java.util.List;
 public interface UserService {
 
 //    用户登录
-//    ResponseEntity addUser(UserInfo userInfo);
+    ResponseEntity addUser(UserInfo userInfo);
     ResponseEntity getUserinfo(Integer userid);
     UserInfo getUserinfoTest();
     ResponseEntity userLogin(UserLogin userLogin);

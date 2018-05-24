@@ -1,19 +1,38 @@
 package com.renchaigao.fangpu.controller;
 
 import com.renchaigao.fangpu.domain.response.ResponseEntity;
+import com.renchaigao.fangpu.service.impl.NumServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 @Controller
 @RequestMapping(value = "/num")
 public class NumController {
 
-    @GetMapping(value = "/zan/add/{userId}/",consumes = "application/json")
+    @Autowired
+    NumServiceImpl numServiceImpl;
+
+    @PostMapping(value = "/zan",consumes = "application/json")
     @ResponseBody
-    public ResponseEntity getMyTermsInfo(@PathVariable("id") Integer id){
-        return myserviceImpl.getMytermsByUserId(id);
+    public ResponseEntity numZanControl(@RequestBody Map<String,Object> reqMap){
+        return numServiceImpl.numZanControl(reqMap);
+    }
+    @GetMapping(value = "/zan/{userid}/info/{recordingid}",consumes = "application/json")
+    @ResponseBody
+    public ResponseEntity numZanGet(@PathVariable("userid") Integer userid,@PathVariable("recordingid") Integer recordingid){
+        return numServiceImpl.numZanGet(userid , recordingid);
+    }
+    @PostMapping(value = "/bad",consumes = "application/json")
+    @ResponseBody
+    public ResponseEntity numBadControl(@RequestBody Map<String,Object> reqMap){
+        return numServiceImpl.numBadControl(reqMap);
+    }
+    @GetMapping(value = "/bad/{userid}/info/{recordingid}",consumes = "application/json")
+    @ResponseBody
+    public ResponseEntity numZanGet(@PathVariable("userid") Integer userid,@PathVariable("recordingid") Integer recordingid){
+        return numServiceImpl.numZanGet(userid , recordingid);
     }
 }

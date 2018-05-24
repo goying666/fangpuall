@@ -2,14 +2,8 @@ package com.renchaigao.fangpu.service.impl;
 
 
 import com.alibaba.fastjson.JSONObject;
-import com.renchaigao.fangpu.dao.MyRecording;
-import com.renchaigao.fangpu.dao.MyTerms;
-import com.renchaigao.fangpu.dao.UserInfo;
-import com.renchaigao.fangpu.dao.UserLogin;
-import com.renchaigao.fangpu.dao.mapper.MyRecordingMapper;
-import com.renchaigao.fangpu.dao.mapper.MyTermsMapper;
-import com.renchaigao.fangpu.dao.mapper.UserInfoMapper;
-import com.renchaigao.fangpu.dao.mapper.UserLoginMapper;
+import com.renchaigao.fangpu.dao.*;
+import com.renchaigao.fangpu.dao.mapper.*;
 import com.renchaigao.fangpu.domain.response.RespCode;
 import com.renchaigao.fangpu.domain.response.ResponseEntity;
 import com.renchaigao.fangpu.domain.wx.WxUserInfo;
@@ -45,6 +39,10 @@ public class UserServiceImpl implements UserService {
     @Autowired
     MyRecordingMapper myRecordingMapper;
 
+    @Autowired
+    MyNumMapper myNumMapper;
+
+
     private RestTemplate restTemplate = new RestTemplate();
 
     public ResponseEntity userWxLogin(WxUserInfo wxUserInfo) {
@@ -55,7 +53,7 @@ public class UserServiceImpl implements UserService {
                 + "&grant_type=authorization_code";
         try {
             org.springframework.http.ResponseEntity<String> responseEntity =
-                restTemplate.getForEntity(urlStr,String.class);
+                    restTemplate.getForEntity(urlStr, String.class);
             JSONObject jsonUse = JSONObject.parseObject(responseEntity.getBody());
             String session_key = jsonUse.getString("session_key");
             String openid = jsonUse.getString("openid");
@@ -65,7 +63,7 @@ public class UserServiceImpl implements UserService {
             String encryptedData = wxUserInfo.getEncryptedData();
             String iv = wxUserInfo.getIv();
             String jsondata = WXCore.decrypt(
-                    "wx5f1755206e7513a2" , encryptedData , session_key , iv);
+                    "wx5f1755206e7513a2", encryptedData, session_key, iv);
             System.out.println(
                     "session_key is : " + session_key +
                             "unionid is : " + openid +
@@ -74,8 +72,8 @@ public class UserServiceImpl implements UserService {
                             "encryptedData is : " + encryptedData +
                             "iv is : " + iv +
                             "jsondata is : " + jsondata);
-            if(ServiceSignatura.equals(wxSignatura))
-                return new ResponseEntity(RespCode.WXPASS,JSONObject.parseObject(jsondata));
+            if (ServiceSignatura.equals(wxSignatura))
+                return new ResponseEntity(RespCode.WXPASS, JSONObject.parseObject(jsondata));
             else
                 return new ResponseEntity(RespCode.WXWRONG);
         } catch (Exception e) {
@@ -91,13 +89,13 @@ public class UserServiceImpl implements UserService {
             if (userUse != null) {
                 return new ResponseEntity(RespCode.OLDUSER, userUse);
             } else {
-
                 userInfoMapper.insertSelective(userInfo);
-//                创建我的系列
+//                创建我的词条myterms
                 MyTerms myTerms = new MyTerms();
                 myTerms.setUserid(userInfo.getId());
                 mytermsmapper.insert(myTerms);
 
+//                创建我的方言recording
                 MyRecording myRecording = new MyRecording();
                 myRecording.setUserid(userInfo.getId());
                 myRecordingMapper.insert(myRecording);
@@ -105,10 +103,16 @@ public class UserServiceImpl implements UserService {
                 userInfo.setMytermsid(myTerms.getId());
                 userInfo.setMyrecordingid(myRecording.getId());
 
-                userInfoMapper.updateByPrimaryKeySelective(userInfo);
+//                创建我的num：mynum
+                MyNum myNum = new MyNum();
+                myNum.setUserid(userInfo.getId());
+                myNumMapper.insertSelective(myNum);
 
+//                 更新userinfo数据
+                userInfoMapper.updateByPrimaryKeySelective(userInfo);
+//                户登录时间信息
                 UserLogin userLogin = new UserLogin();
-                userLogin.setLogindate(dateUse.DateToString(new Date()));//新增用户登录时间信息
+                userLogin.setLogindate(dateUse.DateToString(new Date()));
                 userLoginMapper.insert(userLogin);
 
                 return new ResponseEntity(RespCode.NEWUSER, userInfo);
@@ -128,6 +132,7 @@ public class UserServiceImpl implements UserService {
             return new ResponseEntity(RespCode.EXCEPTION, e);
         }
     }
+
     public UserInfo getUserinfoTest() {
         System.out.println("run in : getUserinfoTest");
 //        List<UserInfo> list = new ArrayList<>();
