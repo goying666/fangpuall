@@ -43,3 +43,20 @@
 2018-05-25 16:23:39  [ http-nio-7899-exec-2:258 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
 2018-05-25 16:23:39  [ http-nio-7899-exec-2:278 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
 2018-05-25 16:23:39  [ http-nio-7899-exec-3:464 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-25 17:35:41  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-25 17:35:42  [ http-nio-7899-exec-1:49 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-25 17:37:21  [ http-nio-7899-exec-3:99441 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-25 17:37:29  [ http-nio-7899-exec-5:107617 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-25 17:51:14  [ http-nio-7899-exec-8:932884 ] - [ DEBUG ]  {conn-10002, pstmt-20003} enter cache
+2018-05-25 17:51:15  [ http-nio-7899-exec-7:933667 ] - [ DEBUG ]  skip not validate connection.
+2018-05-25 17:51:15  [ http-nio-7899-exec-7:933676 ] - [ DEBUG ]  {conn-10002, pstmt-20004} enter cache
+2018-05-25 17:51:15  [ http-nio-7899-exec-7:933685 ] - [ DEBUG ]  {conn-10002, pstmt-20005} enter cache
+2018-05-25 17:51:58  [ http-nio-7899-exec-1:976447 ] - [ DEBUG ]  {conn-10003, pstmt-20006} enter cache
+2018-05-25 17:51:58  [ http-nio-7899-exec-1:976455 ] - [ DEBUG ]  {conn-10003, pstmt-20007} enter cache
+2018-05-25 17:51:58  [ http-nio-7899-exec-2:976518 ] - [ DEBUG ]  {conn-10003, pstmt-20008} enter cache
+2018-05-25 17:55:01  [ http-nio-7899-exec-2:1159239 ] - [ DEBUG ]  {conn-10002, pstmt-20009} enter cache
+2018-05-25 17:59:37  [ http-nio-7899-exec-7:1435078 ] - [ DEBUG ]  {conn-10003, pstmt-20010} enter cache
+2018-05-25 17:59:37  [ http-nio-7899-exec-7:1435094 ] - [ DEBUG ]  {conn-10003, pstmt-20011} enter cache
+2018-05-25 17:59:37  [ http-nio-7899-exec-7:1435109 ] - [ DEBUG ]  {conn-10003, pstmt-20012} enter cache
+2018-05-25 17:59:37  [ http-nio-7899-exec-1:1435229 ] - [ DEBUG ]  {conn-10003, pstmt-20013} enter cache
+2018-05-25 17:59:37  [ http-nio-7899-exec-1:1435245 ] - [ DEBUG ]  {conn-10003, pstmt-20014} enter cache
