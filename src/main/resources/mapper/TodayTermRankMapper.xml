@@ -15,7 +15,6 @@
     termranks
   </sql>
 
-
   <select id="selectByDate" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String" >
     select
     <include refid="Base_Column_List" />

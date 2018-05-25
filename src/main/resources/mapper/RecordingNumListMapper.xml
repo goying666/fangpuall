@@ -90,6 +90,35 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+    <update id="updateZanByPrimaryKeySelective" parameterType="com.renchaigao.fangpu.dao.RecordingNumListWithBLOBs" >
+        update recordingnumlist
+        <set >
+            <if test="recordingid != null" >
+                recordingid = #{recordingid,jdbcType=INTEGER},
+            </if>
+                zanuseridlist = #{zanuseridlist,jdbcType=LONGVARCHAR},
+            <if test="baduseridlist != null" >
+                baduseridlist = #{baduseridlist,jdbcType=LONGVARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <update id="updateBadByPrimaryKeySelective" parameterType="com.renchaigao.fangpu.dao.RecordingNumListWithBLOBs" >
+        update recordingnumlist
+        <set >
+            <if test="recordingid != null" >
+                recordingid = #{recordingid,jdbcType=INTEGER},
+            </if>
+            <if test="zanuseridlist != null" >
+                zanuseridlist = #{zanuseridlist,jdbcType=LONGVARCHAR},
+            </if>
+                baduseridlist = #{baduseridlist,jdbcType=LONGVARCHAR},
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.renchaigao.fangpu.dao.RecordingNumListWithBLOBs" >
     update recordingnumlist
     set recordingid = #{recordingid,jdbcType=INTEGER},

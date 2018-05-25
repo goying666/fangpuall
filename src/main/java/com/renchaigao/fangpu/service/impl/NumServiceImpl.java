@@ -91,8 +91,8 @@ public class NumServiceImpl {
                         }
                         recordingNumListWithBLOBs.setZanuseridlist(userlistNew);
                     } else
-                        recordingNumListWithBLOBs.setZanuseridlist(recordingid.toString());
-                    recordingNumListMapper.updateByPrimaryKeySelective(recordingNumListWithBLOBs);
+                        recordingNumListWithBLOBs.setZanuseridlist(userid.toString());
+                    recordingNumListMapper.updateZanByPrimaryKeySelective(recordingNumListWithBLOBs);
                     JSONObject retJson = new JSONObject();
                     retJson.put("zannum", recordingInfo.getZannum());
                     if (YesOrNo)
@@ -127,8 +127,8 @@ public class NumServiceImpl {
                         }
                         recordingNumListWithBLOBs.setZanuseridlist(userlistNew);
                     } else
-                        recordingNumListWithBLOBs.setZanuseridlist(recordingid.toString());
-                    recordingNumListMapper.updateByPrimaryKeySelective(recordingNumListWithBLOBs);
+                        recordingNumListWithBLOBs.setZanuseridlist(userid.toString());
+                    recordingNumListMapper.updateZanByPrimaryKeySelective(recordingNumListWithBLOBs);
                     JSONObject retJson = new JSONObject();
                     retJson.put("zannum", recordingInfo.getZannum());
                     return new ResponseEntity(RespCode.ZANNEWFINISH, retJson);
@@ -202,7 +202,7 @@ public class NumServiceImpl {
                         recordingNumListWithBLOBs.setBaduseridlist(userlistNew);
                     } else
                         recordingNumListWithBLOBs.setBaduseridlist(userid.toString());
-                    recordingNumListMapper.updateByPrimaryKeySelective(recordingNumListWithBLOBs);
+                    recordingNumListMapper.updateBadByPrimaryKeySelective(recordingNumListWithBLOBs);
                     JSONObject retJson = new JSONObject();
                     retJson.put("badnum", recordingInfo.getBadnum());
                     if (YesOrNo)
@@ -237,7 +237,7 @@ public class NumServiceImpl {
                         recordingNumListWithBLOBs.setBaduseridlist(userlistNew);
                     } else
                         recordingNumListWithBLOBs.setBaduseridlist(userid.toString());
-                    recordingNumListMapper.updateByPrimaryKeySelective(recordingNumListWithBLOBs);
+                    recordingNumListMapper.updateBadByPrimaryKeySelective(recordingNumListWithBLOBs);
                     JSONObject retJson = new JSONObject();
                     retJson.put("badnum", recordingInfo.getBadnum());
                     return new ResponseEntity(RespCode.BADNEWFINISH, retJson);

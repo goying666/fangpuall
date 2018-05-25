@@ -11,6 +11,7 @@ public interface TodayTermRankMapper {
     int insertSelective(TodayTermRank record);
 
     TodayTermRank selectByPrimaryKey(Integer id);
+
     TodayTermRank selectByDate(String todayDate);
 
     int updateByPrimaryKeySelective(TodayTermRank record);

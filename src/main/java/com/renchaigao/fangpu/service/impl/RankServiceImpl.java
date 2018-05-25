@@ -50,15 +50,25 @@ public class RankServiceImpl implements RankService {
                 } else
                     allTermStrIdStr = i.getId().toString();
             }
-            TodayTermRank todayTermRank = new TodayTermRank();
-            todayTermRank.setTermranks(allTermStrIdStr);
+            TodayTermRank todayTermRank = todayTermRankMapper.
+                    selectByDate(dateUse.getTodayDate());
+
+//                todayTermRankMapper.insertSelective(todayTermRank);
             //判断是否已经有今天的排名，若有，就更新，没有就新增
-            if(todayTermRankMapper.selectByDate(dateUse.getTodayDate()).getId()!=null){
+
+//            todayTermRank.setTodaydate(dateUse.getTodayDate());
+//            todayTermRankMapper.insertSelective(todayTermRank);
+
+            if(todayTermRank != null)
+            {
                 System.out.println("today termrank already in DB");
+                todayTermRank.setTermranks(allTermStrIdStr);
                 todayTermRankMapper.updateByPrimaryKeySelective(todayTermRank);
             }
             else {
                 System.out.println("today termrank is none in DB");
+                todayTermRank = new TodayTermRank();
+                todayTermRank.setTermranks(allTermStrIdStr);
                 todayTermRank.setTodaydate(dateUse.getTodayDate());
                 todayTermRankMapper.insertSelective(todayTermRank);
             }
