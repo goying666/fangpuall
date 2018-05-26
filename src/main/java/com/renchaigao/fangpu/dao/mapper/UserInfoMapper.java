@@ -2,6 +2,8 @@ package com.renchaigao.fangpu.dao.mapper;
 
 import com.renchaigao.fangpu.dao.UserInfo;
 
+import java.util.List;
+
 public interface UserInfoMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,6 +16,8 @@ public interface UserInfoMapper {
     UserInfo selectByUnionID(String unionid);
 
     UserInfo selectByOpenID(String openid);
+
+    List<UserInfo> selectAll();
 
     int updateByPrimaryKeySelective(UserInfo record);
 

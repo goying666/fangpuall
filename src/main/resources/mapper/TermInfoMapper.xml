@@ -22,6 +22,13 @@
     recordingids, usernickname, termclass, useravatarurl, sharenum
   </sql>
 
+  <select id="selectAllUserTermByUserId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from terminfo
+    where ownerid = #{userid,jdbcType=INTEGER}
+  </select>
+
   <select id="selectAll" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>

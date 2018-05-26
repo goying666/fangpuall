@@ -16,25 +16,31 @@ public class MyController {
     @Autowired
     MyserviceImpl myserviceImpl;
 
-//    @PostMapping(value = "/myterms/add/",consumes = "application/json")
+    //    @PostMapping(value = "/myterms/add/",consumes = "application/json")
 //    @ResponseBody
 //    public ResponseEntity addMyTermsInfo(@RequestBody MyTerms myTerms){
 //        return myserviceImpl.addMyTerms(myTerms);
 //    }
-
-    @GetMapping(value = "/myterms/get/{id}",consumes = "application/json")
+    @GetMapping(value = "/all/{userid}", consumes = "application/json")
     @ResponseBody
-    public ResponseEntity getMyTermsInfo(@PathVariable("id") Integer id){
+    public ResponseEntity getMyAllInfo(@PathVariable("userid") Integer userid) {
+        return myserviceImpl.getMyAllInfo(userid);
+    }
+
+    @GetMapping(value = "/myterms/get/{id}", consumes = "application/json")
+    @ResponseBody
+    public ResponseEntity getMyTermsInfo(@PathVariable("id") Integer id) {
         return myserviceImpl.getMytermsByUserId(id);
     }
 
-    @PostMapping(value = "/myterms/{id}/termId/{termId}/flag/{flagStr}" , consumes = "application/json")
+
+    @PostMapping(value = "/myterms/{id}/termId/{termId}/flag/{flagStr}", consumes = "application/json")
     @ResponseBody
     public ResponseEntity updateMyTerms(
             @PathVariable("id") Integer id,
             @PathVariable("termId") Integer termId,
-            @PathVariable("flagStr") String flagStr){
-        return myserviceImpl.updateMyTermsByTermId(id,termId,flagStr);
+            @PathVariable("flagStr") String flagStr) {
+        return myserviceImpl.updateMyTermsByTermId(id, termId, flagStr);
     }
 //    @PostMapping(value = "/myrecording/add/",consumes = "application/json")
 //    @ResponseBody
@@ -42,18 +48,18 @@ public class MyController {
 //        return myserviceImpl.addMyRecordings(myRecording);
 //    }
 
-    @GetMapping(value = "/myrecording/get/{id}",consumes = "application/json")
+    @GetMapping(value = "/myrecording/get/{id}", consumes = "application/json")
     @ResponseBody
-    public ResponseEntity getMyRecordingInfo(@PathVariable("id") Integer id){
+    public ResponseEntity getMyRecordingInfo(@PathVariable("id") Integer id) {
         return myserviceImpl.getMyRecordingsByUserId(id);
     }
 
-    @GetMapping(value = "/myrecording/{id}/recordinId/{recordinId}/flag/{flagStr}" , consumes = "application/json")
+    @GetMapping(value = "/myrecording/{id}/recordinId/{recordinId}/flag/{flagStr}", consumes = "application/json")
     @ResponseBody
     public ResponseEntity updateMyRecording(
             @PathVariable("id") Integer id,
             @PathVariable("recordinId") Integer recordinId,
-            @PathVariable("flagStr") String flagStr){
-        return myserviceImpl.updateMyRecordings(id,recordinId,flagStr);
+            @PathVariable("flagStr") String flagStr) {
+        return myserviceImpl.updateMyRecordings(id, recordinId, flagStr);
     }
 }

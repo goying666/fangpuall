@@ -1,14 +1,8 @@
 package com.renchaigao.fangpu.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import com.renchaigao.fangpu.dao.RecordingInfo;
-import com.renchaigao.fangpu.dao.TermInfo;
-import com.renchaigao.fangpu.dao.TodayRecordingRank;
-import com.renchaigao.fangpu.dao.TodayTermRank;
-import com.renchaigao.fangpu.dao.mapper.RecordingInfoMapper;
-import com.renchaigao.fangpu.dao.mapper.TermInfoMapper;
-import com.renchaigao.fangpu.dao.mapper.TodayRecordingRankMapper;
-import com.renchaigao.fangpu.dao.mapper.TodayTermRankMapper;
+import com.renchaigao.fangpu.dao.*;
+import com.renchaigao.fangpu.dao.mapper.*;
 import com.renchaigao.fangpu.domain.response.RespCode;
 import com.renchaigao.fangpu.domain.response.ResponseEntity;
 import com.renchaigao.fangpu.function.dateUse;
@@ -29,7 +23,10 @@ public class RankServiceImpl implements RankService {
     TermInfoMapper termInfoMapper;
     @Autowired
     RecordingInfoMapper recordingInfoMapper;
-
+    @Autowired
+    UserInfoMapper userInfoMapper;
+    @Autowired
+    MyNumMapper myNumMapper;
 
     public ResponseEntity addTermsRank() {
         try {
@@ -59,13 +56,11 @@ public class RankServiceImpl implements RankService {
 //            todayTermRank.setTodaydate(dateUse.getTodayDate());
 //            todayTermRankMapper.insertSelective(todayTermRank);
 
-            if(todayTermRank != null)
-            {
+            if (todayTermRank != null) {
                 System.out.println("today termrank already in DB");
                 todayTermRank.setTermranks(allTermStrIdStr);
                 todayTermRankMapper.updateByPrimaryKeySelective(todayTermRank);
-            }
-            else {
+            } else {
                 System.out.println("today termrank is none in DB");
                 todayTermRank = new TodayTermRank();
                 todayTermRank.setTermranks(allTermStrIdStr);
@@ -85,11 +80,11 @@ public class RankServiceImpl implements RankService {
             List<String> termRanksList = Arrays.asList(todayTermRanks.split("-"));
             List<TermInfo> termInfoList = new ArrayList<>();
             System.out.println("termRanksList.size() is : " + termRanksList.size());
-            if (endnum < termRanksList.size()){
+            if (endnum < termRanksList.size()) {
                 for (int i = endnum - 1; i < endnum + 9 && i < termRanksList.size(); i++)
                     termInfoList.add(termInfoMapper.selectByPrimaryKey(Integer.parseInt(termRanksList.get(i))));
-                return new ResponseEntity(RespCode.RANKGETNEW,termInfoList);
-            }else // endnum相等或大于list的size，说明已经取完
+                return new ResponseEntity(RespCode.RANKGETNEW, termInfoList);
+            } else // endnum相等或大于list的size，说明已经取完
                 return new ResponseEntity(RespCode.RANKALLGET);
 //            if (endnum > termRanksList.size())
 //                endnum = termRanksList.size() ;
@@ -144,6 +139,29 @@ public class RankServiceImpl implements RankService {
         } catch (Exception e) {
             return new ResponseEntity(RespCode.EXCEPTION, e);
         }
+    }
 
+
+    public ResponseEntity getMyRank(Integer userid) {
+        try {
+            List<MyNum> allMyNum = myNumMapper.selectAll();
+            Collections.sort(allMyNum, new Comparator<MyNum>() {
+                @Override
+                public int compare(MyNum o1, MyNum o2) {
+//                    从小到大
+//                    return o1.getZannum() - o2.getZannum();
+//                    从大到小
+                    return o2.getZannum() - o1.getZannum();
+                }
+            });
+            Integer myRankNum = 0;
+            for (int i = 0; i < allMyNum.size(); i++) {
+                if (allMyNum.get(i).getUserid() == userid)
+                    myRankNum = i + 1;
+            }
+            return new ResponseEntity(RespCode.SUCCESS, myRankNum);
+        } catch (Exception e) {
+            return new ResponseEntity(RespCode.EXCEPTION, e);
+        }
     }
 }

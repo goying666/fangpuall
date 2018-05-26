@@ -34,5 +34,10 @@ public class RankController {
     public ResponseEntity getRecordingRank(@PathVariable("endnum") Integer endnum){
         return rankServiceImpl.getRecordingRank(endnum);
     }
+    @GetMapping(value = "/getmygrank/{userid}",consumes = "application/json")
+    @ResponseBody
+    public ResponseEntity getMyRank(@PathVariable("userid") Integer userid){
+        return rankServiceImpl.getMyRank(userid);
+    }
 
 }

@@ -1,14 +1,8 @@
 package com.renchaigao.fangpu.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import com.renchaigao.fangpu.dao.MyZan;
-import com.renchaigao.fangpu.dao.MyZanWithBLOBs;
-import com.renchaigao.fangpu.dao.RecordingInfo;
-import com.renchaigao.fangpu.dao.RecordingNumListWithBLOBs;
-import com.renchaigao.fangpu.dao.mapper.MyNumMapper;
-import com.renchaigao.fangpu.dao.mapper.MyZanMapper;
-import com.renchaigao.fangpu.dao.mapper.RecordingInfoMapper;
-import com.renchaigao.fangpu.dao.mapper.RecordingNumListMapper;
+import com.renchaigao.fangpu.dao.*;
+import com.renchaigao.fangpu.dao.mapper.*;
 import com.renchaigao.fangpu.domain.response.RespCode;
 import com.renchaigao.fangpu.domain.response.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,11 +25,16 @@ public class NumServiceImpl {
     @Autowired
     RecordingNumListMapper recordingNumListMapper;
 
+    @Autowired
+    TermInfoMapper termInfoMapper;
+
     public ResponseEntity numZanControl(Map<String, Object> reqMap) {
         try {
             //        判断用户是否已经赞过该词条，
             Integer userid = Integer.parseInt(reqMap.get("userid").toString());
             Integer recordingid = Integer.parseInt(reqMap.get("recordingid").toString());
+            Integer termid = Integer.parseInt(reqMap.get("termid").toString());
+            TermInfo termInfo = termInfoMapper.selectByPrimaryKey(termid);
             MyZanWithBLOBs myZanWithBLOBs = myZanMapper.selectByUserId(userid);
             if (myZanWithBLOBs != null) {
                 String myZanListStr = myZanWithBLOBs.getZanrecordinglist();
@@ -65,11 +64,16 @@ public class NumServiceImpl {
 //                  2、方言zannum修改
                     RecordingInfo recordingInfo = recordingInfoMapper.selectByPrimaryKey(recordingid);
 //                  赞过：方言recordingInfo赞-1；
-                    if (YesOrNo)
+                    if (YesOrNo) {
+                        termInfo.setZannum(termInfo.getZannum() - 1);
                         recordingInfo.setZannum(recordingInfo.getZannum() - 1);
+                    }
 //                  没赞：方言recordingInfo赞+1；
-                    else
+                    else {
+                        termInfo.setZannum(termInfo.getZannum() + 1);
                         recordingInfo.setZannum(recordingInfo.getZannum() + 1);
+                    }
+                    termInfoMapper.updateByPrimaryKeySelective(termInfo);
                     recordingInfoMapper.updateByPrimaryKeySelective(recordingInfo);
 
 //                   3、 方言赞list用户操作
@@ -108,7 +112,10 @@ public class NumServiceImpl {
 //                  2、方言zannum修改
                     RecordingInfo recordingInfo = recordingInfoMapper.selectByPrimaryKey(recordingid);
 //
+
+                    termInfo.setZannum(termInfo.getZannum() + 1);
                     recordingInfo.setZannum(recordingInfo.getZannum() + 1);
+                    termInfoMapper.updateByPrimaryKeySelective(termInfo);
                     recordingInfoMapper.updateByPrimaryKeySelective(recordingInfo);
 
 //                   3、 方言赞list用户操作

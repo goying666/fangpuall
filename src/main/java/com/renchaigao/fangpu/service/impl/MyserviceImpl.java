@@ -2,14 +2,8 @@ package com.renchaigao.fangpu.service.impl;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.renchaigao.fangpu.dao.MyRecording;
-import com.renchaigao.fangpu.dao.MyTerms;
-import com.renchaigao.fangpu.dao.RecordingInfo;
-import com.renchaigao.fangpu.dao.TermInfo;
-import com.renchaigao.fangpu.dao.mapper.MyRecordingMapper;
-import com.renchaigao.fangpu.dao.mapper.MyTermsMapper;
-import com.renchaigao.fangpu.dao.mapper.RecordingInfoMapper;
-import com.renchaigao.fangpu.dao.mapper.TermInfoMapper;
+import com.renchaigao.fangpu.dao.*;
+import com.renchaigao.fangpu.dao.mapper.*;
 import com.renchaigao.fangpu.domain.response.RespCode;
 import com.renchaigao.fangpu.domain.response.ResponseEntity;
 import com.renchaigao.fangpu.function.normalFunc;
@@ -18,9 +12,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 
 @Service
@@ -38,6 +30,12 @@ public class MyserviceImpl implements MyService {
 
     @Autowired
     RecordingInfoMapper recordingInfoMapper;
+    @Autowired
+    UserInfoMapper userInfoMapper;
+    @Autowired
+    MyShareMapper myShareMapper;
+    @Autowired
+    MyNumMapper myNumMapper;
 
 
     public ResponseEntity addMyTerms(MyTerms myTerms) {
@@ -49,6 +47,40 @@ public class MyserviceImpl implements MyService {
         }
     }
 
+    public ResponseEntity getMyAllInfo(Integer userid) {
+        try {
+            return new ResponseEntity(RespCode.SUCCESS,getUserAllNum(userid));
+        } catch (Exception e) {
+            return new ResponseEntity(RespCode.EXCEPTION, e);
+        }
+    }
+
+    private JSONObject getUserAllNum(Integer userid){
+        UserInfo userInfo = userInfoMapper.selectByPrimaryKey(userid);
+        JSONObject retJson = new JSONObject();
+        MyTerms myTerms = mytermsmapper.selectByPrimaryKey(userInfo.getMytermsid());
+        MyRecording myRecording = myRecordingMapper.selectByPrimaryKey(userInfo.getMyrecordingid());
+        MyShare myShare = myShareMapper.selectByPrimaryKey(userInfo.getMyshareid());
+//      首先取出所有term，让所有term的zannum相加，再赋值给user
+        List<String> termList = Arrays.asList(myTerms.getAlltermlist().split("-"));
+        List<TermInfo> termInfosList = new ArrayList<>();
+        for (String str : termList)
+            termInfosList.add(termInfoMapper.selectByPrimaryKey(Integer.parseInt(str)));
+        Integer allZanNum = 0;
+        for (TermInfo infouse : termInfosList)
+            allZanNum += infouse.getZannum();
+        List<String> recordingList = Arrays.asList(myRecording.getAllrecordinglist().split("-"));
+        MyNum myNum = myNumMapper.selectByUserId(userid);
+        myNum.setTermnum(termList.size());
+        myNum.setRecordingnum(recordingList.size());
+        myNum.setZannum(allZanNum);
+        myNumMapper.updateByPrimaryKeySelective(myNum);
+        retJson.put("mytermnum",termList.size());
+        retJson.put("myrecordingnum",recordingList.size());
+        retJson.put("mysharenum",0);
+        retJson.put("myallzannum",allZanNum);
+        return retJson;
+    }
 
     public ResponseEntity getMytermsByUserId(Integer id) {
         System.out.println("id" + id);

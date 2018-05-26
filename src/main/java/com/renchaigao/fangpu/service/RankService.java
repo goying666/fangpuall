@@ -8,4 +8,5 @@ public interface RankService {
     ResponseEntity getTermsRank(Integer endnum);
     ResponseEntity addRecordingRank();
     ResponseEntity getRecordingRank(Integer endnum);
+    ResponseEntity getMyRank(Integer userid);
 }

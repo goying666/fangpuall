@@ -8,6 +8,7 @@ import com.renchaigao.fangpu.domain.response.ResponseEntity;
 public interface MyService {
 
     ResponseEntity addMyTerms(MyTerms myTerms);
+    ResponseEntity getMyAllInfo(Integer userid);
     ResponseEntity getMytermsByUserId(Integer id);
     ResponseEntity updateMyTermsByTermId(Integer id,Integer termId, String flagStr);
 

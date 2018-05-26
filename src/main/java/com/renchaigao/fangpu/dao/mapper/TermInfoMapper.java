@@ -13,6 +13,7 @@ public interface TermInfoMapper {
 
     TermInfo selectByPrimaryKey(Integer id);
 
+    List<TermInfo> selectAllUserTermByUserId(Integer userid);
     List<TermInfo> selectAll();
 
     int updateByPrimaryKeySelective(TermInfo record);
