@@ -6,6 +6,7 @@ import com.renchaigao.fangpu.domain.response.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public interface RecordingService {
@@ -15,9 +16,9 @@ public interface RecordingService {
     ResponseEntity getRecordingInfo(RecordingInfo recordingInfo);
 
     ResponseEntity addRecordingFile(MultipartFile file, Integer userId, Integer recordingId);
-
-    void downloadRecordingFile(
-            HttpServletResponse res, @PathVariable("recordingid") Integer recordingid);
+    void downloadRecordingFile(HttpServletResponse response, Integer recordingid,HttpServletRequest request);
+//    void downloadRecordingFile(
+//            HttpServletResponse res, @PathVariable("recordingid") Integer recordingid);
 
     ResponseEntity addRecordingList(RecordingList recordingList);
 

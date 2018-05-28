@@ -8,11 +8,14 @@ import com.renchaigao.fangpu.domain.response.ResponseEntity;
 import com.renchaigao.fangpu.function.normalFunc;
 import com.renchaigao.fangpu.service.RecordingService;
 import org.apache.log4j.Logger;
+import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.util.ArrayList;
@@ -96,40 +99,81 @@ public class RecordingServiceImpl implements RecordingService {
         }
     }
 
-    public void downloadRecordingFile(HttpServletResponse res, Integer recordingid) {
+
+
+
+    public void downloadRecordingFile(HttpServletResponse response, Integer recordingid,HttpServletRequest request) {
         System.out.println("enter in downloadRecordingFile");
         RecordingInfo recordingInfo = recordingInfoMapper.selectByPrimaryKey(recordingid);
         String path = recordingInfo.getPath();
         String filename = recordingInfo.getFilename();
+        File downloadFile = new File(path+filename);
+        ServletContext context = request.getServletContext();
 
-        res.setHeader("content-type", "multipart/form-data");
-//        res.setContentType("application/octet-stream");
-        res.setHeader("Content-Disposition", "attachment;filename=" + filename);
-        byte[] buff = new byte[1024];
-        BufferedInputStream bis = null;
-        OutputStream os = null;
+        String mimeType = context.getMimeType(path+filename);
+        if (mimeType == null) {
+            // set to binary type if MIME mapping not found
+            mimeType = "application/octet-stream";
+            System.out.println("context getMimeType is null");
+        }
+
+        System.out.println("MIME type: " + mimeType);
+
+        // set content attributes for the response
+        response.setContentType(mimeType);
+        response.setContentLength((int) downloadFile.length());
+
+        // set headers for the response
+        String headerKey = "Content-Disposition";
+        String headerValue = String.format("attachment; filename=\"%s\"",
+                downloadFile.getName());
+        response.setHeader(headerKey, headerValue);
+
+        // Copy the stream to the response's output stream.
         try {
-            os = res.getOutputStream();
-            bis = new BufferedInputStream(new FileInputStream(
-                    new File(path + filename)));
-            int i = bis.read(buff);
-            while (i != -1) {
-                os.write(buff, 0, buff.length);
-                os.flush();
-                i = bis.read(buff);
-            }
+            InputStream myStream = new FileInputStream(path+filename);
+            IOUtils.copy(myStream, response.getOutputStream());
+            response.flushBuffer();
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            if (bis != null) {
-                try {
-                    bis.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
         }
+
+
     }
+//    public void downloadRecordingFile(HttpServletResponse res, Integer recordingid) {
+//        System.out.println("enter in downloadRecordingFile");
+//        RecordingInfo recordingInfo = recordingInfoMapper.selectByPrimaryKey(recordingid);
+//        String path = recordingInfo.getPath();
+//        String filename = recordingInfo.getFilename();
+//
+//        res.setHeader("Content-type", "audio/mp3");
+////        res.setContentType("application/octet-stream");
+//        res.setHeader("Content-Disposition", "attachment;filename=" + filename);
+//        byte[] buff = new byte[1024];
+//        BufferedInputStream bis = null;
+//        OutputStream os = null;
+//        try {
+//            os = res.getOutputStream();
+//            bis = new BufferedInputStream(new FileInputStream(
+//                    new File(path + filename)));
+//            int i = bis.read(buff);
+//            while (i != -1) {
+//                os.write(buff, 0, buff.length);
+//                os.flush();
+//                i = bis.read(buff);
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } finally {
+//            if (bis != null) {
+//                try {
+//                    bis.close();
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    }
 
     /**********************************************
      * 功能：生成系统下 各用户对应的recording 目录

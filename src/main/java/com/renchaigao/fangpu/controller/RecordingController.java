@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 
@@ -45,10 +46,15 @@ public class RecordingController {
 
     @GetMapping(value = "/file/get/{recordingid}")
     @ResponseBody
-    public void downloadRecordingFile(HttpServletResponse res,
-                                                @PathVariable("recordingid") Integer recordingid) {
-        recordingServiceImpl.downloadRecordingFile(res,recordingid);
+
+    public void downloadRecordingFile(HttpServletResponse response,
+                                      Integer recordingid,HttpServletRequest request) {
+        recordingServiceImpl.downloadRecordingFile(response,recordingid,request);
     }
+//    public void downloadRecordingFile(HttpServletResponse res,
+//                                      @PathVariable("recordingid") Integer recordingid) {
+//        recordingServiceImpl.downloadRecordingFile(res,recordingid);
+//    }
 
 
 
