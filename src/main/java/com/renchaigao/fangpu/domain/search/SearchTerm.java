@@ -6,10 +6,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class SearchTerm {
-
     private String termid;
     private String terminfo;
     private String searchString;
-
-
 }

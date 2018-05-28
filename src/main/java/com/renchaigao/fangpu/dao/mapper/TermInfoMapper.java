@@ -12,9 +12,12 @@ public interface TermInfoMapper {
     int insertSelective(TermInfo record);
 
     TermInfo selectByPrimaryKey(Integer id);
+    TermInfo selectByUseridAndDate(Integer id);
 
     List<TermInfo> selectAllUserTermByUserId(Integer userid);
+
     List<TermInfo> selectAll();
+
 
     int updateByPrimaryKeySelective(TermInfo record);
 

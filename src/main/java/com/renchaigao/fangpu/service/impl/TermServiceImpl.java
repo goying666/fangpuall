@@ -90,7 +90,6 @@ public class TermServiceImpl implements TermService {
     }
 
     public ResponseEntity getTermInfo(TermInfo termInfo) {
-        long startTime = System.currentTimeMillis(); //程序开始记录时间
         try {
             return new ResponseEntity(RespCode.SUCCESS ,
                     termInfoMapper.selectByPrimaryKey(termInfo.getId()));

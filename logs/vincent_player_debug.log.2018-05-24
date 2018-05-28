@@ -1,0 +1,648 @@
+2018-05-24 10:18:23  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 10:18:23  [ http-nio-7899-exec-1:43 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 10:18:39  [ http-nio-7899-exec-3:15624 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 10:18:39  [ http-nio-7899-exec-3:15667 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 10:18:39  [ http-nio-7899-exec-3:15681 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 10:18:39  [ http-nio-7899-exec-3:15694 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 10:18:39  [ http-nio-7899-exec-3:15708 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 10:18:39  [ http-nio-7899-exec-3:15749 ] - [ DEBUG ]  {conn-10001, pstmt-20006} enter cache
+2018-05-24 10:18:45  [ http-nio-7899-exec-4:21996 ] - [ DEBUG ]  {conn-10001, pstmt-20007} enter cache
+2018-05-24 10:20:11  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 10:20:11  [ http-nio-7899-exec-2:70 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 10:20:11  [ http-nio-7899-exec-1:86 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 10:20:23  [ http-nio-7899-exec-3:12142 ] - [ DEBUG ]  {conn-10002, pstmt-20002} enter cache
+2018-05-24 10:28:36  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 10:28:36  [ http-nio-7899-exec-1:38 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 10:29:58  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 10:29:58  [ http-nio-7899-exec-1:42 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 10:37:30  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 10:37:30  [ http-nio-7899-exec-1:37 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 10:37:36  [ http-nio-7899-exec-3:6088 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 10:37:36  [ http-nio-7899-exec-3:6136 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 10:37:36  [ http-nio-7899-exec-3:6154 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 10:37:36  [ http-nio-7899-exec-3:6171 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 10:37:36  [ http-nio-7899-exec-3:6188 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 10:37:36  [ http-nio-7899-exec-3:6205 ] - [ DEBUG ]  {conn-10001, pstmt-20006} enter cache
+2018-05-24 10:38:07  [ http-nio-7899-exec-4:37443 ] - [ DEBUG ]  {conn-10001, pstmt-20007} enter cache
+2018-05-24 10:41:22  [ http-nio-7899-exec-4:232565 ] - [ DEBUG ]  {conn-10002, pstmt-20008} enter cache
+2018-05-24 10:41:31  [ http-nio-7899-exec-6:241167 ] - [ DEBUG ]  {conn-10002, pstmt-20009} enter cache
+2018-05-24 10:41:31  [ http-nio-7899-exec-6:241182 ] - [ DEBUG ]  {conn-10002, pstmt-20010} enter cache
+2018-05-24 10:41:31  [ http-nio-7899-exec-6:241196 ] - [ DEBUG ]  {conn-10002, pstmt-20011} enter cache
+2018-05-24 10:41:31  [ http-nio-7899-exec-6:241208 ] - [ DEBUG ]  {conn-10002, pstmt-20012} enter cache
+2018-05-24 10:41:31  [ http-nio-7899-exec-6:241221 ] - [ DEBUG ]  {conn-10002, pstmt-20013} enter cache
+2018-05-24 10:41:31  [ http-nio-7899-exec-6:241234 ] - [ DEBUG ]  {conn-10002, pstmt-20014} enter cache
+2018-05-24 10:41:35  [ http-nio-7899-exec-7:244784 ] - [ DEBUG ]  {conn-10002, pstmt-20015} enter cache
+2018-05-24 10:45:19  [ http-nio-7899-exec-10:468786 ] - [ DEBUG ]  skip not validate connection.
+2018-05-24 10:45:27  [ http-nio-7899-exec-2:476971 ] - [ DEBUG ]  {conn-10003, pstmt-20016} enter cache
+2018-05-24 10:45:29  [ http-nio-7899-exec-4:479360 ] - [ DEBUG ]  {conn-10003, pstmt-20017} enter cache
+2018-05-24 10:45:29  [ http-nio-7899-exec-4:479380 ] - [ DEBUG ]  {conn-10003, pstmt-20018} enter cache
+2018-05-24 10:45:29  [ http-nio-7899-exec-4:479397 ] - [ DEBUG ]  {conn-10003, pstmt-20019} enter cache
+2018-05-24 10:45:29  [ http-nio-7899-exec-4:479416 ] - [ DEBUG ]  {conn-10003, pstmt-20020} enter cache
+2018-05-24 10:45:29  [ http-nio-7899-exec-4:479434 ] - [ DEBUG ]  {conn-10003, pstmt-20021} enter cache
+2018-05-24 10:45:29  [ http-nio-7899-exec-4:479452 ] - [ DEBUG ]  {conn-10003, pstmt-20022} enter cache
+2018-05-24 11:06:03  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 11:06:03  [ http-nio-7899-exec-1:50 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 11:06:08  [ http-nio-7899-exec-3:4499 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 11:06:08  [ http-nio-7899-exec-3:4538 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 11:06:08  [ http-nio-7899-exec-3:4553 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 11:06:08  [ http-nio-7899-exec-3:4566 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 11:06:08  [ http-nio-7899-exec-3:4580 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 11:06:08  [ http-nio-7899-exec-3:4606 ] - [ DEBUG ]  {conn-10001, pstmt-20006} enter cache
+2018-05-24 11:06:12  [ http-nio-7899-exec-4:9144 ] - [ DEBUG ]  {conn-10001, pstmt-20007} enter cache
+2018-05-24 11:08:35  [ http-nio-7899-exec-1:151357 ] - [ DEBUG ]  {conn-10001, pstmt-20008} enter cache
+2018-05-24 11:08:35  [ http-nio-7899-exec-1:151395 ] - [ DEBUG ]  {conn-10001, pstmt-20009} enter cache
+2018-05-24 11:13:58  [ http-nio-7899-exec-9:474522 ] - [ DEBUG ]  {conn-10002, pstmt-20010} enter cache
+2018-05-24 11:13:59  [ http-nio-7899-exec-8:475449 ] - [ DEBUG ]  skip not validate connection.
+2018-05-24 11:13:59  [ http-nio-7899-exec-8:475456 ] - [ DEBUG ]  {conn-10002, pstmt-20011} enter cache
+2018-05-24 11:16:32  [ http-nio-7899-exec-2:628574 ] - [ DEBUG ]  {conn-10003, pstmt-20012} enter cache
+2018-05-24 11:16:32  [ http-nio-7899-exec-2:628598 ] - [ DEBUG ]  {conn-10003, pstmt-20013} enter cache
+2018-05-24 11:16:53  [ http-nio-7899-exec-3:650076 ] - [ DEBUG ]  {conn-10003, pstmt-20014} enter cache
+2018-05-24 11:16:53  [ http-nio-7899-exec-3:650088 ] - [ DEBUG ]  {conn-10003, pstmt-20015} enter cache
+2018-05-24 11:16:53  [ http-nio-7899-exec-3:650151 ] - [ DEBUG ]  {conn-10002, pstmt-20016} enter cache
+2018-05-24 11:44:32  [ http-nio-7899-exec-2:2308342 ] - [ DEBUG ]  skip not validate connection.
+2018-05-24 11:44:32  [ http-nio-7899-exec-2:2308411 ] - [ DEBUG ]  {conn-10004, pstmt-20017} enter cache
+2018-05-24 11:44:40  [ http-nio-7899-exec-4:2316849 ] - [ DEBUG ]  {conn-10004, pstmt-20018} enter cache
+2018-05-24 11:44:53  [ http-nio-7899-exec-5:2329897 ] - [ DEBUG ]  {conn-10004, pstmt-20019} enter cache
+2018-05-24 11:44:56  [ http-nio-7899-exec-6:2332441 ] - [ DEBUG ]  {conn-10004, pstmt-20020} enter cache
+2018-05-24 11:45:13  [ http-nio-7899-exec-9:2349873 ] - [ DEBUG ]  {conn-10004, pstmt-20021} enter cache
+2018-05-24 11:45:13  [ http-nio-7899-exec-9:2349887 ] - [ DEBUG ]  {conn-10004, pstmt-20022} enter cache
+2018-05-24 11:45:13  [ http-nio-7899-exec-9:2349902 ] - [ DEBUG ]  {conn-10004, pstmt-20023} enter cache
+2018-05-24 11:45:13  [ http-nio-7899-exec-8:2349932 ] - [ DEBUG ]  {conn-10004, pstmt-20024} enter cache
+2018-05-24 11:45:21  [ http-nio-7899-exec-4:2357567 ] - [ DEBUG ]  {conn-10004, pstmt-20025} enter cache
+2018-05-24 11:46:46  [ http-nio-7899-exec-7:2442592 ] - [ DEBUG ]  {conn-10004, pstmt-20026} enter cache
+2018-05-24 11:46:49  [ http-nio-7899-exec-9:2446062 ] - [ DEBUG ]  {conn-10005, pstmt-20027} enter cache
+2018-05-24 11:46:58  [ http-nio-7899-exec-8:2454656 ] - [ DEBUG ]  {conn-10005, pstmt-20028} enter cache
+2018-05-24 11:46:58  [ http-nio-7899-exec-8:2454667 ] - [ DEBUG ]  {conn-10005, pstmt-20029} enter cache
+2018-05-24 11:51:53  [ http-nio-7899-exec-8:2749661 ] - [ DEBUG ]  {conn-10005, pstmt-20030} enter cache
+2018-05-24 11:51:54  [ http-nio-7899-exec-10:2750695 ] - [ DEBUG ]  skip not validate connection.
+2018-05-24 11:51:54  [ http-nio-7899-exec-10:2750716 ] - [ DEBUG ]  {conn-10005, pstmt-20031} enter cache
+2018-05-24 11:51:55  [ http-nio-7899-exec-1:2751814 ] - [ DEBUG ]  {conn-10006, pstmt-20032} enter cache
+2018-05-24 11:52:01  [ http-nio-7899-exec-2:2757972 ] - [ DEBUG ]  {conn-10006, pstmt-20033} enter cache
+2018-05-24 11:52:12  [ http-nio-7899-exec-3:2768493 ] - [ DEBUG ]  {conn-10006, pstmt-20034} enter cache
+2018-05-24 11:52:12  [ http-nio-7899-exec-3:2768502 ] - [ DEBUG ]  {conn-10006, pstmt-20035} enter cache
+2018-05-24 11:52:13  [ http-nio-7899-exec-6:2769813 ] - [ DEBUG ]  {conn-10006, pstmt-20036} enter cache
+2018-05-24 11:54:53  [ http-nio-7899-exec-10:2929768 ] - [ DEBUG ]  {conn-10006, pstmt-20037} enter cache
+2018-05-24 11:54:53  [ http-nio-7899-exec-10:2929787 ] - [ DEBUG ]  {conn-10006, pstmt-20038} enter cache
+2018-05-24 11:54:55  [ http-nio-7899-exec-2:2931808 ] - [ DEBUG ]  {conn-10006, pstmt-20039} enter cache
+2018-05-24 12:01:44  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 12:01:44  [ http-nio-7899-exec-1:59 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 12:01:44  [ http-nio-7899-exec-1:77 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 12:01:44  [ http-nio-7899-exec-1:128 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 12:04:30  [ http-nio-7899-exec-5:165560 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 12:04:31  [ http-nio-7899-exec-7:167066 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 12:06:12  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 12:06:12  [ http-nio-7899-exec-1:45 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 12:06:12  [ http-nio-7899-exec-1:55 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 12:22:12  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 12:22:12  [ http-nio-7899-exec-1:41 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 12:22:12  [ http-nio-7899-exec-1:54 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 12:22:14  [ http-nio-7899-exec-3:2691 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 12:24:59  [ http-nio-7899-exec-10:167182 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 12:25:27  [ http-nio-7899-exec-7:194974 ] - [ DEBUG ]  {conn-10002, pstmt-20004} enter cache
+2018-05-24 12:26:26  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 12:26:26  [ http-nio-7899-exec-1:47 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 12:26:26  [ http-nio-7899-exec-1:61 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 12:26:52  [ http-nio-7899-exec-3:25724 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 12:28:56  [ http-nio-7899-exec-1:1 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 12:28:56  [ http-nio-7899-exec-1:52 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 12:29:09  [ http-nio-7899-exec-5:13567 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 12:29:09  [ http-nio-7899-exec-6:13672 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 12:29:11  [ http-nio-7899-exec-7:14916 ] - [ DEBUG ]  {conn-10002, pstmt-20003} enter cache
+2018-05-24 12:29:11  [ http-nio-7899-exec-7:14922 ] - [ DEBUG ]  {conn-10002, pstmt-20004} enter cache
+2018-05-24 12:33:08  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 12:33:08  [ http-nio-7899-exec-1:39 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 12:33:08  [ http-nio-7899-exec-1:48 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 12:33:09  [ http-nio-7899-exec-3:1280 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 12:33:30  [ http-nio-7899-exec-8:22316 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 12:36:42  [ http-nio-7899-exec-1:213882 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 12:36:45  [ http-nio-7899-exec-2:217323 ] - [ DEBUG ]  {conn-10002, pstmt-20005} enter cache
+2018-05-24 12:36:45  [ http-nio-7899-exec-2:217332 ] - [ DEBUG ]  {conn-10002, pstmt-20006} enter cache
+2018-05-24 12:36:47  [ http-nio-7899-exec-5:218747 ] - [ DEBUG ]  {conn-10002, pstmt-20007} enter cache
+2018-05-24 12:41:58  [ http-nio-7899-exec-1:529885 ] - [ DEBUG ]  skip not validate connection.
+2018-05-24 12:41:59  [ http-nio-7899-exec-1:530887 ] - [ DEBUG ]  skip not validate connection.
+2018-05-24 12:41:59  [ http-nio-7899-exec-1:530896 ] - [ DEBUG ]  {conn-10003, pstmt-20008} enter cache
+2018-05-24 12:42:03  [ http-nio-7899-exec-10:535215 ] - [ DEBUG ]  {conn-10004, pstmt-20009} enter cache
+2018-05-24 12:42:03  [ http-nio-7899-exec-2:535245 ] - [ DEBUG ]  {conn-10004, pstmt-20010} enter cache
+2018-05-24 15:07:40  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 15:07:40  [ http-nio-7899-exec-1:46 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 16:49:58  [ http-nio-7899-exec-10:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 16:49:58  [ http-nio-7899-exec-10:56 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 16:49:58  [ http-nio-7899-exec-10:71 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 16:50:34  [ http-nio-7899-exec-6:36416 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 16:50:35  [ http-nio-7899-exec-6:36475 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 16:50:35  [ http-nio-7899-exec-6:36493 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 16:50:35  [ http-nio-7899-exec-6:36510 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 16:50:35  [ http-nio-7899-exec-6:36533 ] - [ DEBUG ]  {conn-10001, pstmt-20006} exit cache
+2018-05-24 16:50:35  [ http-nio-7899-exec-6:36621 ] - [ INFO ]  Exception e : org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'id' doesn't have a default value
+### The error may involve com.renchaigao.fangpu.dao.mapper.MyNumMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into mynum      ( userid )       values ( ? )
+### Cause: java.sql.SQLException: Field 'id' doesn't have a default value
+; ]; Field 'id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'id' doesn't have a default value
+2018-05-24 16:57:56  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 16:57:56  [ http-nio-7899-exec-1:40 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 16:58:04  [ http-nio-7899-exec-8:8086 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 16:58:04  [ http-nio-7899-exec-8:8150 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 16:58:04  [ http-nio-7899-exec-8:8173 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 16:58:04  [ http-nio-7899-exec-8:8192 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 16:58:04  [ http-nio-7899-exec-8:8211 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 16:58:04  [ http-nio-7899-exec-8:8236 ] - [ DEBUG ]  {conn-10001, pstmt-20006} exit cache
+2018-05-24 16:58:04  [ http-nio-7899-exec-8:8300 ] - [ INFO ]  Exception e : org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'id' doesn't have a default value
+### The error may involve com.renchaigao.fangpu.dao.mapper.MyNumMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into mynum      ( userid )       values ( ? )
+### Cause: java.sql.SQLException: Field 'id' doesn't have a default value
+; ]; Field 'id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'id' doesn't have a default value
+2018-05-24 16:58:17  [ http-nio-7899-exec-6:20704 ] - [ DEBUG ]  {conn-10001, pstmt-20007} enter cache
+2018-05-24 16:59:31  [ http-nio-7899-exec-10:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 16:59:31  [ http-nio-7899-exec-10:50 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 16:59:36  [ http-nio-7899-exec-7:4766 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 16:59:36  [ http-nio-7899-exec-7:4816 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 16:59:36  [ http-nio-7899-exec-7:4834 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 16:59:36  [ http-nio-7899-exec-7:4847 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 16:59:36  [ http-nio-7899-exec-7:4863 ] - [ DEBUG ]  {conn-10001, pstmt-20005} exit cache
+2018-05-24 16:59:36  [ http-nio-7899-exec-7:4912 ] - [ INFO ]  Exception e : org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'id' doesn't have a default value
+### The error may involve com.renchaigao.fangpu.dao.mapper.MyNumMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into mynum      ( userid )       values ( ? )
+### Cause: java.sql.SQLException: Field 'id' doesn't have a default value
+; ]; Field 'id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'id' doesn't have a default value
+2018-05-24 17:00:58  [ http-nio-7899-exec-7:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 17:00:59  [ http-nio-7899-exec-7:54 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 17:01:02  [ http-nio-7899-exec-6:3448 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 17:01:02  [ http-nio-7899-exec-6:3505 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 17:01:02  [ http-nio-7899-exec-6:3537 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 17:01:16  [ http-nio-7899-exec-6:17898 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 17:02:16  [ http-nio-7899-exec-6:77912 ] - [ DEBUG ]  {conn-10001, pstmt-20005} exit cache
+2018-05-24 17:02:16  [ http-nio-7899-exec-6:77967 ] - [ INFO ]  Exception e : org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'id' doesn't have a default value
+### The error may involve com.renchaigao.fangpu.dao.mapper.MyNumMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into mynum      ( userid )       values ( ? )
+### Cause: java.sql.SQLException: Field 'id' doesn't have a default value
+; ]; Field 'id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'id' doesn't have a default value
+2018-05-24 17:02:37  [ http-nio-7899-exec-9:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 17:02:37  [ http-nio-7899-exec-9:48 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 17:02:39  [ http-nio-7899-exec-8:2482 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 17:02:39  [ http-nio-7899-exec-8:2532 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 17:02:39  [ http-nio-7899-exec-8:2553 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 17:02:39  [ http-nio-7899-exec-8:2572 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 17:02:39  [ http-nio-7899-exec-8:2599 ] - [ DEBUG ]  {conn-10001, pstmt-20005} exit cache
+2018-05-24 17:02:39  [ http-nio-7899-exec-8:2651 ] - [ INFO ]  Exception e : org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'id' cannot be null
+### The error may involve com.renchaigao.fangpu.dao.mapper.MyNumMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into mynum (id, todaydate, zannum,        badnum, termnum, recordingnum,        userid)     values (?, ?, ?,        ?, ?, ?,        ?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'id' cannot be null
+; ]; Column 'id' cannot be null; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'id' cannot be null
+2018-05-24 17:03:49  [ http-nio-7899-exec-8:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 17:03:49  [ http-nio-7899-exec-8:53 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 17:03:51  [ http-nio-7899-exec-9:2389 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 17:03:51  [ http-nio-7899-exec-9:2444 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 17:03:51  [ http-nio-7899-exec-9:2470 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 17:03:51  [ http-nio-7899-exec-9:2490 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 17:03:51  [ http-nio-7899-exec-9:2513 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 17:03:51  [ http-nio-7899-exec-9:2534 ] - [ DEBUG ]  {conn-10001, pstmt-20006} enter cache
+2018-05-24 17:03:51  [ http-nio-7899-exec-9:2558 ] - [ DEBUG ]  {conn-10001, pstmt-20007} enter cache
+2018-05-24 17:03:54  [ http-nio-7899-exec-7:4784 ] - [ DEBUG ]  {conn-10001, pstmt-20008} enter cache
+2018-05-24 17:06:42  [ http-nio-7899-exec-10:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 17:06:42  [ http-nio-7899-exec-10:65 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 17:06:45  [ http-nio-7899-exec-7:2825 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 17:06:45  [ http-nio-7899-exec-7:2880 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 17:06:45  [ http-nio-7899-exec-7:2901 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 17:06:52  [ http-nio-7899-exec-7:9325 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 17:07:12  [ http-nio-7899-exec-7:29223 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 17:07:12  [ http-nio-7899-exec-7:29242 ] - [ DEBUG ]  {conn-10001, pstmt-20006} enter cache
+2018-05-24 17:07:12  [ http-nio-7899-exec-7:29261 ] - [ DEBUG ]  {conn-10001, pstmt-20007} enter cache
+2018-05-24 17:13:25  [ http-nio-7899-exec-10:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 17:13:25  [ http-nio-7899-exec-10:53 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 17:13:28  [ http-nio-7899-exec-1:2607 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 17:13:28  [ http-nio-7899-exec-1:2674 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 17:13:28  [ http-nio-7899-exec-1:2696 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 17:13:28  [ http-nio-7899-exec-1:2718 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 17:13:36  [ http-nio-7899-exec-1:10579 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 17:13:45  [ http-nio-7899-exec-1:19594 ] - [ DEBUG ]  {conn-10001, pstmt-20006} enter cache
+2018-05-24 17:13:45  [ http-nio-7899-exec-1:19614 ] - [ DEBUG ]  {conn-10001, pstmt-20007} enter cache
+2018-05-24 17:13:45  [ http-nio-7899-exec-1:19636 ] - [ DEBUG ]  {conn-10001, pstmt-20008} enter cache
+2018-05-24 17:13:53  [ http-nio-7899-exec-3:28414 ] - [ DEBUG ]  {conn-10001, pstmt-20009} enter cache
+2018-05-24 17:14:27  [ http-nio-7899-exec-5:62308 ] - [ DEBUG ]  {conn-10001, pstmt-20010} enter cache
+2018-05-24 17:14:29  [ http-nio-7899-exec-6:64424 ] - [ DEBUG ]  {conn-10001, pstmt-20011} enter cache
+2018-05-24 17:14:40  [ http-nio-7899-exec-8:74706 ] - [ DEBUG ]  {conn-10001, pstmt-20012} enter cache
+2018-05-24 17:14:40  [ http-nio-7899-exec-8:74728 ] - [ DEBUG ]  {conn-10001, pstmt-20013} enter cache
+2018-05-24 17:14:40  [ http-nio-7899-exec-8:74749 ] - [ DEBUG ]  {conn-10001, pstmt-20014} enter cache
+2018-05-24 17:14:40  [ http-nio-7899-exec-10:74797 ] - [ DEBUG ]  {conn-10001, pstmt-20015} enter cache
+2018-05-24 17:14:40  [ http-nio-7899-exec-9:74969 ] - [ DEBUG ]  {conn-10001, pstmt-20016} enter cache
+2018-05-24 17:14:44  [ http-nio-7899-exec-2:79240 ] - [ DEBUG ]  {conn-10001, pstmt-20017} enter cache
+2018-05-24 17:15:13  [ http-nio-7899-exec-7:108432 ] - [ DEBUG ]  {conn-10002, pstmt-20018} enter cache
+2018-05-24 17:15:13  [ http-nio-7899-exec-7:108446 ] - [ DEBUG ]  {conn-10002, pstmt-20019} enter cache
+2018-05-24 17:15:15  [ http-nio-7899-exec-1:109788 ] - [ DEBUG ]  {conn-10002, pstmt-20020} enter cache
+2018-05-24 17:15:41  [ http-nio-7899-exec-1:135880 ] - [ DEBUG ]  {conn-10002, pstmt-20021} enter cache
+2018-05-24 17:15:41  [ http-nio-7899-exec-1:135904 ] - [ DEBUG ]  {conn-10002, pstmt-20022} enter cache
+2018-05-24 17:15:42  [ http-nio-7899-exec-2:137054 ] - [ DEBUG ]  {conn-10002, pstmt-20023} enter cache
+2018-05-24 17:15:42  [ http-nio-7899-exec-3:137119 ] - [ DEBUG ]  {conn-10002, pstmt-20024} enter cache
+2018-05-24 17:15:42  [ http-nio-7899-exec-4:137133 ] - [ DEBUG ]  {conn-10001, pstmt-20025} enter cache
+2018-05-24 17:15:42  [ http-nio-7899-exec-6:137248 ] - [ DEBUG ]  {conn-10001, pstmt-20026} enter cache
+2018-05-24 17:18:18  [ http-nio-7899-exec-6:293258 ] - [ DEBUG ]  {conn-10002, pstmt-20027} enter cache
+2018-05-24 17:18:23  [ http-nio-7899-exec-8:298061 ] - [ DEBUG ]  {conn-10002, pstmt-20028} enter cache
+2018-05-24 17:18:26  [ http-nio-7899-exec-3:300780 ] - [ DEBUG ]  {conn-10002, pstmt-20029} enter cache
+2018-05-24 17:25:04  [ http-nio-7899-exec-6:698894 ] - [ DEBUG ]  {conn-10003, pstmt-20030} enter cache
+2018-05-24 17:25:05  [ http-nio-7899-exec-7:699791 ] - [ DEBUG ]  skip not validate connection.
+2018-05-24 17:25:05  [ http-nio-7899-exec-7:699812 ] - [ DEBUG ]  {conn-10003, pstmt-20031} enter cache
+2018-05-24 17:25:06  [ http-nio-7899-exec-10:701517 ] - [ DEBUG ]  {conn-10004, pstmt-20032} enter cache
+2018-05-24 17:25:06  [ http-nio-7899-exec-10:701528 ] - [ DEBUG ]  {conn-10004, pstmt-20033} enter cache
+2018-05-24 17:25:36  [ http-nio-7899-exec-1:730736 ] - [ DEBUG ]  {conn-10004, pstmt-20034} enter cache
+2018-05-24 17:25:36  [ http-nio-7899-exec-9:730798 ] - [ DEBUG ]  {conn-10004, pstmt-20035} enter cache
+2018-05-24 17:37:32  [ http-nio-7899-exec-9:1447353 ] - [ DEBUG ]  {conn-10005, pstmt-20036} enter cache
+2018-05-24 17:37:33  [ http-nio-7899-exec-1:1448198 ] - [ DEBUG ]  skip not validate connection.
+2018-05-24 17:37:33  [ http-nio-7899-exec-1:1448207 ] - [ DEBUG ]  {conn-10005, pstmt-20037} enter cache
+2018-05-24 17:37:38  [ http-nio-7899-exec-2:1452606 ] - [ DEBUG ]  {conn-10006, pstmt-20038} enter cache
+2018-05-24 17:37:38  [ http-nio-7899-exec-2:1452619 ] - [ DEBUG ]  {conn-10006, pstmt-20039} enter cache
+2018-05-24 17:37:53  [ http-nio-7899-exec-6:1468398 ] - [ DEBUG ]  {conn-10006, pstmt-20040} enter cache
+2018-05-24 17:39:37  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 17:39:37  [ http-nio-7899-exec-1:52 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 17:40:01  [ http-nio-7899-exec-2:23630 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 17:40:01  [ http-nio-7899-exec-2:23641 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 17:40:33  [ http-nio-7899-exec-5:55436 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 17:40:33  [ http-nio-7899-exec-6:55482 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 17:53:34  [ http-nio-7899-exec-10:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 17:53:34  [ http-nio-7899-exec-10:44 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 17:53:42  [ http-nio-7899-exec-10:8488 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 17:53:42  [ http-nio-7899-exec-10:8534 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 17:53:42  [ http-nio-7899-exec-10:8554 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 18:00:12  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 18:00:12  [ http-nio-7899-exec-1:63 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 18:00:12  [ http-nio-7899-exec-1:77 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 18:00:18  [ http-nio-7899-exec-2:6931 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 18:00:19  [ http-nio-7899-exec-2:6945 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 18:00:20  [ http-nio-7899-exec-4:8259 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 18:00:25  [ http-nio-7899-exec-10:13903 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 18:00:26  [ http-nio-7899-exec-10:13946 ] - [ DEBUG ]  {conn-10001, pstmt-20006} enter cache
+2018-05-24 18:00:27  [ http-nio-7899-exec-9:15035 ] - [ DEBUG ]  {conn-10001, pstmt-20007} enter cache
+2018-05-24 18:00:27  [ http-nio-7899-exec-7:15122 ] - [ DEBUG ]  {conn-10001, pstmt-20008} enter cache
+2018-05-24 18:00:27  [ http-nio-7899-exec-8:15144 ] - [ DEBUG ]  {conn-10001, pstmt-20009} enter cache
+2018-05-24 18:00:27  [ http-nio-7899-exec-6:15205 ] - [ DEBUG ]  {conn-10002, pstmt-20010} enter cache
+2018-05-24 18:00:27  [ http-nio-7899-exec-1:15244 ] - [ DEBUG ]  {conn-10002, pstmt-20011} enter cache
+2018-05-24 18:00:27  [ http-nio-7899-exec-1:15254 ] - [ DEBUG ]  {conn-10002, pstmt-20012} enter cache
+2018-05-24 18:00:30  [ http-nio-7899-exec-2:18002 ] - [ DEBUG ]  {conn-10002, pstmt-20013} enter cache
+2018-05-24 18:00:32  [ http-nio-7899-exec-3:20033 ] - [ DEBUG ]  {conn-10002, pstmt-20014} enter cache
+2018-05-24 18:01:01  [ http-nio-7899-exec-5:49303 ] - [ DEBUG ]  {conn-10002, pstmt-20015} enter cache
+2018-05-24 18:01:03  [ http-nio-7899-exec-5:51001 ] - [ DEBUG ]  {conn-10002, pstmt-20016} enter cache
+2018-05-24 18:06:41  [ http-nio-7899-exec-7:389047 ] - [ DEBUG ]  skip not validate connection.
+2018-05-24 18:06:41  [ http-nio-7899-exec-7:389110 ] - [ DEBUG ]  {conn-10003, pstmt-20017} enter cache
+2018-05-24 18:06:41  [ http-nio-7899-exec-7:389116 ] - [ DEBUG ]  {conn-10003, pstmt-20018} enter cache
+2018-05-24 18:06:49  [ http-nio-7899-exec-6:397782 ] - [ DEBUG ]  {conn-10003, pstmt-20019} enter cache
+2018-05-24 18:06:49  [ http-nio-7899-exec-6:397803 ] - [ DEBUG ]  {conn-10003, pstmt-20020} enter cache
+2018-05-24 18:12:40  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 18:12:40  [ http-nio-7899-exec-1:44 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 18:13:14  [ http-nio-7899-exec-2:34349 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 18:13:14  [ http-nio-7899-exec-2:34358 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 18:21:56  [ http-nio-7899-exec-2:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 18:21:56  [ http-nio-7899-exec-2:86 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 18:26:20  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 18:26:20  [ http-nio-7899-exec-1:51 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 18:26:20  [ http-nio-7899-exec-1:61 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 18:26:23  [ http-nio-7899-exec-3:2915 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 18:30:19  [ http-nio-7899-exec-2:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 18:30:19  [ http-nio-7899-exec-2:55 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 18:32:22  [ http-nio-7899-exec-2:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 18:32:22  [ http-nio-7899-exec-2:48 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 18:32:53  [ http-nio-7899-exec-3:31379 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 18:32:53  [ http-nio-7899-exec-3:31391 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 19:03:36  [ http-nio-7899-exec-7:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 19:03:36  [ http-nio-7899-exec-7:49 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 19:03:42  [ http-nio-7899-exec-9:5766 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 19:04:21  [ http-nio-7899-exec-9:45255 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 19:04:21  [ http-nio-7899-exec-9:45287 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 19:05:23  [ http-nio-7899-exec-6:106755 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 19:05:23  [ http-nio-7899-exec-4:106792 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 19:06:15  [ http-nio-7899-exec-3:159295 ] - [ DEBUG ]  {conn-10001, pstmt-20006} enter cache
+2018-05-24 19:39:59  [ http-nio-7899-exec-1:2182850 ] - [ DEBUG ]  skip not validate connection.
+2018-05-24 19:39:59  [ http-nio-7899-exec-1:2182950 ] - [ DEBUG ]  {conn-10002, pstmt-20007} enter cache
+2018-05-24 19:39:59  [ http-nio-7899-exec-7:2182962 ] - [ DEBUG ]  {conn-10002, pstmt-20008} enter cache
+2018-05-24 19:40:01  [ http-nio-7899-exec-9:2184647 ] - [ DEBUG ]  {conn-10003, pstmt-20009} enter cache
+2018-05-24 19:40:01  [ http-nio-7899-exec-9:2184668 ] - [ DEBUG ]  {conn-10003, pstmt-20010} enter cache
+2018-05-24 19:40:01  [ http-nio-7899-exec-9:2184680 ] - [ DEBUG ]  {conn-10003, pstmt-20011} enter cache
+2018-05-24 19:40:01  [ http-nio-7899-exec-9:2184701 ] - [ DEBUG ]  {conn-10003, pstmt-20012} enter cache
+2018-05-24 19:42:57  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 19:42:57  [ http-nio-7899-exec-1:43 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 19:42:57  [ http-nio-7899-exec-1:82 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 19:42:57  [ http-nio-7899-exec-1:91 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 19:42:57  [ http-nio-7899-exec-1:108 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 19:42:59  [ http-nio-7899-exec-1:1977 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 19:43:34  [ http-nio-7899-exec-1:36531 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 19:45:46  [ http-nio-7899-exec-4:168954 ] - [ DEBUG ]  {conn-10001, pstmt-20006} enter cache
+2018-05-24 19:54:58  [ http-nio-7899-exec-10:721106 ] - [ DEBUG ]  skip not validate connection.
+2018-05-24 19:54:58  [ http-nio-7899-exec-10:721172 ] - [ DEBUG ]  {conn-10002, pstmt-20007} enter cache
+2018-05-24 19:55:09  [ http-nio-7899-exec-10:731270 ] - [ DEBUG ]  {conn-10002, pstmt-20008} enter cache
+2018-05-24 19:55:09  [ http-nio-7899-exec-10:731276 ] - [ DEBUG ]  {conn-10002, pstmt-20009} enter cache
+2018-05-24 19:55:09  [ http-nio-7899-exec-10:731291 ] - [ DEBUG ]  {conn-10002, pstmt-20010} enter cache
+2018-05-24 19:55:31  [ http-nio-7899-exec-10:753834 ] - [ DEBUG ]  {conn-10002, pstmt-20011} enter cache
+2018-05-24 19:59:41  [ http-nio-7899-exec-10:1004135 ] - [ DEBUG ]  {conn-10002, pstmt-20012} enter cache
+2018-05-24 19:59:59  [ http-nio-7899-exec-9:1021557 ] - [ DEBUG ]  {conn-10002, pstmt-20013} enter cache
+2018-05-24 19:59:59  [ http-nio-7899-exec-10:1021577 ] - [ DEBUG ]  {conn-10002, pstmt-20014} enter cache
+2018-05-24 20:00:01  [ http-nio-7899-exec-1:1023682 ] - [ DEBUG ]  {conn-10003, pstmt-20015} enter cache
+2018-05-24 20:00:01  [ http-nio-7899-exec-1:1023690 ] - [ DEBUG ]  {conn-10003, pstmt-20016} enter cache
+2018-05-24 20:00:03  [ http-nio-7899-exec-3:1025874 ] - [ DEBUG ]  {conn-10003, pstmt-20017} enter cache
+2018-05-24 20:00:03  [ http-nio-7899-exec-3:1025887 ] - [ DEBUG ]  {conn-10003, pstmt-20018} enter cache
+2018-05-24 20:00:03  [ http-nio-7899-exec-3:1025905 ] - [ DEBUG ]  {conn-10003, pstmt-20019} enter cache
+2018-05-24 20:00:03  [ http-nio-7899-exec-3:1025910 ] - [ DEBUG ]  {conn-10003, pstmt-20020} enter cache
+2018-05-24 20:01:34  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 20:01:34  [ http-nio-7899-exec-1:53 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 20:01:34  [ http-nio-7899-exec-1:102 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 20:01:34  [ http-nio-7899-exec-1:112 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 20:01:34  [ http-nio-7899-exec-1:134 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 20:01:34  [ http-nio-7899-exec-1:144 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 20:02:22  [ http-nio-7899-exec-1:47997 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 20:02:39  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 20:02:40  [ http-nio-7899-exec-1:52 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 20:02:40  [ http-nio-7899-exec-1:103 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 20:02:40  [ http-nio-7899-exec-1:114 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 20:02:40  [ http-nio-7899-exec-1:135 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 20:02:40  [ http-nio-7899-exec-1:144 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 20:02:43  [ http-nio-7899-exec-1:3975 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 20:04:10  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 20:04:10  [ http-nio-7899-exec-1:58 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 20:04:10  [ http-nio-7899-exec-1:107 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 20:04:10  [ http-nio-7899-exec-1:118 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 20:04:10  [ http-nio-7899-exec-1:142 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 20:04:10  [ http-nio-7899-exec-1:152 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 20:04:10  [ http-nio-7899-exec-1:173 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 20:04:44  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 20:04:44  [ http-nio-7899-exec-1:56 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 20:04:44  [ http-nio-7899-exec-1:109 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 20:04:44  [ http-nio-7899-exec-1:122 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 20:04:44  [ http-nio-7899-exec-1:150 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 20:04:44  [ http-nio-7899-exec-1:161 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 20:04:45  [ http-nio-7899-exec-1:184 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 20:04:46  [ http-nio-7899-exec-2:1695 ] - [ DEBUG ]  {conn-10001, pstmt-20006} enter cache
+2018-05-24 20:12:33  [ http-nio-7899-exec-4:468334 ] - [ DEBUG ]  {conn-10002, pstmt-20007} enter cache
+2018-05-24 20:12:33  [ http-nio-7899-exec-4:468360 ] - [ DEBUG ]  {conn-10002, pstmt-20008} enter cache
+2018-05-24 20:12:33  [ http-nio-7899-exec-4:468394 ] - [ DEBUG ]  {conn-10002, pstmt-20009} enter cache
+2018-05-24 20:12:33  [ http-nio-7899-exec-7:468404 ] - [ DEBUG ]  {conn-10003, pstmt-20010} enter cache
+2018-05-24 20:12:33  [ http-nio-7899-exec-4:468414 ] - [ DEBUG ]  {conn-10002, pstmt-20011} enter cache
+2018-05-24 20:12:33  [ http-nio-7899-exec-6:468419 ] - [ DEBUG ]  {conn-10003, pstmt-20012} enter cache
+2018-05-24 20:12:33  [ http-nio-7899-exec-4:468426 ] - [ DEBUG ]  {conn-10003, pstmt-20013} enter cache
+2018-05-24 20:12:33  [ http-nio-7899-exec-4:468442 ] - [ DEBUG ]  {conn-10002, pstmt-20014} enter cache
+2018-05-24 20:12:33  [ http-nio-7899-exec-6:468455 ] - [ DEBUG ]  {conn-10003, pstmt-20015} enter cache
+2018-05-24 20:12:34  [ http-nio-7899-exec-5:469271 ] - [ DEBUG ]  skip not validate connection.
+2018-05-24 20:12:34  [ http-nio-7899-exec-5:469320 ] - [ DEBUG ]  {conn-10002, pstmt-20016} enter cache
+2018-05-24 20:12:40  [ http-nio-7899-exec-9:475220 ] - [ DEBUG ]  {conn-10005, pstmt-20017} enter cache
+2018-05-24 20:12:40  [ http-nio-7899-exec-9:475236 ] - [ DEBUG ]  {conn-10005, pstmt-20018} enter cache
+2018-05-24 20:12:40  [ http-nio-7899-exec-9:475244 ] - [ DEBUG ]  {conn-10005, pstmt-20019} enter cache
+2018-05-24 20:12:40  [ http-nio-7899-exec-9:475258 ] - [ DEBUG ]  {conn-10005, pstmt-20020} enter cache
+2018-05-24 20:12:40  [ http-nio-7899-exec-9:475266 ] - [ DEBUG ]  {conn-10005, pstmt-20021} enter cache
+2018-05-24 20:12:40  [ http-nio-7899-exec-9:475280 ] - [ DEBUG ]  {conn-10005, pstmt-20022} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-7:950738 ] - [ DEBUG ]  {conn-10006, pstmt-20023} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-8:950781 ] - [ DEBUG ]  {conn-10006, pstmt-20024} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-4:950788 ] - [ DEBUG ]  {conn-10006, pstmt-20025} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-6:950838 ] - [ DEBUG ]  {conn-10007, pstmt-20026} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-7:950850 ] - [ DEBUG ]  {conn-10007, pstmt-20027} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-9:950854 ] - [ DEBUG ]  {conn-10006, pstmt-20028} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-4:950877 ] - [ DEBUG ]  {conn-10006, pstmt-20030} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-7:950881 ] - [ DEBUG ]  {conn-10007, pstmt-20029} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-1:950905 ] - [ DEBUG ]  {conn-10006, pstmt-20031} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-2:950910 ] - [ DEBUG ]  {conn-10008, pstmt-20032} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-8:950915 ] - [ DEBUG ]  {conn-10007, pstmt-20033} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-1:950932 ] - [ DEBUG ]  {conn-10008, pstmt-20035} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-2:950936 ] - [ DEBUG ]  {conn-10007, pstmt-20034} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-10:950964 ] - [ DEBUG ]  {conn-10008, pstmt-20036} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-1:950990 ] - [ DEBUG ]  {conn-10008, pstmt-20037} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-4:950997 ] - [ DEBUG ]  {conn-10008, pstmt-20038} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-3:951020 ] - [ DEBUG ]  {conn-10007, pstmt-20039} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-1:951026 ] - [ DEBUG ]  {conn-10008, pstmt-20041} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-9:951030 ] - [ DEBUG ]  {conn-10009, pstmt-20040} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-6:951031 ] - [ DEBUG ]  {conn-10007, pstmt-20042} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-5:951038 ] - [ DEBUG ]  {conn-10009, pstmt-20043} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-5:951058 ] - [ DEBUG ]  {conn-10009, pstmt-20044} enter cache
+2018-05-24 20:20:35  [ http-nio-7899-exec-5:951067 ] - [ DEBUG ]  {conn-10009, pstmt-20045} enter cache
+2018-05-24 20:21:13  [ http-nio-7899-exec-10:989043 ] - [ DEBUG ]  {conn-10010, pstmt-20046} enter cache
+2018-05-24 20:21:34  [ http-nio-7899-exec-2:1009408 ] - [ DEBUG ]  {conn-10010, pstmt-20047} enter cache
+2018-05-24 20:21:34  [ http-nio-7899-exec-2:1009426 ] - [ DEBUG ]  {conn-10010, pstmt-20048} enter cache
+2018-05-24 20:21:34  [ http-nio-7899-exec-2:1009454 ] - [ DEBUG ]  {conn-10010, pstmt-20049} enter cache
+2018-05-24 20:21:34  [ http-nio-7899-exec-2:1009462 ] - [ DEBUG ]  {conn-10010, pstmt-20050} enter cache
+2018-05-24 20:21:34  [ http-nio-7899-exec-2:1009480 ] - [ DEBUG ]  {conn-10010, pstmt-20051} enter cache
+2018-05-24 20:22:20  [ http-nio-7899-exec-1:1055215 ] - [ DEBUG ]  {conn-10010, pstmt-20052} enter cache
+2018-05-24 20:22:20  [ http-nio-7899-exec-7:1055236 ] - [ DEBUG ]  {conn-10009, pstmt-20053} enter cache
+2018-05-24 20:25:32  [ http-nio-7899-exec-2:1248126 ] - [ DEBUG ]  {conn-10009, pstmt-20054} enter cache
+2018-05-24 20:25:32  [ http-nio-7899-exec-4:1248138 ] - [ DEBUG ]  {conn-10010, pstmt-20055} enter cache
+2018-05-24 20:25:36  [ http-nio-7899-exec-9:1251257 ] - [ DEBUG ]  {conn-10010, pstmt-20056} enter cache
+2018-05-24 20:42:51  [ http-nio-7899-exec-1:1 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 20:42:51  [ http-nio-7899-exec-1:48 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 20:42:51  [ http-nio-7899-exec-1:96 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 20:42:51  [ http-nio-7899-exec-1:105 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 20:42:51  [ http-nio-7899-exec-1:122 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 20:42:51  [ http-nio-7899-exec-1:129 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 20:42:51  [ http-nio-7899-exec-1:144 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 20:42:59  [ http-nio-7899-exec-2:7837 ] - [ DEBUG ]  {conn-10001, pstmt-20006} enter cache
+2018-05-24 20:43:01  [ http-nio-7899-exec-4:10185 ] - [ DEBUG ]  {conn-10001, pstmt-20007} enter cache
+2018-05-24 20:43:01  [ http-nio-7899-exec-3:10193 ] - [ DEBUG ]  {conn-10001, pstmt-20008} enter cache
+2018-05-24 20:43:05  [ http-nio-7899-exec-5:14034 ] - [ DEBUG ]  {conn-10002, pstmt-20009} enter cache
+2018-05-24 20:43:05  [ http-nio-7899-exec-5:14043 ] - [ DEBUG ]  {conn-10002, pstmt-20010} enter cache
+2018-05-24 20:43:09  [ http-nio-7899-exec-7:17677 ] - [ DEBUG ]  {conn-10002, pstmt-20011} enter cache
+2018-05-24 20:43:09  [ http-nio-7899-exec-7:17690 ] - [ DEBUG ]  {conn-10002, pstmt-20012} enter cache
+2018-05-24 20:43:09  [ http-nio-7899-exec-7:17708 ] - [ DEBUG ]  {conn-10002, pstmt-20013} enter cache
+2018-05-24 20:43:09  [ http-nio-7899-exec-7:17714 ] - [ DEBUG ]  {conn-10002, pstmt-20014} enter cache
+2018-05-24 20:43:09  [ http-nio-7899-exec-7:17728 ] - [ DEBUG ]  {conn-10002, pstmt-20015} enter cache
+2018-05-24 20:43:09  [ http-nio-7899-exec-8:18404 ] - [ DEBUG ]  {conn-10002, pstmt-20016} enter cache
+2018-05-24 20:43:39  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 20:43:39  [ http-nio-7899-exec-1:43 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 20:43:39  [ http-nio-7899-exec-1:85 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 20:43:39  [ http-nio-7899-exec-1:93 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 20:43:39  [ http-nio-7899-exec-1:113 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 20:43:39  [ http-nio-7899-exec-1:122 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 20:43:39  [ http-nio-7899-exec-1:139 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 20:47:25  [ http-nio-7899-exec-4:226178 ] - [ DEBUG ]  {conn-10001, pstmt-20006} enter cache
+2018-05-24 20:49:03  [ http-nio-7899-exec-1:324101 ] - [ DEBUG ]  {conn-10001, pstmt-20007} enter cache
+2018-05-24 20:49:07  [ http-nio-7899-exec-3:328510 ] - [ DEBUG ]  {conn-10001, pstmt-20008} enter cache
+2018-05-24 20:49:07  [ http-nio-7899-exec-3:328537 ] - [ DEBUG ]  {conn-10001, pstmt-20009} enter cache
+2018-05-24 20:49:07  [ http-nio-7899-exec-3:328566 ] - [ DEBUG ]  {conn-10001, pstmt-20010} enter cache
+2018-05-24 20:49:08  [ http-nio-7899-exec-3:328583 ] - [ DEBUG ]  {conn-10001, pstmt-20011} enter cache
+2018-05-24 20:49:08  [ http-nio-7899-exec-3:328600 ] - [ DEBUG ]  {conn-10001, pstmt-20012} enter cache
+2018-05-24 20:49:08  [ http-nio-7899-exec-3:328617 ] - [ DEBUG ]  {conn-10001, pstmt-20013} enter cache
+2018-05-24 20:49:08  [ http-nio-7899-exec-3:328635 ] - [ DEBUG ]  {conn-10001, pstmt-20014} enter cache
+2018-05-24 20:49:08  [ http-nio-7899-exec-3:328653 ] - [ DEBUG ]  {conn-10001, pstmt-20015} enter cache
+2018-05-24 20:49:10  [ http-nio-7899-exec-4:330951 ] - [ DEBUG ]  {conn-10001, pstmt-20016} enter cache
+2018-05-24 20:49:21  [ http-nio-7899-exec-5:342061 ] - [ DEBUG ]  {conn-10001, pstmt-20017} enter cache
+2018-05-24 20:49:21  [ http-nio-7899-exec-5:342079 ] - [ DEBUG ]  {conn-10001, pstmt-20018} enter cache
+2018-05-24 20:49:21  [ http-nio-7899-exec-5:342096 ] - [ DEBUG ]  {conn-10001, pstmt-20019} enter cache
+2018-05-24 20:49:21  [ http-nio-7899-exec-6:342118 ] - [ DEBUG ]  {conn-10001, pstmt-20001} exit cache
+2018-05-24 20:49:21  [ http-nio-7899-exec-6:342119 ] - [ DEBUG ]  {conn-10001, pstmt-20020} enter cache
+2018-05-24 20:49:21  [ http-nio-7899-exec-6:342137 ] - [ DEBUG ]  {conn-10001, pstmt-20000} exit cache
+2018-05-24 20:49:21  [ http-nio-7899-exec-6:342137 ] - [ DEBUG ]  {conn-10001, pstmt-20021} enter cache
+2018-05-24 20:49:21  [ http-nio-7899-exec-7:342305 ] - [ DEBUG ]  {conn-10001, pstmt-20006} exit cache
+2018-05-24 20:49:21  [ http-nio-7899-exec-7:342306 ] - [ DEBUG ]  {conn-10001, pstmt-20022} enter cache
+2018-05-24 20:49:23  [ http-nio-7899-exec-9:344488 ] - [ DEBUG ]  {conn-10001, pstmt-20002} exit cache
+2018-05-24 20:49:23  [ http-nio-7899-exec-9:344489 ] - [ DEBUG ]  {conn-10001, pstmt-20023} enter cache
+2018-05-24 20:49:41  [ http-nio-7899-exec-1:362117 ] - [ DEBUG ]  {conn-10001, pstmt-20003} exit cache
+2018-05-24 20:49:41  [ http-nio-7899-exec-1:362118 ] - [ DEBUG ]  {conn-10001, pstmt-20024} enter cache
+2018-05-24 20:49:41  [ http-nio-7899-exec-1:362137 ] - [ DEBUG ]  {conn-10001, pstmt-20004} exit cache
+2018-05-24 20:49:41  [ http-nio-7899-exec-1:362138 ] - [ DEBUG ]  {conn-10001, pstmt-20025} enter cache
+2018-05-24 20:49:42  [ http-nio-7899-exec-2:363266 ] - [ DEBUG ]  {conn-10001, pstmt-20005} exit cache
+2018-05-24 20:49:42  [ http-nio-7899-exec-2:363266 ] - [ DEBUG ]  {conn-10001, pstmt-20026} enter cache
+2018-05-24 20:49:42  [ http-nio-7899-exec-4:363313 ] - [ DEBUG ]  {conn-10001, pstmt-20007} exit cache
+2018-05-24 20:49:42  [ http-nio-7899-exec-4:363313 ] - [ DEBUG ]  {conn-10001, pstmt-20027} enter cache
+2018-05-24 20:49:42  [ http-nio-7899-exec-3:363330 ] - [ DEBUG ]  {conn-10001, pstmt-20008} exit cache
+2018-05-24 20:49:42  [ http-nio-7899-exec-3:363331 ] - [ DEBUG ]  {conn-10001, pstmt-20028} enter cache
+2018-05-24 20:49:42  [ http-nio-7899-exec-4:363348 ] - [ DEBUG ]  {conn-10001, pstmt-20009} exit cache
+2018-05-24 20:49:42  [ http-nio-7899-exec-4:363348 ] - [ DEBUG ]  {conn-10001, pstmt-20029} enter cache
+2018-05-24 20:49:42  [ http-nio-7899-exec-5:363400 ] - [ DEBUG ]  {conn-10002, pstmt-20030} enter cache
+2018-05-24 20:49:42  [ http-nio-7899-exec-6:363426 ] - [ DEBUG ]  {conn-10002, pstmt-20031} enter cache
+2018-05-24 20:49:42  [ http-nio-7899-exec-6:363437 ] - [ DEBUG ]  {conn-10002, pstmt-20032} enter cache
+2018-05-24 20:49:59  [ http-nio-7899-exec-8:379684 ] - [ DEBUG ]  {conn-10002, pstmt-20033} enter cache
+2018-05-24 20:49:59  [ http-nio-7899-exec-8:379703 ] - [ DEBUG ]  {conn-10002, pstmt-20034} enter cache
+2018-05-24 20:49:59  [ http-nio-7899-exec-8:379731 ] - [ DEBUG ]  {conn-10002, pstmt-20035} enter cache
+2018-05-24 20:49:59  [ http-nio-7899-exec-8:379739 ] - [ DEBUG ]  {conn-10002, pstmt-20036} enter cache
+2018-05-24 20:49:59  [ http-nio-7899-exec-8:379757 ] - [ DEBUG ]  {conn-10002, pstmt-20037} enter cache
+2018-05-24 20:50:01  [ http-nio-7899-exec-9:382340 ] - [ DEBUG ]  {conn-10002, pstmt-20038} enter cache
+2018-05-24 20:50:01  [ http-nio-7899-exec-9:382395 ] - [ DEBUG ]  {conn-10002, pstmt-20039} enter cache
+2018-05-24 20:50:10  [ http-nio-7899-exec-10:391496 ] - [ DEBUG ]  {conn-10002, pstmt-20040} enter cache
+2018-05-24 20:50:10  [ http-nio-7899-exec-10:391554 ] - [ DEBUG ]  {conn-10002, pstmt-20041} enter cache
+2018-05-24 21:00:33  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 21:00:33  [ http-nio-7899-exec-1:55 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 21:00:42  [ http-nio-7899-exec-1:8518 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 21:00:58  [ http-nio-7899-exec-1:24685 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 21:00:58  [ http-nio-7899-exec-2:24724 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 21:00:58  [ http-nio-7899-exec-1:24742 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 21:00:58  [ http-nio-7899-exec-1:24757 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 21:00:58  [ http-nio-7899-exec-1:24790 ] - [ DEBUG ]  {conn-10002, pstmt-20006} enter cache
+2018-05-24 21:00:58  [ http-nio-7899-exec-2:24795 ] - [ DEBUG ]  {conn-10001, pstmt-20007} enter cache
+2018-05-24 21:15:43  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 21:15:43  [ http-nio-7899-exec-1:50 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 21:15:51  [ http-nio-7899-exec-3:8182 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 21:15:51  [ http-nio-7899-exec-3:8243 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 21:15:51  [ http-nio-7899-exec-3:8275 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 21:15:51  [ http-nio-7899-exec-3:8295 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 21:15:51  [ http-nio-7899-exec-3:8314 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 21:15:51  [ http-nio-7899-exec-3:8333 ] - [ DEBUG ]  {conn-10001, pstmt-20006} enter cache
+2018-05-24 21:15:51  [ http-nio-7899-exec-3:8354 ] - [ DEBUG ]  {conn-10001, pstmt-20007} enter cache
+2018-05-24 21:15:51  [ http-nio-7899-exec-3:8375 ] - [ DEBUG ]  {conn-10001, pstmt-20008} enter cache
+2018-05-24 21:15:53  [ http-nio-7899-exec-4:10436 ] - [ DEBUG ]  {conn-10001, pstmt-20009} enter cache
+2018-05-24 21:16:12  [ http-nio-7899-exec-5:29474 ] - [ DEBUG ]  {conn-10001, pstmt-20010} enter cache
+2018-05-24 21:16:23  [ http-nio-7899-exec-6:39724 ] - [ DEBUG ]  {conn-10001, pstmt-20011} enter cache
+2018-05-24 21:16:23  [ http-nio-7899-exec-6:39745 ] - [ DEBUG ]  {conn-10001, pstmt-20012} enter cache
+2018-05-24 21:16:23  [ http-nio-7899-exec-6:39764 ] - [ DEBUG ]  {conn-10001, pstmt-20013} enter cache
+2018-05-24 21:16:23  [ http-nio-7899-exec-7:39812 ] - [ DEBUG ]  {conn-10001, pstmt-20014} enter cache
+2018-05-24 21:16:23  [ http-nio-7899-exec-8:39983 ] - [ DEBUG ]  {conn-10001, pstmt-20015} enter cache
+2018-05-24 21:16:26  [ http-nio-7899-exec-10:42994 ] - [ DEBUG ]  {conn-10001, pstmt-20016} enter cache
+2018-05-24 21:16:34  [ http-nio-7899-exec-2:50657 ] - [ DEBUG ]  {conn-10001, pstmt-20017} enter cache
+2018-05-24 21:16:34  [ http-nio-7899-exec-2:50676 ] - [ DEBUG ]  {conn-10001, pstmt-20018} enter cache
+2018-05-24 21:16:35  [ http-nio-7899-exec-3:51764 ] - [ DEBUG ]  {conn-10001, pstmt-20019} enter cache
+2018-05-24 21:16:35  [ http-nio-7899-exec-5:51817 ] - [ DEBUG ]  {conn-10001, pstmt-20000} exit cache
+2018-05-24 21:16:35  [ http-nio-7899-exec-5:51818 ] - [ DEBUG ]  {conn-10001, pstmt-20020} enter cache
+2018-05-24 21:16:35  [ http-nio-7899-exec-4:51838 ] - [ DEBUG ]  {conn-10001, pstmt-20001} exit cache
+2018-05-24 21:16:35  [ http-nio-7899-exec-4:51839 ] - [ DEBUG ]  {conn-10001, pstmt-20021} enter cache
+2018-05-24 21:16:35  [ http-nio-7899-exec-5:51859 ] - [ DEBUG ]  {conn-10001, pstmt-20002} exit cache
+2018-05-24 21:16:35  [ http-nio-7899-exec-5:51859 ] - [ DEBUG ]  {conn-10001, pstmt-20022} enter cache
+2018-05-24 21:16:35  [ http-nio-7899-exec-6:51911 ] - [ DEBUG ]  {conn-10002, pstmt-20023} enter cache
+2018-05-24 21:16:35  [ http-nio-7899-exec-7:51939 ] - [ DEBUG ]  {conn-10002, pstmt-20024} enter cache
+2018-05-24 21:16:35  [ http-nio-7899-exec-7:51950 ] - [ DEBUG ]  {conn-10002, pstmt-20025} enter cache
+2018-05-24 21:16:38  [ http-nio-7899-exec-9:54505 ] - [ DEBUG ]  {conn-10002, pstmt-20026} enter cache
+2018-05-24 21:16:38  [ http-nio-7899-exec-9:54526 ] - [ DEBUG ]  {conn-10002, pstmt-20027} enter cache
+2018-05-24 21:16:38  [ http-nio-7899-exec-9:54555 ] - [ DEBUG ]  {conn-10002, pstmt-20028} enter cache
+2018-05-24 21:16:38  [ http-nio-7899-exec-9:54564 ] - [ DEBUG ]  {conn-10002, pstmt-20029} enter cache
+2018-05-24 21:16:38  [ http-nio-7899-exec-9:54582 ] - [ DEBUG ]  {conn-10002, pstmt-20030} enter cache
+2018-05-24 21:16:38  [ http-nio-7899-exec-10:55309 ] - [ DEBUG ]  {conn-10002, pstmt-20031} enter cache
+2018-05-24 21:16:38  [ http-nio-7899-exec-10:55366 ] - [ DEBUG ]  {conn-10002, pstmt-20032} enter cache
+2018-05-24 21:16:39  [ http-nio-7899-exec-1:56458 ] - [ DEBUG ]  {conn-10002, pstmt-20033} enter cache
+2018-05-24 21:16:40  [ http-nio-7899-exec-2:57245 ] - [ DEBUG ]  {conn-10002, pstmt-20034} enter cache
+2018-05-24 21:18:50  [ http-nio-7899-exec-5:187250 ] - [ DEBUG ]  {conn-10002, pstmt-20035} enter cache
+2018-05-24 21:19:00  [ http-nio-7899-exec-6:196505 ] - [ DEBUG ]  {conn-10002, pstmt-20036} enter cache
+2018-05-24 21:19:00  [ http-nio-7899-exec-6:196524 ] - [ DEBUG ]  {conn-10002, pstmt-20037} enter cache
+2018-05-24 21:19:00  [ http-nio-7899-exec-6:196544 ] - [ DEBUG ]  {conn-10002, pstmt-20038} enter cache
+2018-05-24 21:19:00  [ http-nio-7899-exec-7:196582 ] - [ DEBUG ]  {conn-10002, pstmt-20039} enter cache
+2018-05-24 21:19:12  [ http-nio-7899-exec-2:208622 ] - [ DEBUG ]  {conn-10002, pstmt-20040} enter cache
+2018-05-24 21:19:12  [ http-nio-7899-exec-2:208641 ] - [ DEBUG ]  {conn-10002, pstmt-20041} enter cache
+2018-05-24 21:19:13  [ http-nio-7899-exec-3:209701 ] - [ DEBUG ]  {conn-10002, pstmt-20042} enter cache
+2018-05-24 21:19:13  [ http-nio-7899-exec-4:209761 ] - [ DEBUG ]  {conn-10002, pstmt-20030} exit cache
+2018-05-24 21:19:13  [ http-nio-7899-exec-4:209761 ] - [ DEBUG ]  {conn-10002, pstmt-20043} enter cache
+2018-05-24 21:19:13  [ http-nio-7899-exec-7:209857 ] - [ DEBUG ]  {conn-10001, pstmt-20003} exit cache
+2018-05-24 21:19:13  [ http-nio-7899-exec-7:209858 ] - [ DEBUG ]  {conn-10001, pstmt-20044} enter cache
+2018-05-24 21:19:22  [ http-nio-7899-exec-9:218845 ] - [ DEBUG ]  {conn-10001, pstmt-20004} exit cache
+2018-05-24 21:19:22  [ http-nio-7899-exec-9:218846 ] - [ DEBUG ]  {conn-10001, pstmt-20045} enter cache
+2018-05-24 21:19:22  [ http-nio-7899-exec-9:218868 ] - [ DEBUG ]  {conn-10001, pstmt-20005} exit cache
+2018-05-24 21:19:22  [ http-nio-7899-exec-9:218869 ] - [ DEBUG ]  {conn-10001, pstmt-20046} enter cache
+2018-05-24 21:19:22  [ http-nio-7899-exec-9:218900 ] - [ DEBUG ]  {conn-10001, pstmt-20006} exit cache
+2018-05-24 21:19:22  [ http-nio-7899-exec-9:218901 ] - [ DEBUG ]  {conn-10001, pstmt-20047} enter cache
+2018-05-24 21:19:22  [ http-nio-7899-exec-9:218910 ] - [ DEBUG ]  {conn-10001, pstmt-20007} exit cache
+2018-05-24 21:19:22  [ http-nio-7899-exec-9:218910 ] - [ DEBUG ]  {conn-10001, pstmt-20048} enter cache
+2018-05-24 21:19:22  [ http-nio-7899-exec-9:218929 ] - [ DEBUG ]  {conn-10001, pstmt-20008} exit cache
+2018-05-24 21:19:22  [ http-nio-7899-exec-9:218930 ] - [ DEBUG ]  {conn-10001, pstmt-20049} enter cache
+2018-05-24 21:19:29  [ http-nio-7899-exec-10:226115 ] - [ DEBUG ]  {conn-10001, pstmt-20009} exit cache
+2018-05-24 21:19:29  [ http-nio-7899-exec-10:226115 ] - [ DEBUG ]  {conn-10001, pstmt-20050} enter cache
+2018-05-24 21:19:29  [ http-nio-7899-exec-10:226169 ] - [ DEBUG ]  {conn-10001, pstmt-20011} exit cache
+2018-05-24 21:19:29  [ http-nio-7899-exec-10:226170 ] - [ DEBUG ]  {conn-10001, pstmt-20051} enter cache
+2018-05-24 21:22:36  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 21:22:36  [ http-nio-7899-exec-1:50 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 21:22:36  [ http-nio-7899-exec-1:69 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 21:22:36  [ http-nio-7899-exec-1:79 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 21:22:36  [ http-nio-7899-exec-1:122 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 21:22:36  [ http-nio-7899-exec-1:131 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 21:22:36  [ http-nio-7899-exec-1:151 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 21:22:37  [ http-nio-7899-exec-2:1084 ] - [ DEBUG ]  {conn-10001, pstmt-20006} enter cache
+2018-05-24 21:22:37  [ http-nio-7899-exec-2:1142 ] - [ DEBUG ]  {conn-10001, pstmt-20007} enter cache
+2018-05-24 21:22:48  [ http-nio-7899-exec-3:11882 ] - [ DEBUG ]  {conn-10001, pstmt-20008} enter cache
+2018-05-24 21:22:48  [ http-nio-7899-exec-4:11911 ] - [ DEBUG ]  {conn-10001, pstmt-20009} enter cache
+2018-05-24 21:22:52  [ http-nio-7899-exec-6:16211 ] - [ DEBUG ]  {conn-10001, pstmt-20010} enter cache
+2018-05-24 21:22:52  [ http-nio-7899-exec-6:16231 ] - [ DEBUG ]  {conn-10001, pstmt-20011} enter cache
+2018-05-24 21:22:53  [ http-nio-7899-exec-7:17306 ] - [ DEBUG ]  {conn-10001, pstmt-20012} enter cache
+2018-05-24 21:22:53  [ http-nio-7899-exec-9:17349 ] - [ DEBUG ]  {conn-10001, pstmt-20013} enter cache
+2018-05-24 21:22:53  [ http-nio-7899-exec-9:17377 ] - [ DEBUG ]  {conn-10001, pstmt-20014} enter cache
+2018-05-24 21:22:53  [ http-nio-7899-exec-8:17397 ] - [ DEBUG ]  {conn-10001, pstmt-20015} enter cache
+2018-05-24 21:23:00  [ http-nio-7899-exec-3:24428 ] - [ DEBUG ]  {conn-10001, pstmt-20016} enter cache
+2018-05-24 21:33:02  [ http-nio-7899-exec-7:626272 ] - [ DEBUG ]  skip not validate connection.
+2018-05-24 21:33:02  [ http-nio-7899-exec-7:626341 ] - [ DEBUG ]  {conn-10003, pstmt-20017} enter cache
+2018-05-24 21:33:02  [ http-nio-7899-exec-7:626348 ] - [ DEBUG ]  {conn-10003, pstmt-20018} enter cache
+2018-05-24 21:34:41  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 21:34:41  [ http-nio-7899-exec-1:49 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 21:34:56  [ http-nio-7899-exec-1:14573 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 21:42:07  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 21:42:08  [ http-nio-7899-exec-1:45 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 21:42:08  [ http-nio-7899-exec-1:92 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 21:43:23  [ Thread-6:75371 ] - [ DEBUG ]  {conn-10001, pstmt-20000} exit cache
+2018-05-24 21:43:23  [ Thread-6:75432 ] - [ DEBUG ]  {conn-10001, pstmt-20001} exit cache
+2018-05-24 21:43:23  [ Thread-6:75435 ] - [ INFO ]  {dataSource-1} closed
+2018-05-24 21:44:25  [ http-nio-7899-exec-10:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 21:44:25  [ http-nio-7899-exec-10:40 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 21:44:25  [ http-nio-7899-exec-10:77 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 21:44:57  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 21:44:57  [ http-nio-7899-exec-1:40 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 21:44:57  [ http-nio-7899-exec-2:125 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 21:44:57  [ http-nio-7899-exec-2:136 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 21:44:57  [ http-nio-7899-exec-3:243 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 21:45:07  [ http-nio-7899-exec-4:10856 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 21:45:09  [ http-nio-7899-exec-6:12552 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 21:45:25  [ http-nio-7899-exec-8:28612 ] - [ DEBUG ]  {conn-10001, pstmt-20006} enter cache
+2018-05-24 21:45:32  [ http-nio-7899-exec-9:35039 ] - [ DEBUG ]  {conn-10002, pstmt-20007} enter cache
+2018-05-24 21:45:40  [ http-nio-7899-exec-1:43196 ] - [ DEBUG ]  {conn-10002, pstmt-20008} enter cache
+2018-05-24 21:50:32  [ http-nio-7899-exec-8:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 21:50:32  [ http-nio-7899-exec-8:46 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 22:01:14  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 22:01:14  [ http-nio-7899-exec-1:62 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 22:01:14  [ http-nio-7899-exec-1:119 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 22:01:52  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 22:01:52  [ http-nio-7899-exec-1:60 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 22:01:52  [ http-nio-7899-exec-1:73 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 22:07:35  [ http-nio-7899-exec-2:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 22:07:35  [ http-nio-7899-exec-2:59 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 22:07:48  [ http-nio-7899-exec-2:13213 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 22:08:46  [ http-nio-7899-exec-3:71802 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 22:10:10  [ http-nio-7899-exec-1:0 ] - [ INFO ]  {dataSource-1} inited
+2018-05-24 22:10:10  [ http-nio-7899-exec-1:44 ] - [ DEBUG ]  {conn-10001, pstmt-20000} enter cache
+2018-05-24 22:10:10  [ http-nio-7899-exec-1:56 ] - [ DEBUG ]  {conn-10001, pstmt-20001} enter cache
+2018-05-24 22:10:10  [ http-nio-7899-exec-1:99 ] - [ DEBUG ]  {conn-10001, pstmt-20002} enter cache
+2018-05-24 22:10:23  [ http-nio-7899-exec-2:13273 ] - [ DEBUG ]  {conn-10001, pstmt-20003} enter cache
+2018-05-24 22:10:25  [ http-nio-7899-exec-4:14930 ] - [ DEBUG ]  {conn-10001, pstmt-20004} enter cache
+2018-05-24 22:10:28  [ http-nio-7899-exec-5:18486 ] - [ DEBUG ]  {conn-10001, pstmt-20005} enter cache
+2018-05-24 22:10:30  [ http-nio-7899-exec-6:20341 ] - [ DEBUG ]  {conn-10001, pstmt-20006} enter cache
+2018-05-24 22:10:30  [ http-nio-7899-exec-6:20349 ] - [ DEBUG ]  {conn-10001, pstmt-20007} enter cache
+2018-05-24 22:10:37  [ http-nio-7899-exec-9:27003 ] - [ DEBUG ]  {conn-10001, pstmt-20008} enter cache
+2018-05-24 22:10:37  [ http-nio-7899-exec-9:27018 ] - [ DEBUG ]  {conn-10001, pstmt-20009} enter cache
+2018-05-24 22:10:37  [ http-nio-7899-exec-9:27041 ] - [ DEBUG ]  {conn-10001, pstmt-20010} enter cache
+2018-05-24 22:10:37  [ http-nio-7899-exec-9:27047 ] - [ DEBUG ]  {conn-10001, pstmt-20011} enter cache
+2018-05-24 22:10:37  [ http-nio-7899-exec-9:27061 ] - [ DEBUG ]  {conn-10001, pstmt-20012} enter cache
+2018-05-24 22:10:43  [ http-nio-7899-exec-10:33005 ] - [ DEBUG ]  {conn-10001, pstmt-20013} enter cache
+2018-05-24 22:10:43  [ http-nio-7899-exec-10:33047 ] - [ DEBUG ]  {conn-10001, pstmt-20014} enter cache
+2018-05-24 22:10:46  [ http-nio-7899-exec-3:36341 ] - [ DEBUG ]  {conn-10001, pstmt-20015} enter cache

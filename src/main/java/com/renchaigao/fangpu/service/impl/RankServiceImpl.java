@@ -80,7 +80,7 @@ public class RankServiceImpl implements RankService {
             List<String> termRanksList = Arrays.asList(todayTermRanks.split("-"));
             List<TermInfo> termInfoList = new ArrayList<>();
             System.out.println("termRanksList.size() is : " + termRanksList.size());
-            if (endnum < termRanksList.size()) {
+            if (endnum <= termRanksList.size()) {
                 for (int i = endnum - 1; i < endnum + 9 && i < termRanksList.size(); i++)
                     termInfoList.add(termInfoMapper.selectByPrimaryKey(Integer.parseInt(termRanksList.get(i))));
                 return new ResponseEntity(RespCode.RANKGETNEW, termInfoList);

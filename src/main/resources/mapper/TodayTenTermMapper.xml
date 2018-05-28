@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.renchaigao.fangpu.dao.mapper.TodayTenTermMapper" >
+  <resultMap id="BaseResultMap" type="com.renchaigao.fangpu.dao.TodayTenTerm" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="todaydate" property="todaydate" jdbcType="VARCHAR" />
+    <result column="termidlist" property="termidlist" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, todaydate, termidlist
+  </sql>
+  <select id="selectByDate" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from todaytenterm
+    where todaydate = #{todaydate,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from todaytenterm
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from todaytenterm
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.renchaigao.fangpu.dao.TodayTenTerm" >
+    insert into todaytenterm (id, todaydate, termidlist
+      )
+    values (#{id,jdbcType=INTEGER}, #{todaydate,jdbcType=VARCHAR}, #{termidlist,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.renchaigao.fangpu.dao.TodayTenTerm" >
+    insert into todaytenterm
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="todaydate != null" >
+        todaydate,
+      </if>
+      <if test="termidlist != null" >
+        termidlist,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="todaydate != null" >
+        #{todaydate,jdbcType=VARCHAR},
+      </if>
+      <if test="termidlist != null" >
+        #{termidlist,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.renchaigao.fangpu.dao.TodayTenTerm" >
+    update todaytenterm
+    <set >
+      <if test="todaydate != null" >
+        todaydate = #{todaydate,jdbcType=VARCHAR},
+      </if>
+      <if test="termidlist != null" >
+        termidlist = #{termidlist,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.renchaigao.fangpu.dao.TodayTenTerm" >
+    update todaytenterm
+    set todaydate = #{todaydate,jdbcType=VARCHAR},
+      termidlist = #{termidlist,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,14 +1,8 @@
 package com.renchaigao.fangpu.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import com.renchaigao.fangpu.dao.RecordingInfo;
-import com.renchaigao.fangpu.dao.RecordingList;
-import com.renchaigao.fangpu.dao.RecordingNumList;
-import com.renchaigao.fangpu.dao.RecordingNumListWithBLOBs;
-import com.renchaigao.fangpu.dao.mapper.MyRecordingMapper;
-import com.renchaigao.fangpu.dao.mapper.RecordingInfoMapper;
-import com.renchaigao.fangpu.dao.mapper.RecordingListMapper;
-import com.renchaigao.fangpu.dao.mapper.RecordingNumListMapper;
+import com.renchaigao.fangpu.dao.*;
+import com.renchaigao.fangpu.dao.mapper.*;
 import com.renchaigao.fangpu.domain.response.RespCode;
 import com.renchaigao.fangpu.domain.response.ResponseEntity;
 import com.renchaigao.fangpu.function.normalFunc;
@@ -46,6 +40,9 @@ public class RecordingServiceImpl implements RecordingService {
     @Autowired
     RecordingNumListMapper recordingNumListMapper;
 
+    @Autowired
+    TermInfoMapper termInfoMapper;
+
     public ResponseEntity addRecording(RecordingInfo recordingInfo) {
         try {
             recordingInfo.setAddtime(new Date());
@@ -54,6 +51,12 @@ public class RecordingServiceImpl implements RecordingService {
             RecordingNumListWithBLOBs recordingNumListWithBLOBs = new RecordingNumListWithBLOBs();
             recordingNumListWithBLOBs.setRecordingid(recordingInfo.getId());
             recordingNumListMapper.insertSelective(recordingNumListWithBLOBs);
+
+//            增加terms的recordingnum数
+            TermInfo termInfo = termInfoMapper.selectByPrimaryKey(recordingInfo.getTermid());
+            termInfo.setRecordingnum(termInfo.getRecordingnum() + 1);
+            termInfoMapper.updateByPrimaryKeySelective(termInfo);
+
             return new ResponseEntity(RespCode.SUCCESS, recordingInfo);
         } catch (Exception e) {
             return new ResponseEntity(RespCode.EXCEPTION, e);
@@ -100,7 +103,7 @@ public class RecordingServiceImpl implements RecordingService {
         String filename = recordingInfo.getFilename();
 
         res.setHeader("content-type", "multipart/form-data");
-        res.setContentType("application/octet-stream");
+//        res.setContentType("application/octet-stream");
         res.setHeader("Content-Disposition", "attachment;filename=" + filename);
         byte[] buff = new byte[1024];
         BufferedInputStream bis = null;
@@ -141,8 +144,7 @@ public class RecordingServiceImpl implements RecordingService {
 
     public ResponseEntity getRecordingInfo(RecordingInfo recordingInfo) {
         try {
-            return new ResponseEntity(RespCode.SUCCESS, recordingInfoMapper.
-                    selectByPrimaryKey(recordingInfo.getId()));
+            return new ResponseEntity(RespCode.SUCCESS, recordingInfoMapper.selectByPrimaryKey(recordingInfo.getId()));
         } catch (Exception e) {
             return new ResponseEntity(RespCode.EXCEPTION, e);
         }
@@ -188,7 +190,7 @@ public class RecordingServiceImpl implements RecordingService {
         }
     }
 
-    public ResponseEntity getRecordingList(Integer id){
+    public ResponseEntity getRecordingList(Integer id) {
         try {
             RecordingList recordingList = recordingListMapper.selectByPrimaryKey(id);
             List<String> termrecordingList = Arrays.asList(recordingList.getRecordingliststr().split("-"));

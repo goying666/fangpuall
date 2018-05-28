@@ -96,16 +96,22 @@ public class UserServiceImpl implements UserService {
 //                创建我的词条myterms
                 MyTerms myTerms = new MyTerms();
                 myTerms.setUserid(userInfo.getId());
+                myTerms.setTermnum(0);
                 mytermsmapper.insert(myTerms);
 
 //                创建我的方言recording
                 MyRecording myRecording = new MyRecording();
                 myRecording.setUserid(userInfo.getId());
+                myRecording.setRecordingnum(0);
                 myRecordingMapper.insert(myRecording);
 
 //                创建我的num：mynum
                 MyNum myNum = new MyNum();
                 myNum.setUserid(userInfo.getId());
+                myNum.setRecordingnum(0);
+                myNum.setZannum(0);
+                myNum.setTermnum(0);
+                myNum.setBadnum(0);
                 myNumMapper.insertSelective(myNum);
 
                 MyZanWithBLOBs myZanWithBLOBs = new MyZanWithBLOBs();

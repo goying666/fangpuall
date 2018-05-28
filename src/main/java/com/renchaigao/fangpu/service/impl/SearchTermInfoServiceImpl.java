@@ -2,6 +2,7 @@ package com.renchaigao.fangpu.service.impl;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.renchaigao.fangpu.dao.RecordingInfo;
 import com.renchaigao.fangpu.dao.TermInfo;
 import com.renchaigao.fangpu.dao.mapper.TermInfoMapper;
 import com.renchaigao.fangpu.domain.response.RespCode;
@@ -27,6 +28,8 @@ public class SearchTermInfoServiceImpl implements SearchTermInfoService{
 
     public ResponseEntity searchTermInfo(SearchTerm searchTerm){
         try {
+
+            long startTime = System.currentTimeMillis(); //程序开始记录时间
             JSONObject retJson = searchTermInfoFromSearch(searchTerm.getSearchString());
 
 //             JSONObject test = JSON.
@@ -38,13 +41,25 @@ public class SearchTermInfoServiceImpl implements SearchTermInfoService{
             for(int i = 0 ; i < hitsJsonArg.size() ; i++){
                 termIdList.add(i,hitsJsonArg.getJSONObject(i).get("_id").toString());
             }
+            Integer recordingnum = 0;
             for(int i = 0 ; i < termIdList.size() ; i++){
                 termList.add(i,termInfoMapper.selectByPrimaryKey(
                         Integer.parseInt(termIdList.get(i))));
+                recordingnum =+termList.get(i).getRecordingnum();
             }
-            return new ResponseEntity(RespCode.SUCCESS,termList);
+            long spendTime = System.currentTimeMillis() - startTime;
+            retJson.put("termlist",termList);
+            retJson.put("spendtime",spendTime);
+            retJson.put("termnum",termIdList.size());
+            retJson.put("recordingnum",recordingnum);
+            return new ResponseEntity(RespCode.SUCCESS,retJson);
         }catch (Exception e){
-            return new ResponseEntity(RespCode.EXCEPTION,e);
+            JSONObject retJson = new JSONObject();
+            retJson.put("termlist",0);
+            retJson.put("spendtime","***");
+            retJson.put("termnum",0);
+            retJson.put("recordingnum",0);
+            return new ResponseEntity(RespCode.EXCEPTION,retJson);
         }
 
     }

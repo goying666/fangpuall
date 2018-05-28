@@ -111,7 +111,6 @@ public class NumServiceImpl {
 
 //                  2、方言zannum修改
                     RecordingInfo recordingInfo = recordingInfoMapper.selectByPrimaryKey(recordingid);
-//
 
                     termInfo.setZannum(termInfo.getZannum() + 1);
                     recordingInfo.setZannum(recordingInfo.getZannum() + 1);
@@ -261,24 +260,33 @@ public class NumServiceImpl {
 
     public ResponseEntity numControlGet(Integer userid, Integer recordingid) {
         try {
-            //        判断用户是否已经赞过该词条，
             MyZanWithBLOBs myZanWithBLOBs = myZanMapper.selectByUserId(userid);
+            JSONObject retJson = new JSONObject();
+
+            //        判断用户是否已经赞过该方言，
             if (myZanWithBLOBs != null) {
                 String myBadListStr = myZanWithBLOBs.getBadrecordinglist();
                 String myZanListStr = myZanWithBLOBs.getZanrecordinglist();
-                if (myBadListStr != null) {
-//                  1、方言zannum修改
-                    List<String> badlist = Arrays.asList(myBadListStr.split("-"));
-                    boolean badYesOrNo = badlist.contains(recordingid.toString());
+                if (myZanListStr != null) {
                     List<String> zanlist = Arrays.asList(myZanListStr.split("-"));
                     boolean zanYesOrNo = zanlist.contains(recordingid.toString());
-                    JSONObject retJson = new JSONObject();
                     retJson.put("zan", zanYesOrNo);
+                } else
+                    retJson.put("zan", false);
+//            判断用户是否已经bad过该方言
+                if (myBadListStr != null) {
+                    List<String> badlist = Arrays.asList(myBadListStr.split("-"));
+                    boolean badYesOrNo = badlist.contains(recordingid.toString());
                     retJson.put("bad", badYesOrNo);
-                    return new ResponseEntity(RespCode.SUCCESS, retJson);
-                }
+                } else
+                    retJson.put("bad", false);
+//            判断用户是否已经收藏过
+//            判断用户是否已经分享过
+            } else{
+                retJson.put("zan", false);
+                retJson.put("bad", false);
             }
-            return new ResponseEntity(RespCode.SUCCESS);
+            return new ResponseEntity(RespCode.SUCCESS,retJson);
         } catch (Exception e) {
             return new ResponseEntity(RespCode.EXCEPTION, e);
         }
