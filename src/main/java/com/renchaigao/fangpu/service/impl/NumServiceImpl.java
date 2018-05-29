@@ -5,13 +5,14 @@ import com.renchaigao.fangpu.dao.*;
 import com.renchaigao.fangpu.dao.mapper.*;
 import com.renchaigao.fangpu.domain.response.RespCode;
 import com.renchaigao.fangpu.domain.response.ResponseEntity;
+import com.renchaigao.fangpu.service.NumService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 @Service
-public class NumServiceImpl {
+public class NumServiceImpl implements NumService {
 
     @Autowired
     MyZanMapper myZanMapper;
@@ -257,7 +258,6 @@ public class NumServiceImpl {
         }
     }
 
-
     public ResponseEntity numControlGet(Integer userid, Integer recordingid) {
         try {
             MyZanWithBLOBs myZanWithBLOBs = myZanMapper.selectByUserId(userid);
@@ -282,14 +282,24 @@ public class NumServiceImpl {
                     retJson.put("bad", false);
 //            判断用户是否已经收藏过
 //            判断用户是否已经分享过
-            } else{
+            } else {
                 retJson.put("zan", false);
                 retJson.put("bad", false);
             }
-            return new ResponseEntity(RespCode.SUCCESS,retJson);
+            return new ResponseEntity(RespCode.SUCCESS, retJson);
         } catch (Exception e) {
             return new ResponseEntity(RespCode.EXCEPTION, e);
         }
     }
 
+    public ResponseEntity deleteTerm(Map<String, Object> reqMap) {
+        try {
+            JSONObject retJson = new JSONObject();
+
+            return new ResponseEntity(RespCode.SUCCESS, retJson);
+        } catch (Exception e) {
+            return new ResponseEntity(RespCode.EXCEPTION, e);
+        }
+
+    }
 }

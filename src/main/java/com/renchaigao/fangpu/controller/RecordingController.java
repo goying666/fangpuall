@@ -44,17 +44,17 @@ public class RecordingController {
 
 
 
-    @GetMapping(value = "/file/get/{recordingid}")
+    @GetMapping(value = "/file/get/{recordingid}",consumes = "application/octet-stream")
     @ResponseBody
 
-    public void downloadRecordingFile(HttpServletResponse response,
-                                      Integer recordingid,HttpServletRequest request) {
-        recordingServiceImpl.downloadRecordingFile(response,recordingid,request);
-    }
-//    public void downloadRecordingFile(HttpServletResponse res,
-//                                      @PathVariable("recordingid") Integer recordingid) {
-//        recordingServiceImpl.downloadRecordingFile(res,recordingid);
+//    public void downloadRecordingFile(HttpServletResponse response,
+//                                      Integer recordingid,HttpServletRequest request) {
+//        recordingServiceImpl.downloadRecordingFile(response,recordingid,request);
 //    }
+    public void downloadRecordingFile(HttpServletResponse res,
+                                      @PathVariable("recordingid") Integer recordingid) {
+        recordingServiceImpl.downloadRecordingFile(res,recordingid);
+    }
 
 
 

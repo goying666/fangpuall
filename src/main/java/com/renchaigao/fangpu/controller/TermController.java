@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Map;
+
 @Controller
 @RequestMapping(value = "/term/")
 public class TermController {
@@ -34,10 +36,11 @@ public class TermController {
     public ResponseEntity updateTermInfo(@RequestBody TermInfo termInfo){
         return termserviceimpl.updateTerm(termInfo);
     }
-    @PostMapping(value = "/delete" , consumes = "application/json")
+
+    @PostMapping(value = "/delete",consumes = "application/json")
     @ResponseBody
-    public ResponseEntity deleteTermInfo(@RequestBody TermInfo termInfo){
-        return termserviceimpl.deleteTerm(termInfo);
+    public ResponseEntity deleteTermInfo(@RequestBody Map<String,Object> reqMap){
+        return termserviceimpl.deleteTerm(reqMap);
     }
 
 }

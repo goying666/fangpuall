@@ -1,8 +1,10 @@
 package com.renchaigao.fangpu.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
+import com.renchaigao.fangpu.dao.MyTerms;
 import com.renchaigao.fangpu.dao.RecordingList;
 import com.renchaigao.fangpu.dao.TermInfo;
+import com.renchaigao.fangpu.dao.mapper.MyTermsMapper;
 import com.renchaigao.fangpu.dao.mapper.RecordingListMapper;
 import com.renchaigao.fangpu.dao.mapper.TermInfoMapper;
 import com.renchaigao.fangpu.dao.mapper.UserInfoMapper;
@@ -20,9 +22,7 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class TermServiceImpl implements TermService {
@@ -35,6 +35,8 @@ public class TermServiceImpl implements TermService {
     UserInfoMapper userInfoMapper;
     @Autowired
     RecordingListMapper recordingListMapper;
+    @Autowired
+    MyTermsMapper myTermsMapper;
 
     public ResponseEntity addTerm(TermInfo termInfo) {
         System.out.println(JSONObject.toJSONString(termInfo));
@@ -103,14 +105,38 @@ public class TermServiceImpl implements TermService {
         return new ResponseEntity(RespCode.SUCCESS);
     }
 
-
-
-    public ResponseEntity deleteTerm(TermInfo termInfo) {
-
-        return new ResponseEntity(RespCode.SUCCESS);
+    public ResponseEntity deleteTerm(Map<String,Object> reqMap) {
+        try {
+            JSONObject retJson = new JSONObject();
+//            删除terminfo
+             List<String> idlist = Arrays.asList(reqMap.get("deleteidlist").toString().split("-"));
+            for (String id : idlist){
+                termInfoMapper.deleteByPrimaryKey(Integer.parseInt(id));
+            }
+//            删除myterm中对应terms的信息；
+            MyTerms myTerms = myTermsMapper.selectByPrimaryKey(Integer.parseInt(reqMap.get("userid").toString()));
+            List<String> termList = Arrays.asList(myTerms.getAlltermlist().split("-"));
+            String newTermString = null;
+            boolean strDeleteFlag = false;
+            for (String str:termList){
+                for (String strid: idlist){
+                    if (str == strid){
+                        strDeleteFlag = true;
+                        break;
+                    }
+                }
+                if (!strDeleteFlag){
+                    if (newTermString != null)
+                        newTermString = newTermString + "-" +str;
+                    else
+                        newTermString = str;
+                }
+            }
+            myTerms.setAlltermlist(newTermString);
+            myTermsMapper.updateByPrimaryKeySelective(myTerms);
+            return new ResponseEntity(RespCode.SUCCESS,myTerms);
+        }catch (Exception e){
+            return new ResponseEntity(RespCode.EXCEPTION,e);
+        }
     }
-
-    ;
-
-
 }

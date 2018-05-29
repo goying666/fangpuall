@@ -16,9 +16,9 @@ public interface RecordingService {
     ResponseEntity getRecordingInfo(RecordingInfo recordingInfo);
 
     ResponseEntity addRecordingFile(MultipartFile file, Integer userId, Integer recordingId);
-    void downloadRecordingFile(HttpServletResponse response, Integer recordingid,HttpServletRequest request);
-//    void downloadRecordingFile(
-//            HttpServletResponse res, @PathVariable("recordingid") Integer recordingid);
+//    void downloadRecordingFile(HttpServletResponse response, Integer recordingid,HttpServletRequest request);
+    void downloadRecordingFile(
+            HttpServletResponse res, @PathVariable("recordingid") Integer recordingid);
 
     ResponseEntity addRecordingList(RecordingList recordingList);
 
